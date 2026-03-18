@@ -61,7 +61,7 @@
   font-size: clamp(16px, 2vw, 22px);
   font-style: italic;
   font-weight: 400;
-  color: rgba(242, 232, 220, 0.55);
+  color: rgba(242, 232, 220, 0.75);
   line-height: 1.4;
 }
 
@@ -136,7 +136,7 @@
 
 .about-edu-school {
   font-size: var(--text-sm);
-  color: var(--warm-gray-lt);
+  color: var(--warm-gray);
 }
 
 /* Right column */
@@ -275,7 +275,7 @@
   font-family: var(--font-serif);
   font-size: var(--btn-font-size);
   font-style: italic;
-  color: var(--warm-gray-lt);
+  color: var(--warm-gray);
   min-width: var(--space-10);
   padding-top: 1px;
   flex-shrink: 0;
@@ -313,7 +313,7 @@
   justify-content: center;
   border: var(--border-width) solid var(--border-light);
   border-radius: var(--radius-sm);
-  color: var(--warm-gray-lt);
+  color: var(--warm-gray);
   background: transparent;
   transition: color 0.18s, border-color 0.18s, background 0.18s;
   margin-top: -2px;
@@ -349,7 +349,7 @@
 
 .about-award-sub {
   font-size: var(--text-sm);
-  color: var(--warm-gray-lt);
+  color: var(--warm-gray);
 }
 
 /* ══════════════════════════════════════

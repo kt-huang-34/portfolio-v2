@@ -54,7 +54,7 @@ export function WorkGrid() {
           );
 
           return w.fullImage ? (
-            <a key={i} href={w.fullImage} target="_blank" rel="noopener noreferrer" className="work-card">
+            <a key={i} href={w.fullImage} target="_blank" rel="noopener noreferrer" className="work-card" aria-label={`${w.company}: ${w.title} (opens in new tab)`}>
               {cardContent}
             </a>
           ) : (

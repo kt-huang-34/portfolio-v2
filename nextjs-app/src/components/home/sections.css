@@ -51,7 +51,7 @@
   font-weight: var(--label-weight);
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
-  color: var(--warm-gray-lt);
+  color: var(--warm-gray);
   margin-bottom: var(--space-8);
 }
 
@@ -103,7 +103,7 @@
 
 .section-intro-sub {
   font-size: var(--text-sm);
-  color: var(--warm-gray-lt);
+  color: var(--warm-gray);
   max-width: 240px;
   text-align: right;
   line-height: var(--leading-normal);

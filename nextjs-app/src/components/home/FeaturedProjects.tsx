@@ -1,4 +1,3 @@
-import React from 'react';
 import { SectionLabel, ArrowIcon } from '@/components/ui';
 import Link from 'next/link';
 
@@ -62,7 +61,7 @@ export function FeaturedProjects() {
       <div className="feat-grid">
         {projects.map((p) => (
           <Link key={p.num} href={p.href} className="feat-card">
-            <div className="feat-card-num">{p.num}</div>
+            <div className="feat-card-num" aria-hidden="true">{p.num}</div>
             <div className={`feat-img ${p.bgClass}`}>
               <div className="feat-img-inner">
                 {p.coverImage && (
@@ -84,7 +83,7 @@ export function FeaturedProjects() {
                     <span key={t} className="tag-base tag-muted">{t}</span>
                   ))}
                 </div>
-                <div className="btn-icon">
+                <div className="btn-icon" aria-hidden="true">
                   <ArrowIcon size={13} color="white" />
                 </div>
               </div>

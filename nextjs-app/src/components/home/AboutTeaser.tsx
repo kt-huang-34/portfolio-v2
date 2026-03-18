@@ -8,7 +8,7 @@ export function AboutTeaser() {
       <div className="about-teaser-left">
         <div className="teaser-portrait">
           <div className="tp-badge">Available for hire</div>
-          <div className="tp-location">📍 Singapore</div>
+          <div className="tp-location"><span aria-hidden="true">📍</span> Singapore</div>
           <img src="/images/selfie.png" alt="Tina Huang" />
         </div>
       </div>

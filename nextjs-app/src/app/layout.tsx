@@ -37,9 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <CustomCursor />
         <Nav />
-        {children}
+        <div id="main-content">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

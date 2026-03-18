@@ -97,8 +97,8 @@ export function ChatWindow() {
         </div>
       </div>
 
-      {/* Avatar area */}
-      <div className="tina-avatar-area">
+      {/* Avatar area — decorative */}
+      <div className="tina-avatar-area" aria-hidden="true">
         <div className="avatar-figure">
           <div className="avatar-hair">
             <div className="avatar-hair-side left" />
@@ -115,7 +115,7 @@ export function ChatWindow() {
       </div>
 
       {/* Messages */}
-      <div className="tina-chat-body" ref={chatBodyRef}>
+      <div className="tina-chat-body" ref={chatBodyRef} role="log" aria-label="Chat messages" aria-live="polite">
         {messages.map((msg, i) => (
           <div key={i} className={`chat-msg ${msg.isUser ? 'user' : ''}`}>
             <div className={`chat-avatar ${msg.isUser ? '' : 'tina-av'}`}>
@@ -149,11 +149,12 @@ export function ChatWindow() {
           className="chat-input"
           type="text"
           placeholder="Ask about my skills, projects, or approach…"
+          aria-label="Ask AI Tina a question"
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <button className="chat-send-btn" onClick={sendChat}>Ask ↗</button>
+        <button className="chat-send-btn" onClick={sendChat} aria-label="Send message">Ask <span aria-hidden="true">↗</span></button>
       </div>
     </div>
   );

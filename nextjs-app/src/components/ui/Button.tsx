@@ -36,6 +36,7 @@ export function Button({ variant = 'primary', size = 'default', href, target, on
           style={style}
         >
           {children}
+          {target === '_blank' && <span className="sr-only">(opens in new tab)</span>}
         </a>
       );
     }
