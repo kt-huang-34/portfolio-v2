@@ -143,6 +143,12 @@
   overflow: hidden;
 }
 
+.work-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Project gradient backgrounds */
 .wc-viki      { background: linear-gradient(135deg, #0D1B2A 0%, #1B3A5C 100%); }
 .wc-carousell { background: linear-gradient(135deg, #1C0805 0%, #4A1F10 100%); }
@@ -197,13 +203,14 @@
    ABOUT TEASER
    ══════════════════════════════════════ */
 .about-teaser {
-  padding: var(--space-20) var(--page-gutter);
+  padding: var(--space-section) var(--page-gutter) var(--space-20);
   display: grid;
   grid-template-columns: 360px 1fr;
   gap: 72px;
   align-items: center;
   background: var(--cream);
   border-top: var(--border-width-sub) solid var(--border-light);
+  margin-top: var(--space-section);
 }
 
 .about-teaser-left { display: flex; justify-content: center; }

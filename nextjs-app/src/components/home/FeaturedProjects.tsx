@@ -12,6 +12,7 @@ interface FeaturedProject {
   outcome: string;
   bgClass: string;
   href: string;
+  coverImage?: string;
 }
 
 const projects: FeaturedProject[] = [
@@ -25,6 +26,7 @@ const projects: FeaturedProject[] = [
     outcome: '↑ 0→1 product launch',
     bgClass: 'fi-beebob',
     href: '/case-study/beebob',
+    coverImage: '/images/cover-beebob.jpg',
   },
   {
     num: '02',
@@ -36,6 +38,7 @@ const projects: FeaturedProject[] = [
     outcome: '↑ 30% user engagement',
     bgClass: 'fi-viki',
     href: '/case-study/viki-show-page',
+    coverImage: '/images/cover-viki.png',
   },
 ];
 
@@ -61,7 +64,11 @@ export function FeaturedProjects() {
           <Link key={p.num} href={p.href} className="feat-card">
             <div className="feat-card-num">{p.num}</div>
             <div className={`feat-img ${p.bgClass}`}>
-              <div className="feat-img-inner" />
+              <div className="feat-img-inner">
+                {p.coverImage && (
+                  <img src={p.coverImage} alt={`${p.company} cover`} className="feat-cover" />
+                )}
+              </div>
               <div className="feat-img-overlay" />
             </div>
             <div className="feat-body">

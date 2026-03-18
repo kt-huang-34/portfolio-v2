@@ -9,8 +9,7 @@ export function AboutTeaser() {
         <div className="teaser-portrait">
           <div className="tp-badge">Available for hire</div>
           <div className="tp-location">📍 Singapore</div>
-          {/* Placeholder for photo — replace with actual image */}
-          <div className="teaser-portrait-placeholder" />
+          <img src="/images/selfie.png" alt="Tina Huang" />
         </div>
       </div>
 
