@@ -5,7 +5,7 @@ export function Footer() {
     <footer>
       <div className="footer-logo">Tina Kuei Tien Huang</div>
       <div className="footer-links">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/tinakueitienhuang/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
       <div className="footer-copy">&copy; 2026 Tina Kuei Tien Huang</div>
     </footer>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 type ButtonVariant = 'primary' | 'ghost' | 'ghost-light' | 'icon';
 
@@ -22,10 +23,27 @@ export function Button({ variant = 'primary', size = 'default', href, target, on
   ].filter(Boolean).join(' ');
 
   if (href) {
+    const isExternal = href.startsWith('http') || href.startsWith('mailto:');
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          target={target}
+          rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+          className={classes}
+          onClick={onClick}
+          style={style}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a href={href} target={target} className={classes} onClick={onClick} style={style}>
+      <Link href={href} className={classes} onClick={onClick} style={style}>
         {children}
-      </a>
+      </Link>
     );
   }
 

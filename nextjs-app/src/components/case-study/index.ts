@@ -1,0 +1,1 @@
+export { CaseStudyPlaceholder } from './CaseStudyPlaceholder';

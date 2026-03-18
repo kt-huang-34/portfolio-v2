@@ -121,10 +121,14 @@ export function ChatWindow() {
             <div className={`chat-avatar ${msg.isUser ? '' : 'tina-av'}`}>
               {msg.isUser ? 'You' : 'T'}
             </div>
-            <div
-              className={`chat-bubble ${msg.isUser ? 'user-bubble' : ''}`}
-              dangerouslySetInnerHTML={{ __html: msg.text }}
-            />
+            {msg.isUser ? (
+              <div className="chat-bubble user-bubble">{msg.text}</div>
+            ) : (
+              <div
+                className="chat-bubble"
+                dangerouslySetInnerHTML={{ __html: msg.text }}
+              />
+            )}
           </div>
         ))}
         {isTyping && (

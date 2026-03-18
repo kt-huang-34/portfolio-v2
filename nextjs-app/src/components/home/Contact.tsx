@@ -17,7 +17,7 @@ export function Contact() {
           <Button variant="primary" href="mailto:iam.aqua1026@gmail.com">
             Say Hello <ArrowIcon />
           </Button>
-          <Button variant="ghost" href="https://linkedin.com" target="_blank">
+          <Button variant="ghost" href="https://www.linkedin.com/in/tinakueitienhuang/" target="_blank">
             LinkedIn
           </Button>
         </div>

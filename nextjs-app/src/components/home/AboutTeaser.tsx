@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 import { Button, Tag, ArrowIcon, SectionLabel } from '@/components/ui';
 
 const chips = ['AI Product Design', 'Design Systems', 'Conversational UX', 'Research', 'Figma', 'Mentorship'];
@@ -11,8 +9,8 @@ export function AboutTeaser() {
         <div className="teaser-portrait">
           <div className="tp-badge">Available for hire</div>
           <div className="tp-location">📍 Singapore</div>
-          {/* Placeholder for photo - replace with actual image */}
-          <div style={{ width: '100%', height: '100%', background: 'linear-gradient(160deg, #E8D8C8 0%, #D4C0A8 100%)' }} />
+          {/* Placeholder for photo — replace with actual image */}
+          <div className="teaser-portrait-placeholder" />
         </div>
       </div>
 
