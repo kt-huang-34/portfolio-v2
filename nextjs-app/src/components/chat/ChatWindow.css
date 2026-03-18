@@ -238,3 +238,13 @@
 }
 
 .chat-send-btn:hover { background: var(--coral-hover); }
+
+/* ══════════════════════════════════════
+   CHAT WINDOW — RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .chat-send-btn,
+  .chat-input {
+    cursor: auto;
+  }
+}

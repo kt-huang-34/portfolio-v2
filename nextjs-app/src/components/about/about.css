@@ -374,3 +374,65 @@
   height: 100%;
   background: linear-gradient(160deg, var(--cream-deep) 0%, var(--sand) 100%);
 }
+
+/* ══════════════════════════════════════
+   ABOUT PAGE — RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .about-page-hero {
+    padding: 100px var(--space-5) var(--space-10);
+    min-height: auto;
+  }
+
+  .about-page-hero-meta {
+    flex-wrap: wrap;
+    gap: var(--space-5);
+  }
+
+  .divider-vertical {
+    display: none;
+  }
+
+  .about-body-section {
+    padding: var(--space-12) var(--space-5);
+  }
+
+  .about-body-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-podcast-card {
+    flex-direction: column;
+  }
+
+  .about-speaking-item {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .about-speaking-year {
+    min-width: auto;
+  }
+
+  .about-award-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .case-study-placeholder {
+    padding: var(--space-12) var(--space-5);
+  }
+
+  .skill-chip-light {
+    cursor: auto;
+  }
+
+  .about-speaking-item {
+    cursor: auto;
+  }
+}

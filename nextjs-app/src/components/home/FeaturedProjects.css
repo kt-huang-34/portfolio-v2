@@ -204,3 +204,31 @@
   color: var(--coral-light);
   white-space: nowrap;
 }
+
+/* ══════════════════════════════════════
+   FEATURED PROJECTS — RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .featured-section {
+    padding: var(--space-12) var(--space-5);
+  }
+
+  .feat-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-8);
+  }
+
+  .feat-header-sub {
+    text-align: left;
+  }
+
+  .feat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feat-img {
+    height: 200px;
+  }
+}

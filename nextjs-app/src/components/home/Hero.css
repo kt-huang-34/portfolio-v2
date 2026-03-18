@@ -274,3 +274,64 @@
 .fi-carousell { background: linear-gradient(160deg, #1C0805 0%, #4A2010 100%); }
 .fi-gxs { background: linear-gradient(160deg, #041208 0%, #0D2E18 100%); }
 .fi-beebob { background: linear-gradient(160deg, #0D0A1A 0%, #1E1640 100%); }
+
+/* ══════════════════════════════════════
+   HERO — RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 100px var(--space-5) var(--space-10);
+    min-height: auto;
+    gap: var(--space-8);
+  }
+
+  .hero-name {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .hero-role {
+    font-size: clamp(14px, 3.5vw, 18px);
+  }
+
+  .hero-desc {
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    flex-wrap: wrap;
+  }
+
+  .hero-metrics {
+    gap: var(--space-5);
+  }
+
+  /* Stack retro windows vertically, reduce size */
+  .hero-right {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .retro-window {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  .win-skills {
+    width: 100%;
+  }
+
+  .win-project {
+    width: 100%;
+  }
+
+  .win-tina {
+    width: 100%;
+  }
+}
