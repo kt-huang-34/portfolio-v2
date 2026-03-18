@@ -1,0 +1,200 @@
+/* ══════════════════════════════════════
+   FEATURED PROJECTS
+   ══════════════════════════════════════ */
+.featured-section {
+  padding: var(--space-20) var(--page-gutter);
+  background: var(--near-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent var(--space-8)
+  );
+  pointer-events: none;
+}
+
+.feat-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+.feat-header h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.5vw, 52px);
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+}
+
+.feat-header h2 em {
+  font-style: italic;
+  color: var(--coral-light);
+}
+
+.feat-header-sub {
+  font-size: var(--label-size);
+  color: rgba(242, 232, 220, 0.4);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  font-weight: var(--label-weight);
+  text-align: right;
+}
+
+.feat-see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--label-size);
+  font-weight: var(--btn-font-weight);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--coral-light);
+  text-decoration: none;
+  border-bottom: var(--border-width-sub) solid rgba(200, 74, 46, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.18s, border-color 0.18s;
+  cursor: none;
+  margin-top: var(--space-2);
+}
+
+.feat-see-all:hover {
+  color: var(--coral);
+  border-color: var(--coral);
+}
+
+.feat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.feat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: var(--border-width-sub) solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  cursor: none;
+  text-decoration: none;
+  transition: border-color 0.3s, transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.feat-card:hover {
+  border-color: rgba(200, 74, 46, 0.4);
+  transform: translateY(-6px);
+}
+
+.feat-card-num {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-family: var(--font-serif);
+  font-size: var(--label-size);
+  font-style: italic;
+  color: rgba(242, 232, 220, 0.25);
+  z-index: 3;
+}
+
+.feat-img {
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.feat-img-inner {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.feat-card:hover .feat-img-inner {
+  transform: scale(1.04);
+}
+
+.feat-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+  z-index: 2;
+}
+
+.feat-body {
+  padding: var(--space-5);
+  border-top: var(--border-width-sub) solid rgba(255, 255, 255, 0.07);
+}
+
+.feat-company-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.feat-company {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--coral-light);
+}
+
+.feat-year {
+  font-size: var(--text-xs);
+  color: rgba(242, 232, 220, 0.3);
+  letter-spacing: var(--tracking-wide);
+}
+
+.feat-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
+}
+
+.feat-desc {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(242, 232, 220, 0.5);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-4);
+}
+
+.feat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feat-tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.feat-outcome-row {
+  margin-top: var(--space-3);
+}
+
+.feat-outcome {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--coral-light);
+  white-space: nowrap;
+}
