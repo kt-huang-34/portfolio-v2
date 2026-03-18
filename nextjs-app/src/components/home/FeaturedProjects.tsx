@@ -17,6 +17,17 @@ interface FeaturedProject {
 const projects: FeaturedProject[] = [
   {
     num: '01',
+    company: 'BeeBob AI',
+    year: '2024 – Present',
+    title: 'AI Operations Co-Pilot — Zero to One UX',
+    desc: 'Designed the end-to-end experience for an AI-powered operations co-pilot, from conversational AI patterns to agentic UX workflows.',
+    tags: ['Conversational AI', 'Agentic UX', '0→1 Product'],
+    outcome: '↑ 0→1 product launch',
+    bgClass: 'fi-beebob',
+    href: '/case-study/beebob',
+  },
+  {
+    num: '02',
     company: 'Rakuten Viki',
     year: '2019 – 2023',
     title: 'Show Page Redesign — IA, Video Player & Social Features',
@@ -25,17 +36,6 @@ const projects: FeaturedProject[] = [
     outcome: '↑ 30% user engagement',
     bgClass: 'fi-viki',
     href: '/case-study/viki-show-page',
-  },
-  {
-    num: '02',
-    company: 'Carousell',
-    year: '2017 – 2019',
-    title: 'Payment & Shipping UX — Cross-Market E-Commerce',
-    desc: 'Simplified end-to-end transaction flows for Taiwan and Singapore, reducing friction across payment, shipping, and post-order experiences.',
-    tags: ['E-Commerce', 'Payment UX', 'Cross-Market'],
-    outcome: '↑ 20% product adoption',
-    bgClass: 'fi-carousell',
-    href: '/case-study/carousell',
   },
 ];
 
