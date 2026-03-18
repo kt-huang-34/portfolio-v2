@@ -5,7 +5,6 @@ import {
   Companies,
   WorkGrid,
   AboutTeaser,
-  Contact,
 } from '@/components/home';
 
 export default function HomePage() {
@@ -17,7 +16,6 @@ export default function HomePage() {
       <Companies />
       <WorkGrid />
       <AboutTeaser />
-      <Contact />
     </main>
   );
 }

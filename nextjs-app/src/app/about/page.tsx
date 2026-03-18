@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { AboutHero } from '@/components/about/AboutHero';
 import { AboutBody } from '@/components/about/AboutBody';
+import { AboutContact } from '@/components/about/AboutContact';
 
 export const metadata: Metadata = {
   title: 'About — Tina Huang | Lead AI Product Designer',
@@ -12,6 +13,7 @@ export default function AboutPage() {
     <main>
       <AboutHero />
       <AboutBody />
+      <AboutContact />
     </main>
   );
 }
