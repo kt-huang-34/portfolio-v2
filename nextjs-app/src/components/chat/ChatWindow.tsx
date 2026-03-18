@@ -87,7 +87,7 @@ export function ChatWindow() {
   return (
     <div className="retro-window win-tina">
       <div className="retro-titlebar">
-        <div className="retro-titlebar-dot" style={{ background: 'var(--status-green)' }} />
+        <div className="retro-titlebar-dot rtd-green" />
         <div className="retro-titlebar-line" />
         <span className="retro-titlebar-title">AI Tina — Ask me anything</span>
         <div className="retro-titlebar-controls">

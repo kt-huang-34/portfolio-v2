@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
-import { Button, ArrowIcon } from '@/components/ui';
+import { Button, ArrowIcon, Metric, StatPill } from '@/components/ui';
 import { ChatWindow } from '@/components/chat/ChatWindow';
+import { useScrollReveal } from '@/lib';
 
 export function Hero() {
+  useScrollReveal();
   return (
     <section className="hero">
       <div className="hero-texture" />
@@ -28,18 +30,9 @@ export function Hero() {
           </Button>
         </div>
         <div className="hero-metrics">
-          <div className="metric">
-            <div className="metric-num">10<span>+</span></div>
-            <div className="metric-label">Years Experience</div>
-          </div>
-          <div className="metric">
-            <div className="metric-num">30<span>%</span></div>
-            <div className="metric-label">Engagement Lift</div>
-          </div>
-          <div className="metric">
-            <div className="metric-num">4</div>
-            <div className="metric-label">Markets</div>
-          </div>
+          <Metric value="10" suffix="+" label="Years Experience" />
+          <Metric value="30" suffix="%" label="Engagement Lift" />
+          <Metric value="4" label="Markets" />
         </div>
       </div>
 
@@ -86,7 +79,7 @@ export function Hero() {
             <div className="win-project-co">Rakuten Viki</div>
             <div className="win-project-title">Show Page Redesign &amp; IA</div>
             <div className="win-project-stat">
-              <span className="stat-pill">↑ 30%</span> user engagement
+              <StatPill>↑ 30%</StatPill> user engagement
             </div>
           </div>
         </div>

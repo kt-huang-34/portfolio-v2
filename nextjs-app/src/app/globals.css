@@ -33,6 +33,11 @@
   --dark-navy: #0D1B2A;
   --viki-blue: #0C9BFF;
   --status-green: #5DB86A;
+  --white: #FFFFFF;
+  --off-white: #FAFAF8;
+  --skin-tone: #D4A882;
+  --hair-brown: #2A1A10;
+  --text-dark: #2A2520;
 
   /* Typography — --font-serif and --font-sans are injected by next/font
      via className on <html>. Fallbacks defined here for safety. */
@@ -41,6 +46,9 @@
   --text-base: 14px;
   --text-md: 15px;
   --text-lg: 17px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 28px;
   --leading-tight: 1.1;
   --leading-normal: 1.6;
   --leading-loose: 1.8;
@@ -293,7 +301,83 @@ body {
 }
 
 /* ----------------------------------------------------------
-   8. Scroll Reveal Animation
+   8. Metric Component
+   ---------------------------------------------------------- */
+.metric-num {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  color: var(--near-black);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.metric-num span {
+  color: var(--coral);
+}
+
+.metric-label {
+  font-size: var(--text-xs);
+  color: var(--warm-gray-lt);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.metric-dark .metric-num {
+  color: var(--cream);
+}
+
+.metric-dark .metric-num span {
+  color: var(--coral-light);
+}
+
+.metric-dark .metric-label {
+  color: rgba(242, 232, 220, 0.4);
+}
+
+/* ----------------------------------------------------------
+   9. Stat Pill Component
+   ---------------------------------------------------------- */
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: var(--tag-padding);
+  border-radius: var(--tag-radius);
+  border: var(--border-width-sub) solid rgba(42, 37, 32, 0.15);
+  background: var(--cream-deep);
+  color: var(--coral);
+}
+
+.stat-pill-subtle {
+  font-weight: 500;
+  background: rgba(200, 74, 46, 0.1);
+  border-color: rgba(200, 74, 46, 0.2);
+  padding: 2px var(--space-2);
+}
+
+/* ----------------------------------------------------------
+   10. Divider Component
+   ---------------------------------------------------------- */
+.divider { flex-shrink: 0; }
+
+.divider-horizontal {
+  width: 100%;
+  height: var(--border-width-sub);
+}
+
+.divider-vertical {
+  width: var(--border-width);
+  height: var(--space-10);
+}
+
+.divider-light { background: var(--border-light); }
+.divider-dark { background: rgba(255, 255, 255, 0.1); }
+
+/* ----------------------------------------------------------
+   11. Scroll Reveal Animation
    ---------------------------------------------------------- */
 .reveal {
   opacity: 0;

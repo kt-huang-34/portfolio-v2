@@ -77,34 +77,7 @@
   animation: fadeUp 0.8s 0.25s ease both;
 }
 
-.about-meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.about-meta-num {
-  font-family: var(--font-serif);
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--cream);
-  line-height: 1;
-}
-
-.about-meta-label {
-  font-size: var(--text-xs);
-  color: rgba(242, 232, 220, 0.4);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.about-meta-divider {
-  width: 1px;
-  height: var(--space-10);
-  background: rgba(255, 255, 255, 0.1);
-  flex-shrink: 0;
-}
+/* Metrics and dividers now use shared DS components from globals.css */
 
 /* Body section */
 .about-body-section {
@@ -180,7 +153,7 @@
 }
 
 .skill-chip-light {
-  background: #fff;
+  background: var(--white);
   border: var(--border-width) solid var(--border-light);
   border-radius: var(--radius-md);
   padding: var(--space-3) var(--space-4);
@@ -216,7 +189,7 @@
 }
 
 .about-podcast-icon {
-  font-size: 28px;
+  font-size: var(--text-3xl);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -232,7 +205,7 @@
 
 .about-podcast-title {
   font-family: var(--font-serif);
-  font-size: var(--space-5);
+  font-size: var(--text-2xl);
   font-weight: 500;
   color: var(--near-black);
   line-height: 1.2;
@@ -254,15 +227,7 @@
   flex-wrap: wrap;
 }
 
-.about-stat-pill {
-  font-size: var(--text-xs);
-  font-weight: 500;
-  background: rgba(200, 74, 46, 0.1);
-  border: var(--border-width-sub) solid rgba(200, 74, 46, 0.2);
-  color: var(--coral);
-  padding: 2px var(--space-2);
-  border-radius: var(--tag-radius);
-}
+/* Stat pills now use shared StatPill component from globals.css */
 
 /* Speaking */
 .about-speaking-list {
@@ -355,6 +320,10 @@
   pointer-events: none;
 }
 
+.about-podcast-btn {
+  margin-top: var(--space-3);
+}
+
 /* Award card */
 .about-award-card {
   display: flex;
@@ -364,6 +333,11 @@
   border: var(--border-width) solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-5);
+}
+
+.about-award-icon {
+  font-size: var(--text-3xl);
+  flex-shrink: 0;
 }
 
 .about-award-title {

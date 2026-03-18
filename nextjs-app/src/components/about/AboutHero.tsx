@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metric, Divider } from '@/components/ui';
 
 export function AboutHero() {
   return (
@@ -12,20 +13,11 @@ export function AboutHero() {
         </p>
       </div>
       <div className="about-page-hero-meta">
-        <div className="about-meta-item">
-          <div className="about-meta-num">10+</div>
-          <div className="about-meta-label">Years Experience</div>
-        </div>
-        <div className="about-meta-divider" />
-        <div className="about-meta-item">
-          <div className="about-meta-num">4</div>
-          <div className="about-meta-label">Markets</div>
-        </div>
-        <div className="about-meta-divider" />
-        <div className="about-meta-item">
-          <div className="about-meta-num">50M+</div>
-          <div className="about-meta-label">Users Impacted</div>
-        </div>
+        <Metric value="10+" label="Years Experience" variant="dark" />
+        <Divider orientation="vertical" variant="dark" />
+        <Metric value="4" label="Markets" variant="dark" />
+        <Divider orientation="vertical" variant="dark" />
+        <Metric value="50M+" label="Users Impacted" variant="dark" />
       </div>
     </section>
   );

@@ -4,7 +4,7 @@
 
 /* Avatar area */
 .tina-avatar-area {
-  background: linear-gradient(160deg, #E8D8C8 0%, #D4C0A8 100%);
+  background: linear-gradient(160deg, var(--cream-deep) 0%, var(--sand) 100%);
   height: 160px;
   position: relative;
   overflow: hidden;
@@ -27,7 +27,7 @@
   position: absolute;
   width: 62px;
   height: 68px;
-  background: #D4A882;
+  background: var(--skin-tone);
   border-radius: 50% 50% 45% 45%;
   top: 10px;
   left: 50%;
@@ -38,7 +38,7 @@
   position: absolute;
   width: 70px;
   height: 50px;
-  background: #2A1A10;
+  background: var(--hair-brown);
   border-radius: 50% 50% 20% 20%;
   top: 4px;
   left: 50%;
@@ -50,7 +50,7 @@
   position: absolute;
   width: var(--space-4);
   height: 38px;
-  background: #2A1A10;
+  background: var(--hair-brown);
   border-radius: 0 0 var(--radius-md) var(--radius-md);
   top: var(--space-8);
 }
@@ -73,7 +73,7 @@
   position: absolute;
   width: 22px;
   height: var(--space-5);
-  background: #D4A882;
+  background: var(--skin-tone);
   bottom: 68px;
   left: 50%;
   transform: translateX(-50%);
@@ -125,7 +125,7 @@
 /* Chat messages */
 .tina-chat-body {
   padding: var(--space-3);
-  background: #FAFAF8;
+  background: var(--off-white);
   min-height: 200px;
   max-height: 200px;
   overflow-y: auto;
@@ -171,8 +171,8 @@
   padding: var(--space-2) 11px;
   border-radius: var(--radius-none);
   border: var(--border-width) solid rgba(42, 37, 32, 0.15);
-  color: #2A2520;
-  background: #fff;
+  color: var(--text-dark);
+  background: var(--white);
 }
 
 .chat-bubble.user-bubble {
@@ -213,7 +213,7 @@
   padding: var(--space-3) var(--space-3);
   border: none;
   outline: none;
-  background: #FAFAF8;
+  background: var(--off-white);
   color: var(--near-black);
 }
 
@@ -231,7 +231,7 @@
   font-weight: var(--btn-font-weight);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
   cursor: none;
   font-family: var(--font-sans);
   transition: background 0.15s;

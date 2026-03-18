@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ArrowIcon, SectionLabel } from '@/components/ui';
+import { Button, ArrowIcon, SectionLabel, StatPill } from '@/components/ui';
 
 const skills = [
   { title: 'AI Product Design', desc: 'Conversational & Agentic UX' },
@@ -73,12 +73,12 @@ export function AboutBody() {
                 Co-hosting conversations with tech leaders on product strategy, agentic AI, and career growth.
               </div>
               <div className="about-podcast-stats">
-                <span className="about-stat-pill">1,000+ listeners</span>
-                <span className="about-stat-pill">SG 30%</span>
-                <span className="about-stat-pill">TW 21%</span>
-                <span className="about-stat-pill">US 20%</span>
+                <StatPill variant="subtle">1,000+ listeners</StatPill>
+                <StatPill variant="subtle">SG 30%</StatPill>
+                <StatPill variant="subtle">TW 21%</StatPill>
+                <StatPill variant="subtle">US 20%</StatPill>
               </div>
-              <Button variant="primary" size="sm" href="#" style={{ marginTop: '14px' }}>
+              <Button variant="primary" size="sm" href="#" className="about-podcast-btn">
                 Listen Now <ArrowIcon size={10} />
               </Button>
             </div>
@@ -105,7 +105,7 @@ export function AboutBody() {
           </div>
 
           <div className="about-award-card">
-            <div style={{ fontSize: '28px' }}>🏆</div>
+            <div className="about-award-icon">🏆</div>
             <div>
               <div className="about-award-title">Carouhack 2018 Winner</div>
               <div className="about-award-sub">Chrome extension — CarouPocket</div>
