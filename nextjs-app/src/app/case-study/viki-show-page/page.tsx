@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { CaseStudyPlaceholder } from '@/components/case-study';
+import { VikiShowPage } from '@/components/case-study';
 
 export const metadata: Metadata = {
   title: 'Rakuten Viki — Show Page Redesign | Tina Huang',
@@ -7,10 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function VikiShowPageCaseStudy() {
-  return (
-    <CaseStudyPlaceholder
-      label="Rakuten Viki · 2019 – 2023"
-      title="Show Page Redesign — IA, Video Player & Social Features"
-    />
-  );
+  return <VikiShowPage />;
 }
