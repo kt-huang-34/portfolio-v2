@@ -111,7 +111,7 @@
 
 /* Retro OS window chrome */
 .retro-window {
-  position: absolute;
+  position: relative;
   background: var(--off-white);
   border: var(--border-width) solid var(--near-black);
   border-radius: var(--radius-none);
@@ -179,6 +179,7 @@
 
 /* Win: Skills */
 .win-skills {
+  position: absolute;
   width: 200px;
   top: var(--space-5);
   left: var(--space-5);
@@ -214,6 +215,7 @@
 
 /* Win: Project peek */
 .win-project {
+  position: absolute;
   width: 220px;
   top: 200px;
   left: 0;
@@ -263,6 +265,7 @@
 
 /* Win: AI Tina */
 .win-tina {
+  position: absolute;
   width: 340px;
   top: var(--space-5);
   right: 0;
@@ -315,23 +318,14 @@
     gap: var(--space-4);
   }
 
-  .retro-window {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-  }
-
-  .win-skills {
-    width: 100%;
-  }
-
-  .win-project {
-    width: 100%;
-  }
-
+  .win-skills,
+  .win-project,
   .win-tina {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
     width: 100%;
   }
 }

@@ -5,7 +5,7 @@ export function Footer() {
     <footer role="contentinfo">
       <div className="footer-logo">Tina Kuei Tien Huang</div>
       <div className="footer-links">
-        <a href="https://www.linkedin.com/in/tinakueitienhuang/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kuei-tien-huang/" target="_blank" rel="noopener noreferrer">
           LinkedIn<span className="sr-only"> (opens in new tab)</span>
         </a>
       </div>

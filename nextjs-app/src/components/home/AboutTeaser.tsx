@@ -1,15 +1,27 @@
-import { Button, Tag, ArrowIcon, SectionLabel } from '@/components/ui';
-
-const chips = ['AI Product Design', 'Design Systems', 'Conversational UX', 'Research', 'Figma', 'Mentorship'];
+import { Button, ArrowIcon, SectionLabel } from '@/components/ui';
 
 export function AboutTeaser() {
   return (
     <section className="about-teaser reveal">
       <div className="about-teaser-left">
-        <div className="teaser-portrait">
-          <div className="tp-badge">Available for hire</div>
-          <div className="tp-location"><span aria-hidden="true">📍</span> Singapore</div>
-          <img src="/images/selfie.png" alt="Tina Huang" />
+        <div className="retro-window portrait-skills">
+          <div className="retro-titlebar">
+            <div className="retro-titlebar-dot rtd-sand" />
+            <span className="retro-titlebar-title">Available for Hire</span>
+            <div className="retro-titlebar-controls">
+              <div className="retro-titlebar-btn">–</div>
+              <div className="retro-titlebar-btn">□</div>
+            </div>
+          </div>
+          <div className="portrait-skills-photo">
+            <div className="tp-location"><span aria-hidden="true">📍</span> Singapore</div>
+            <img src="/images/selfie.png" alt="Tina Huang" />
+          </div>
+          <div className="win-skills-body">
+            {['AI/UX', 'Conversational AI', 'Design Systems', 'Research', 'Agentic UX', 'Figma'].map((skill, i) => (
+              <span key={skill} className={`skill-tag ${i % 3 === 0 ? 'active' : ''}`}>{skill}</span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -21,19 +33,9 @@ export function AboutTeaser() {
         <p className="about-teaser-body">
           10+ years designing products people love — from streaming platforms to AI co-pilots. I blend strategic thinking with meticulous craft, specialising in complex, multi-market product experiences.
         </p>
-        <div className="about-teaser-chips">
-          {chips.map(c => (
-            <Tag key={c} variant="outline">{c}</Tag>
-          ))}
-        </div>
-        <div className="about-teaser-links">
-          <Button variant="primary" href="/about">
-            More About Me <ArrowIcon />
-          </Button>
-          <Button variant="ghost" href="https://docs.google.com/document/d/1ZCq3snzfjolB85sXl9eF652BWbaDVdoiIfzHL363aho/edit?usp=sharing" target="_blank">
-            Download CV
-          </Button>
-        </div>
+        <Button variant="primary" href="/about">
+          More About Me <ArrowIcon />
+        </Button>
       </div>
     </section>
   );
