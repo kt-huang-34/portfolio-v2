@@ -119,61 +119,24 @@ export function GxsRdsPage() {
           </div>
           <div>
             <div className="img-card">
-              <ImgPlaceholder label="Current state — 3 isolated systems with no cross-bank communication" />
+              <img src="/images/rds-problem-01.png" alt="Current workflow structure — 3 isolated design systems (GXS, GXB, SB) iterating independently with no cross-bank communication" />
               <div className="cap">GXS (Pancake/Cream) &middot; GXB (Gula) &middot; SB (Pancake/Cream) &mdash; all diverging independently</div>
             </div>
           </div>
         </div>
 
-        <div className="rds-survey-wrap" style={{ marginTop: 'var(--space-12)' }}>
-          <p className="chapter-body" style={{ marginBottom: 'var(--space-6)' }}>
-            When we ran a self-evaluation survey across all three design teams, the data made it concrete:
-          </p>
-          <table className="rds-survey-table">
-            <thead>
-              <tr>
-                <th>Question</th>
-                <th>GXS</th>
-                <th>GXB</th>
-                <th>SB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Happy with speed of product development</td>
-                <td><span className="rds-score rds-score-amber">3</span></td>
-                <td><span className="rds-score rds-score-green">4</span></td>
-                <td><span className="rds-score rds-score-green">4</span></td>
-              </tr>
-              <tr>
-                <td>Product interfaces look consistent</td>
-                <td><span className="rds-score rds-score-amber">3</span></td>
-                <td><span className="rds-score rds-score-amber">3</span></td>
-                <td><span className="rds-score rds-score-amber">3</span></td>
-              </tr>
-              <tr>
-                <td>I know where to find reusable components in Figma</td>
-                <td><span className="rds-score rds-score-green">4</span></td>
-                <td><span className="rds-score rds-score-green">4</span></td>
-                <td><span className="rds-score rds-score-green">5</span></td>
-              </tr>
-              <tr>
-                <td>DS library supports me when working on new designs</td>
-                <td><span className="rds-score rds-score-green">4</span></td>
-                <td><span className="rds-score rds-score-red">2</span></td>
-                <td><span className="rds-score rds-score-amber">3</span></td>
-              </tr>
-              <tr>
-                <td>3 banks communicate well with each other</td>
-                <td><span className="rds-score rds-score-red">2</span></td>
-                <td><span className="rds-score rds-score-red">2</span></td>
-                <td><span className="rds-score rds-score-red">2</span></td>
-              </tr>
-              <tr className="rds-alert-row">
-                <td colSpan={4}>&#9888; Cross-bank communication scored 2/5 across all 3 banks &mdash; the single biggest shared pain point</td>
-              </tr>
-            </tbody>
-          </table>
+        <p className="chapter-body" style={{ marginTop: 'var(--space-12)' }}>
+          When we ran a self-evaluation survey across all three design teams, the data made it concrete:
+        </p>
+
+        <div className="img-card" style={{ marginTop: 'var(--space-6)' }}>
+          <img src="/images/rds-problem-02.png" alt="Self-evaluation survey — current state scores across GXS Bank, GX Bank and Super Bank" />
+          <div className="cap">Self-evaluation survey results across all 3 banks &mdash; scale from 1&ndash;5</div>
+        </div>
+
+        <div className="img-card" style={{ marginTop: 'var(--space-6)' }}>
+          <img src="/images/rds-problem-03.png" alt="Top pain points — inconsistent design patterns, components in local files, internal workflow gaps" />
+          <div className="cap">Top 1 pain point from each bank &mdash; hope to solve immediately</div>
         </div>
       </section>
 
