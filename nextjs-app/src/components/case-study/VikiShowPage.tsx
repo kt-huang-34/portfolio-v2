@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { useScrollReveal } from '@/lib';
 import './viki-show-page.css';
 
@@ -417,19 +416,6 @@ export function VikiShowPage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════
-          CASE NAV
-      ══════════════════════════════════════════════════════════ */}
-      <nav className="case-nav">
-        <Link href="/" className="case-nav-link">
-          <span className="dir">← Back</span>
-          <span className="pname">Portfolio</span>
-        </Link>
-        <Link href="/case-study/watch-party" className="case-nav-link" style={{ textAlign: 'right' }}>
-          <span className="dir">Next Project →</span>
-          <span className="pname">Watch Party</span>
-        </Link>
-      </nav>
     </main>
   );
 }

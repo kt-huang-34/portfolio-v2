@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { useScrollReveal } from '@/lib';
 import './gxs-rds-page.css';
 
@@ -30,7 +29,7 @@ export function GxsRdsPage() {
             move as one
           </h1>
           <p className="gxs-hero-sub">
-            Unifying 3 isolated design systems across Singapore, Malaysia and Indonesia &mdash; without breaking anything in production.
+            Unifying 3 isolated design systems across Singapore (GXS), Malaysia (GXB) and Indonesia (SB) &mdash; without breaking anything in production.
           </p>
           <div className="gxs-hero-meta">
             <div className="gxs-hero-meta-item">
@@ -40,7 +39,7 @@ export function GxsRdsPage() {
             <div className="gxs-hero-meta-divider" />
             <div className="gxs-hero-meta-item">
               <div className="label">Duration</div>
-              <div className="val">Jan 2024 &ndash; Ongoing</div>
+              <div className="val">1 Year</div>
             </div>
             <div className="gxs-hero-meta-divider" />
             <div className="gxs-hero-meta-item">
@@ -48,32 +47,15 @@ export function GxsRdsPage() {
               <div className="val">Design System &middot; Governance &middot; Cross-team</div>
             </div>
           </div>
-          <div className="gxs-hero-badges">
-            <span className="gxs-hero-badge gxs">GXS</span>
-            <span className="gxs-hero-badge gxb">GXB</span>
-            <span className="gxs-hero-badge sb">SB</span>
-            <span className="gxs-hero-badge-label">SG &middot; MY &middot; ID</span>
-          </div>
         </div>
 
-        <div>
-          <div className="gxs-hero-stat-block">
-            <div className="gxs-hero-stat-num">3<span> banks</span></div>
-            <div className="gxs-hero-stat-label">
-              Each inherited the same foundation but <strong>diverged independently</strong>.<br />
-              This project set out to unify them.
-            </div>
-          </div>
-          <div className="gxs-hero-stat-row">
-            <div className="gxs-hero-stat-sm">
-              <div className="num">8<span>+</span></div>
-              <div className="lbl">Cross-bank workshops run across design, PM and engineering</div>
-            </div>
-            <div className="gxs-hero-stat-sm">
-              <div className="num">2<span>/5</span></div>
-              <div className="lbl">Communication score across all 3 banks &mdash; the shared pain point</div>
-            </div>
-          </div>
+        <div className="img-card gxs-hero-video">
+          <iframe
+            src="https://player.vimeo.com/video/1175421664?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+            title="GXS Regional Design System"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </section>
 
@@ -92,10 +74,6 @@ export function GxsRdsPage() {
         <div className="stat-item">
           <div className="lbl">Communication Score</div>
           <div className="num">2<span>/5</span></div>
-        </div>
-        <div className="stat-item">
-          <div className="lbl">Kickoff</div>
-          <div className="num">Jan<span>&rsquo;24</span></div>
         </div>
       </div>
 
@@ -426,19 +404,6 @@ export function GxsRdsPage() {
         <cite className="rds-cite">Key learning &mdash; #OneDigibank Regional Design System, 2024</cite>
       </div>
 
-      {/* ══════════════════════════════════════════════════════════
-          CASE NAV
-      ══════════════════════════════════════════════════════════ */}
-      <nav className="case-nav">
-        <Link href="/" className="case-nav-link">
-          <span className="dir">&larr; Back</span>
-          <span className="pname">Portfolio</span>
-        </Link>
-        <Link href="/case-study/carousell" className="case-nav-link" style={{ textAlign: 'right' }}>
-          <span className="dir">Next Project &rarr;</span>
-          <span className="pname">Carousell</span>
-        </Link>
-      </nav>
     </main>
   );
 }
