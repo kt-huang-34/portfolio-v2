@@ -4,14 +4,6 @@ import React from 'react';
 import { useScrollReveal } from '@/lib';
 import './gxs-rds-page.css';
 
-function ImgPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="img-placeholder">
-      <div className="img-placeholder-label">{label}</div>
-    </div>
-  );
-}
-
 export function GxsRdsPage() {
   useScrollReveal();
 
@@ -73,7 +65,7 @@ export function GxsRdsPage() {
         </div>
         <div className="stat-item">
           <div className="lbl">Communication Score</div>
-          <div className="num">2<span>/5</span></div>
+          <div className="num">2<span>/5</span> <span className="stat-arrow">&rarr;</span> 4.5<span>/5</span></div>
         </div>
       </div>
 
@@ -290,8 +282,7 @@ export function GxsRdsPage() {
               The pilot worked. Engineering bought in. The Hybrid Mode plan was agreed: keep 3 local DSes running while RDS grows alongside them &mdash; starting with foundation tokens, then homepage components, then core components.
             </p>
             <div className="img-card-light" style={{ marginTop: 'var(--space-8)' }}>
-              <ImgPlaceholder label="Agreed future architecture — RDS as shared repo, engineers from all 3 banks push components into local repos" />
-              <div className="cap">Hybrid Mode: 3 local systems + RDS running in parallel &mdash; a deliberate strategy, not a compromise.</div>
+              <img src="/images/rds-discussion.png" alt="Discussion and collaboration during the RDS pilot" />
             </div>
           </div>
         </div>
@@ -329,9 +320,80 @@ export function GxsRdsPage() {
           The foundation tokens &mdash; Typography and Color &mdash; have been trialled with all 3 banks. Homepage components are being migrated. The system is live and growing.
         </p>
 
-        <div className="img-card" style={{ marginTop: 'var(--space-10)' }}>
-          <ImgPlaceholder label="Foundation layer — Typography · Color tokens · Spacing · Iconography · Grid system" />
-          <div className="cap">Foundation layer shared across GXS, GXB and Superbank.</div>
+        <div className="rds-video-grid">
+          <div className="rds-video-card">
+            <iframe
+              src="https://player.vimeo.com/video/1175749114?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+              title="RDS Demo 1"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="rds-video-card">
+            <iframe
+              src="https://player.vimeo.com/video/1175748695?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+              title="RDS Demo 2"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="rds-video-card">
+            <iframe
+              src="https://player.vimeo.com/video/1175748555?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+              title="RDS Demo 3"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="rds-video-card">
+            <iframe
+              src="https://player.vimeo.com/video/1175748535?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+              title="RDS Demo 4"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="rds-video-card">
+            <iframe
+              src="https://player.vimeo.com/video/1175748515?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+              title="RDS Demo 5"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="rds-video-card">
+            <iframe
+              src="https://player.vimeo.com/video/1175421803?badge=0&amp;autopause=0&amp;player_id=0&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0&amp;title=0&amp;byline=0&amp;portrait=0"
+              title="RDS Demo 6"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
+        <div className="eyebrow" style={{ marginTop: 'var(--space-section)' }}>From System to Screens</div>
+        <h3 className="chapter-title">
+          Applying the design system<br /><em>into a central library</em>
+        </h3>
+        <p className="chapter-body">
+          With the regional tokens and components locked down, we applied them across real product screens &mdash; unifying brand, typography, iconography, and layout into a single shared Figma library that all three banks pull from. Every component maps back to a governed source of truth.
+        </p>
+
+        <div className="rds-library-images">
+          <div className="rds-library-row-2col">
+            <div className="img-card">
+              <img src="/images/rds-brand-image.png" alt="Brand imagery guidelines applied across GXS, GXB and Superbank" />
+            </div>
+            <div className="img-card">
+              <img src="/images/rds-icons.png" alt="Unified iconography set shared across all three banks" />
+            </div>
+          </div>
+          <div className="img-card">
+            <img src="/images/rds-typography.png" alt="Typography scale and type tokens applied regionally" />
+          </div>
+          <div className="img-card">
+            <img src="/images/rds-display-3banks.png" alt="Design system applied to live screens across GXS, GXB and Superbank" />
+          </div>
         </div>
       </section>
 

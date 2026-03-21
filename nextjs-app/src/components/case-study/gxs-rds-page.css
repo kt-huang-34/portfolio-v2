@@ -30,7 +30,19 @@
 /* ── Stat Strip (3-column override) ── */
 .gxs-hero + .stat-strip {
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+}
+
+.gxs-hero + .stat-strip .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-arrow {
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: var(--coral-light);
+  margin: 0 var(--space-1);
 }
 
 .img-row {
@@ -691,6 +703,52 @@
   line-height: 1.5;
 }
 
+/* ── Ch 5 full-width body text ── */
+#ch5 .chapter-body {
+  max-width: 100%;
+}
+
+/* ── Video Grid (Ch 5) ── */
+.rds-video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.rds-video-card {
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.rds-video-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Library Images (Ch 6) ── */
+.rds-library-images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.rds-library-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.rds-library-images .img-card img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
 /* ── Learning Quote ── */
 .rds-learning-section {
   text-align: center;
@@ -761,6 +819,18 @@
   }
 
   .rds-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rds-video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rds-video-card {
+    max-height: 320px;
+  }
+
+  .rds-library-row-2col {
     grid-template-columns: 1fr;
   }
 
