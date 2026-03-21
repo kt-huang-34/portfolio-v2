@@ -89,10 +89,7 @@ export function GxsRdsPage() {
               3 banks. 3 siloed systems.<br /><em>No one talking to each other.</em>
             </h2>
             <p className="chapter-body">
-              GXS (Singapore), GXB (Malaysia), and Superbank (Indonesia) each inherited the same foundation from GXS Cream &mdash; but diverged independently over time. New components lived in local project files. Tokens were replaced with raw hex codes. The three teams had never coordinated a single design decision together.
-            </p>
-            <p className="chapter-body" style={{ marginTop: 'var(--space-4)' }}>
-              The result: duplicated work, inconsistent product experiences, and engineers building the same component three times over in three different countries.
+              All three banks inherited the same foundation but diverged independently &mdash; tokens replaced with raw hex, components duplicated in local files, and zero cross-bank coordination. <em className="chapter-highlight">The result: the same component built three times in three countries.</em> When we ran a self-evaluation survey across all three design teams, the data made it concrete.
             </p>
           </div>
           <div>
@@ -103,18 +100,9 @@ export function GxsRdsPage() {
           </div>
         </div>
 
-        <p className="chapter-body" style={{ marginTop: 'var(--space-12)' }}>
-          When we ran a self-evaluation survey across all three design teams, the data made it concrete:
-        </p>
-
-        <div className="img-card" style={{ marginTop: 'var(--space-6)' }}>
-          <img src="/images/rds-problem-02.png" alt="Self-evaluation survey — current state scores across GXS Bank, GX Bank and Super Bank" />
-          <div className="cap">Self-evaluation survey results across all 3 banks &mdash; scale from 1&ndash;5</div>
-        </div>
-
-        <div className="img-card" style={{ marginTop: 'var(--space-6)' }}>
-          <img src="/images/rds-problem-03.png" alt="Top pain points — inconsistent design patterns, components in local files, internal workflow gaps" />
-          <div className="cap">Top 1 pain point from each bank &mdash; hope to solve immediately</div>
+        <div className="img-card" style={{ marginTop: 'var(--space-8)' }}>
+          <img src="/images/rds-problem-01-2.png" alt="Different design system files managed by different design teams across the 3 banks" />
+          <div className="cap">Different design system files, and managed by different design team</div>
         </div>
       </section>
 
@@ -127,28 +115,13 @@ export function GxsRdsPage() {
         <h2 className="chapter-title">
           Build one regional source of truth &mdash;<br /><em>without halting 3 live products</em>
         </h2>
-        <p className="chapter-body">
-          The goal was not to replace three design systems overnight. It was to create a shared Regional Design System (RDS) that all three banks could contribute to and consume from &mdash; while their local systems continued running in parallel during the transition.
-        </p>
-        <p className="chapter-body" style={{ marginTop: 'var(--space-4)' }}>
-          Three DS goals were aligned in workshops with designers from all three banks:
-        </p>
 
-        <div className="rds-principle-grid">
-          <div className="rds-principle-card">
-            <span className="rds-principle-icon">&#128227;</span>
-            <div className="rds-principle-title">Communication</div>
-            <p>A shared language and process so teams stop working in isolation and start making decisions together.</p>
+        <div className="img-row rds-goal-images" style={{ marginTop: 'var(--space-8)' }}>
+          <div className="img-card-light">
+            <img src="/images/rds-future.png" alt="RDS future architecture" />
           </div>
-          <div className="rds-principle-card green">
-            <span className="rds-principle-icon">&#9889;</span>
-            <div className="rds-principle-title">Optimized Workflow</div>
-            <p>Methodical contribution model and governance &mdash; no more duplicated components or lost context.</p>
-          </div>
-          <div className="rds-principle-card light-accent">
-            <span className="rds-principle-icon">&#128640;</span>
-            <div className="rds-principle-title">Faster Onboarding</div>
-            <p>New team members across SG, MY and ID can get up to speed without tribal knowledge.</p>
+          <div className="img-card-light">
+            <img src="/images/rds-flow.png" alt="RDS contribution and governance flow" />
           </div>
         </div>
       </section>
@@ -168,37 +141,34 @@ export function GxsRdsPage() {
 
         <div className="rds-timeline">
           <div className="rds-tl-item">
-            <div className="rds-tl-dot">&#127793;</div>
+            <div className="rds-tl-dot">&#128483;</div>
             <div className="rds-tl-content">
-              <div className="rds-tl-date">Principles &amp; vision</div>
-              <div className="rds-tl-title">Defined the DS principles with all 3 banks</div>
-              <p>Facilitated principle workshops in FigJam. Co-created Consistency, Flexibility and Quality as the 3 core RDS principles &mdash; voted on by designers from GXS, GXB and SB.</p>
-            </div>
-          </div>
-          <div className="rds-tl-item">
-            <div className="rds-tl-dot">&#128203;</div>
-            <div className="rds-tl-content">
-              <div className="rds-tl-date">Governance design</div>
-              <div className="rds-tl-title">Designed the 3-stage contribution workflow</div>
-              <p>Review &amp; Evaluate &rarr; Propose to RDS Team &rarr; Approved or Rejected. Defined criteria, documentation standards and the bi-weekly dev review cadence.</p>
-            </div>
-          </div>
-          <div className="rds-tl-item">
-            <div className="rds-tl-dot">&#128270;</div>
-            <div className="rds-tl-content">
-              <div className="rds-tl-date">Component audit</div>
-              <div className="rds-tl-title">Led the component naming reconciliation</div>
-              <p>Audited 8 component categories across all 3 local systems and mapped them to a unified regional naming convention. Resolved conflicts between local names like &ldquo;App bar&rdquo; vs &ldquo;Header&rdquo; and &ldquo;Chip&rdquo; vs &ldquo;Selection&rdquo;.</p>
+              <div className="rds-tl-date">Stakeholder &amp; Resource Negotiation</div>
+              <div className="rds-tl-title">Secured engineering resources and aligned cross-country teams</div>
+              <p>Led conversations with the Engineering Manager to request dedicated resources. Ran multiple workshops to align each country team&rsquo;s design direction and gather feedback on the regional strategy.</p>
             </div>
           </div>
           <div className="rds-tl-item">
             <div className="rds-tl-dot">&#129309;</div>
             <div className="rds-tl-content">
-              <div className="rds-tl-date">Engineering alignment</div>
-              <div className="rds-tl-title">Weekly syncs with Engineering Manager (Prateek)</div>
-              <p>6 months of weekly collaboration to align design timelines with engineering capacity, negotiate scope, manage the Q3 delivery pressure from stakeholders, and secure buy-in for the Hybrid Mode rollout plan.</p>
+              <div className="rds-tl-date">Building the Cross-Country Team</div>
+              <div className="rds-tl-title">Convinced 7 designers and 3 engineers to join the mission</div>
+              <p>Successfully brought together 7 designers &mdash; 2 from Singapore, 3 from Malaysia, and 2 from Indonesia &mdash; representing each country team. Also secured 3 engineering resources: 1 engineering manager to coordinate and 2 IC engineers to build.</p>
             </div>
           </div>
+          <div className="rds-tl-item">
+            <div className="rds-tl-dot">&#127919;</div>
+            <div className="rds-tl-content">
+              <div className="rds-tl-date">Wearing Multiple Hats: PM + Design Lead</div>
+              <div className="rds-tl-title">Played the dual role of PM and Design Lead</div>
+              <p>Communicated the vision and assigned different workstreams to different teams. Tracked progress across design and engineering, and reported status to the broader audience of stakeholders and leadership.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="img-card" style={{ marginTop: 'var(--space-8)' }}>
+          <img src="/images/rds-manage.png" alt="Team structure — 7 designers across SG, MY, IN and 3 engineers coordinating on the Regional Design System" />
+          <div className="cap">Cross-country team: 7 designers and 3 engineers working together on the Regional Design System.</div>
         </div>
       </section>
 
@@ -220,9 +190,15 @@ export function GxsRdsPage() {
             <p>
               Before touching a single component, we needed agreement on what the system was <em>for</em>. I ran principle workshops with designers from all 3 banks in January 2024 &mdash; using FigJam for live voting and mind-mapping. Over 100 votes were cast. The output: 3 agreed principles and a shared understanding of what the DS should enable for designers vs. what the system itself should do.
             </p>
-            <div className="img-card-light" style={{ marginTop: 'var(--space-8)' }}>
-              <ImgPlaceholder label="FigJam workshop — principle voting across GXS, GXB and SB teams" />
-              <div className="cap">Principle workshop across all 3 banks using FigJam for live voting and mind-mapping.</div>
+            <div className="img-row" style={{ marginTop: 'var(--space-8)' }}>
+              <div className="img-card-light">
+                <img src="/images/rds-component-alignment.png" alt="Component alignment across GXS, GXB and SB design systems" />
+                <div className="cap">Component alignment across all 3 banks.</div>
+              </div>
+              <div className="img-card-light">
+                <img src="/images/rds-several-workshop.png" alt="Multiple workshops conducted with designers from all 3 banks" />
+                <div className="cap">Workshops with designers from all 3 banks using FigJam for live voting and mind-mapping.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -231,36 +207,50 @@ export function GxsRdsPage() {
         <div className="rds-process-step">
           <div className="rds-step-num">2</div>
           <div className="rds-step-body">
-            <h3>Defining the 3-stage governance workflow</h3>
+            <h3>Running the component naming audit</h3>
             <p>
-              Without governance, a shared system becomes a free-for-all. We designed a structured process so every component request &mdash; whether an iteration, a new variation, or a brand new component &mdash; goes through the same review loop.
+              8 component categories were audited across all 3 local systems. Each category was mapped from its local naming convention to an agreed regional standard &mdash; resolving conflicts and surfacing gaps.
             </p>
-            <div className="rds-stage-grid">
-              <div className="rds-stage-card">
-                <div className="rds-stage-head">
-                  <span className="rds-stage-num">Stage 01</span>
-                  Review &amp; Evaluate
-                </div>
-                <div className="rds-stage-body">
-                  <p>Find the closest component. If it doesn&rsquo;t fit: document use case, risk level, all possible solutions. Share with RDS team.</p>
-                </div>
+            <div className="rds-audit-row">
+              <div className="img-card-light">
+                <img src="/images/rds-checklist.png" alt="Component naming audit checklist across all 3 banks" />
               </div>
-              <div className="rds-stage-card">
-                <div className="rds-stage-head stage-2">
-                  <span className="rds-stage-num">Stage 02</span>
-                  Propose to RDS Team
+              <div className="rds-audit-grid">
+                <div className="rds-audit-item">
+                  <div className="rds-audit-cat">Foundation <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
+                  <div className="rds-audit-from">Colour &middot; Typography &middot; Icons &middot; Space &middot; Divider</div>
+                  <div className="rds-audit-arrow">&darr;</div>
+                  <div className="rds-audit-to">Colour &middot; Typography &middot; Iconography &middot; Spacing &middot; Grids &middot; Shadows</div>
                 </div>
-                <div className="rds-stage-body">
-                  <p>1 representative per bank. Evaluate on scalability, accessibility, impact/effort, and precedence/redundancy.</p>
+                <div className="rds-audit-item">
+                  <div className="rds-audit-cat">Navigation <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
+                  <div className="rds-audit-from">Tab &middot; App bar &middot; Navigation</div>
+                  <div className="rds-audit-arrow">&darr;</div>
+                  <div className="rds-audit-to">Tabs &middot; Header</div>
                 </div>
-              </div>
-              <div className="rds-stage-card">
-                <div className="rds-stage-head stage-3">
-                  <span className="rds-stage-num">Stage 03</span>
-                  Approved or Rejected
+                <div className="rds-audit-item">
+                  <div className="rds-audit-cat">Forms &amp; Controls <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
+                  <div className="rds-audit-from">Chip &middot; Selection &middot; Audio Button &middot; Check box</div>
+                  <div className="rds-audit-arrow">&darr;</div>
+                  <div className="rds-audit-to">Chip &middot; Selection &middot; Check box &middot; Toggle &middot; Drop down</div>
                 </div>
-                <div className="rds-stage-body">
-                  <p>&#10003; Approved: create Figma branch, document, join bi-weekly dev review. &#10007; Rejected: alternative provided &mdash; revisit Stage 01.</p>
+                <div className="rds-audit-item review">
+                  <div className="rds-audit-cat">Structure <span className="rds-audit-status rds-status-review">&#9888; In Review</span></div>
+                  <div className="rds-audit-from">Banner &middot; Lists &middot; Card Symbol &middot; Full Screen Dialog</div>
+                  <div className="rds-audit-arrow">&darr;</div>
+                  <div className="rds-audit-to">Banner &middot; Lists &middot; Card &middot; Full Screen Dialog</div>
+                </div>
+                <div className="rds-audit-item">
+                  <div className="rds-audit-cat">Buttons &amp; Links <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
+                  <div className="rds-audit-from">Toolbar &middot; FAB &middot; Icon Buttons &middot; Bottom Sheet</div>
+                  <div className="rds-audit-arrow">&darr;</div>
+                  <div className="rds-audit-to">Toolbar &middot; Icon Buttons &middot; Bottom Sheet</div>
+                </div>
+                <div className="rds-audit-item">
+                  <div className="rds-audit-cat">Overlays <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
+                  <div className="rds-audit-from">Loading &middot; Progress bar &middot; Bottom sheet &middot; Breadcrumb</div>
+                  <div className="rds-audit-arrow">&darr;</div>
+                  <div className="rds-audit-to">Loading &middot; Progress &middot; Empty State &middot; Bottom sheet</div>
                 </div>
               </div>
             </div>
@@ -270,55 +260,6 @@ export function GxsRdsPage() {
         {/* Step 3 */}
         <div className="rds-process-step">
           <div className="rds-step-num">3</div>
-          <div className="rds-step-body">
-            <h3>Running the component naming audit</h3>
-            <p>
-              8 component categories were audited across all 3 local systems. Each category was mapped from its local naming convention to an agreed regional standard &mdash; resolving conflicts and surfacing gaps.
-            </p>
-            <div className="rds-audit-grid">
-              <div className="rds-audit-item">
-                <div className="rds-audit-cat">Foundation <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
-                <div className="rds-audit-from">Colour &middot; Typography &middot; Icons &middot; Space &middot; Divider</div>
-                <div className="rds-audit-arrow">&darr;</div>
-                <div className="rds-audit-to">Colour &middot; Typography &middot; Iconography &middot; Spacing &middot; Grids &middot; Shadows</div>
-              </div>
-              <div className="rds-audit-item">
-                <div className="rds-audit-cat">Navigation <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
-                <div className="rds-audit-from">Tab &middot; App bar &middot; Navigation</div>
-                <div className="rds-audit-arrow">&darr;</div>
-                <div className="rds-audit-to">Tabs &middot; Header</div>
-              </div>
-              <div className="rds-audit-item">
-                <div className="rds-audit-cat">Forms &amp; Controls <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
-                <div className="rds-audit-from">Chip &middot; Selection &middot; Audio Button &middot; Check box</div>
-                <div className="rds-audit-arrow">&darr;</div>
-                <div className="rds-audit-to">Chip &middot; Selection &middot; Check box &middot; Toggle &middot; Drop down</div>
-              </div>
-              <div className="rds-audit-item review">
-                <div className="rds-audit-cat">Structure <span className="rds-audit-status rds-status-review">&#9888; In Review</span></div>
-                <div className="rds-audit-from">Banner &middot; Lists &middot; Card Symbol &middot; Full Screen Dialog</div>
-                <div className="rds-audit-arrow">&darr;</div>
-                <div className="rds-audit-to">Banner &middot; Lists &middot; Card &middot; Full Screen Dialog</div>
-              </div>
-              <div className="rds-audit-item">
-                <div className="rds-audit-cat">Buttons &amp; Links <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
-                <div className="rds-audit-from">Toolbar &middot; FAB &middot; Icon Buttons &middot; Bottom Sheet</div>
-                <div className="rds-audit-arrow">&darr;</div>
-                <div className="rds-audit-to">Toolbar &middot; Icon Buttons &middot; Bottom Sheet</div>
-              </div>
-              <div className="rds-audit-item">
-                <div className="rds-audit-cat">Overlays <span className="rds-audit-status rds-status-done">&#10003; Aligned</span></div>
-                <div className="rds-audit-from">Loading &middot; Progress bar &middot; Bottom sheet &middot; Breadcrumb</div>
-                <div className="rds-audit-arrow">&darr;</div>
-                <div className="rds-audit-to">Loading &middot; Progress &middot; Empty State &middot; Bottom sheet</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Step 4 */}
-        <div className="rds-process-step">
-          <div className="rds-step-num">4</div>
           <div className="rds-step-body">
             <h3>Getting engineering buy-in &mdash; MSME as the pilot</h3>
             <p>

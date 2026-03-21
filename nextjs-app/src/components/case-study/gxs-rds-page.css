@@ -9,18 +9,40 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
-  align-items: center;
+  align-items: stretch;
 }
 
 .gxs-hero-video {
-  aspect-ratio: 9 / 16;
-  align-self: center;
+  align-self: stretch;
 }
 
 .gxs-hero-video iframe {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* ── Goal Images (prevent upscaling blur) ── */
+.rds-goal-images .img-card-light img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ── Stat Strip (3-column override) ── */
+.gxs-hero + .stat-strip {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.img-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.chapter-highlight {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--coral-light);
 }
 
 .gxs-hero-eyebrow {
@@ -475,12 +497,23 @@
   color: var(--warm-gray);
 }
 
-/* ── Audit Grid (Ch 4, Step 3) ── */
+/* ── Audit Row + Grid (Ch 4, Step 2) ── */
+.rds-audit-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+  align-items: start;
+}
+
+.rds-audit-row .img-card-light {
+  align-self: start;
+}
+
 .rds-audit-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
-  margin-top: var(--space-6);
 }
 
 .rds-audit-item {
@@ -715,6 +748,10 @@
     grid-template-columns: 1fr;
   }
 
+  .rds-audit-row {
+    grid-template-columns: 1fr;
+  }
+
   .rds-audit-grid {
     grid-template-columns: 1fr;
   }
@@ -730,6 +767,20 @@
   .rds-process-step {
     flex-direction: column;
     gap: var(--space-4);
+  }
+
+  .gxs-hero-video {
+    aspect-ratio: 9 / 16;
+    max-height: 480px;
+    margin-inline: auto;
+  }
+
+  .img-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-strip {
+    grid-template-columns: 1fr;
   }
 
   .rds-learning-section {
