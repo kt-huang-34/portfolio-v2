@@ -38,41 +38,28 @@ export function VikiShowPage() {
               <div className="val">Web · iOS · Android</div>
             </div>
             <div className="viki-hero-meta-item">
-              <div className="label">Team</div>
-              <div className="val">4 Designers · 3 PMs · Engineering</div>
-            </div>
-            <div className="viki-hero-meta-item">
               <div className="label">Markets</div>
               <div className="val">Global · 190+ countries</div>
             </div>
-          </div>
-          <div className="viki-hero-tags">
-            <span className="viki-hero-tag">UX Strategy</span>
-            <span className="viki-hero-tag">User Research</span>
-            <span className="viki-hero-tag">IA</span>
-            <span className="viki-hero-tag">Design Systems</span>
-            <span className="viki-hero-tag">A/B Testing</span>
+            <div className="viki-hero-meta-item viki-hero-meta-tags">
+              <div className="label">Methods</div>
+              <div className="viki-hero-tags">
+                <span className="viki-hero-tag">UX Strategy</span>
+                <span className="viki-hero-tag">User Research</span>
+                <span className="viki-hero-tag">IA</span>
+                <span className="viki-hero-tag">Design Systems</span>
+                <span className="viki-hero-tag">A/B Testing</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div>
-          <div className="viki-hero-stat-block">
-            <div className="viki-hero-stat-num">57<span>%</span></div>
-            <div className="viki-hero-stat-label">
-              of users were <strong>dropping off</strong> the show page without pressing play.<br />
-              This project set out to fix that.
-            </div>
-          </div>
-          <div className="viki-hero-stat-row">
-            <div className="viki-hero-stat-sm">
-              <div className="num">79<span>%</span></div>
-              <div className="lbl">of new users land on the show page as their first touchpoint</div>
-            </div>
-            <div className="viki-hero-stat-sm">
-              <div className="num">+30<span>%</span></div>
-              <div className="lbl">user engagement increase after redesign</div>
-            </div>
-          </div>
+        <div className="viki-hero-image-wrap">
+          <img
+            src="/images/viki-hero.png"
+            alt="Viki Show Page Redesign"
+            className="viki-hero-image"
+          />
         </div>
       </section>
 
@@ -107,20 +94,18 @@ export function VikiShowPage() {
             <div className="chapter-num">Chapter 01</div>
             <div className="eyebrow">The Problem</div>
             <h2 className="chapter-title">
-              The most important<br />page was <em>failing</em>
+              57% left<br /><em>without watching</em>
             </h2>
-            <div className="pull-quote">
-              &ldquo;79% of new users landed here first. 57% left without watching. We were losing them at the moment of decision.&rdquo;
-            </div>
             <p className="chapter-body">
-              Viki&rsquo;s show page was the highest-traffic entry point across the entire product — users arriving from Google searches, TikTok clips, YouTube trailers, and Facebook groups. But the data told a brutal story: more than half of them were gone before pressing play.
-              <br /><br />
-              The page wasn&rsquo;t built around how users actually decided to watch. Critical information — episode count, rating, cast, synopsis — was buried, fragmented, or missing entirely above the fold.
+              79% of new users landed on the show page first. More than half left before pressing play. The key decision info &mdash; rating, cast, synopsis, episode count &mdash; was buried or missing above the fold.
             </p>
           </div>
           <div>
             <div className="img-card">
-              <ImgPlaceholder label="Analytics — Traffic sources & drop-off data" />
+              <img
+                src="/images/data_research.png"
+                alt="Analytics — Traffic sources & drop-off data"
+              />
               <div className="cap">79% of new users landed on the show page first. 57% AVOD non-log-in vs 43% SVOD. Sources: SEO, TikTok, YouTube, Facebook.</div>
             </div>
           </div>
@@ -134,29 +119,42 @@ export function VikiShowPage() {
         <div className="chapter-num">Chapter 02</div>
         <div className="eyebrow">Research</div>
         <h2 className="chapter-title">
-          Who we were<br /><em>designing for</em>
+          What users check<br /><em>before pressing play</em>
         </h2>
         <p className="chapter-body">
-          Before touching a single wireframe, we needed to understand our users deeply. We mapped our audience across two axes — familiarity with Asian content and regularity on Viki — revealing three distinct archetypes that shaped every design decision.
+          We mapped user behaviour across three segments and found each follows a distinct decision sequence before pressing play.
         </p>
 
-        <div className="img-card-light" style={{ marginTop: 'var(--space-10)' }}>
-          <ImgPlaceholder label="User segment matrix — Explorer / Enthusiast / Expert" />
-          <div className="cap">Three user archetypes mapped across content familiarity and platform regularity.</div>
+        <div className="ch2-persona-images" style={{ marginTop: 'var(--space-10)' }}>
+          <div className="img-card-light">
+            <img
+              src="/images/Target-persona.png"
+              alt="User segment matrix — Explorer / Enthusiast / Expert"
+            />
+          </div>
+          <div className="img-card-light">
+            <img
+              src="/images/data-persona.png"
+              alt="Data persona research"
+            />
+          </div>
         </div>
 
         <div className="persona-grid">
           <div className="persona-card">
-            <div className="persona-name">Christina L.</div>
-            <div className="persona-type">Non-subscriber · Explorer</div>
-            <div className="persona-detail">College student. Uses Google to find shows. Her journey: check episode count → check rating → play.</div>
-            <div className="persona-detail">Expects Netflix-level simplicity. Needs to be convinced quickly.</div>
+            <div className="persona-type">The Explorer</div>
+            <div className="persona-name">Episode count &rarr; rating &rarr; play</div>
+            <div className="persona-detail">New to Viki. Expects Netflix-level simplicity.</div>
           </div>
           <div className="persona-card">
-            <div className="persona-name">Chris H.</div>
-            <div className="persona-type">Viki Pass Subscriber · Enthusiast</div>
-            <div className="persona-detail">Needs genre and synopsis to feel convinced. Same destination, completely different journey.</div>
-            <div className="persona-detail">Already trusts Viki but wants richer content information before committing time.</div>
+            <div className="persona-type">The Enthusiast</div>
+            <div className="persona-name">Genre &rarr; synopsis &rarr; play</div>
+            <div className="persona-detail">Familiar with Asian content. Still comparing to Netflix.</div>
+          </div>
+          <div className="persona-card">
+            <div className="persona-type">The Expert</div>
+            <div className="persona-name">Cast &rarr; reviews &rarr; play</div>
+            <div className="persona-detail">Regular SVOD user. Most loyal, most underserved.</div>
           </div>
         </div>
       </section>
@@ -170,21 +168,24 @@ export function VikiShowPage() {
             <div className="chapter-num">Chapter 03</div>
             <div className="eyebrow">Key Insight</div>
             <h2 className="chapter-title">
-              New users don&rsquo;t<br /><em>trust Viki yet</em>
+              Same four elements,<br /><em>every pattern</em>
             </h2>
-            <div className="pull-quote">
-              &ldquo;New users rely on 3rd-party sites for show info before coming to Viki to watch. The show page has to close that gap.&rdquo;
-            </div>
             <p className="chapter-body">
-              Mapping the journeys of new vs existing users revealed the most important design insight of the entire project. New users arrive from a viral clip or a friend&rsquo;s recommendation — but they still go to Google, IMDb, or other streaming services to gather more information before committing.
-              <br /><br />
-              Our show page needed to be so complete, so trustworthy, that users never had a reason to leave and look elsewhere.
+              Different sequences, same destination. The same four elements appeared in every decision path. The show page had to surface all of them immediately &mdash; not behind tabs, not below the fold.
             </p>
+            <div className="ch3-highlights">
+              <div className="ch3-highlight-item">⭐ Rating</div>
+              <div className="ch3-highlight-item">📖 Synopsis</div>
+              <div className="ch3-highlight-item">🎭 Cast</div>
+              <div className="ch3-highlight-item">💬 Reviews</div>
+            </div>
           </div>
           <div>
             <div className="img-card">
-              <ImgPlaceholder label="User journey map — New vs Existing Viki users" />
-              <div className="cap">New users route through 3rd-party sites before arriving at Viki. The show page must intercept this behaviour.</div>
+              <img
+                src="/images/rating-synopsis-reviews-image.png"
+                alt="The four key decision elements — rating, synopsis, cast, reviews"
+              />
             </div>
           </div>
         </div>
@@ -209,7 +210,10 @@ export function VikiShowPage() {
           </div>
           <div>
             <div className="img-card-light">
-              <ImgPlaceholder label="Workshop FigJam board" />
+              <img
+                src="/images/workshop.png"
+                alt="Workshop FigJam board"
+              />
               <div className="cap">Cross-functional workshop mapping Content Discovery, Manage Contents, and Watching touchpoints against research findings.</div>
             </div>
           </div>

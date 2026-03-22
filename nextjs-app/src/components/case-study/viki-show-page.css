@@ -7,9 +7,9 @@
   background: var(--dark-navy);
   padding: calc(var(--space-section) + var(--space-16)) var(--page-gutter) var(--space-section);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   gap: var(--space-16);
-  align-items: start;
+  align-items: stretch;
 }
 
 .viki-hero-eyebrow {
@@ -61,6 +61,10 @@
   line-height: var(--leading-normal);
 }
 
+.viki-hero-meta-tags {
+  grid-column: 1 / -1;
+}
+
 .viki-hero-tags {
   display: flex;
   flex-wrap: wrap;
@@ -79,70 +83,17 @@
   padding: 3px 9px;
 }
 
-/* ── Hero Stats ── */
-.viki-hero-stat-block {
-  background: rgba(255, 255, 255, 0.04);
-  border: var(--border-width-sub) solid rgba(255, 255, 255, 0.1);
+/* ── Hero Image ── */
+.viki-hero-image-wrap {
   border-radius: var(--radius-lg);
-  padding: var(--space-8);
-  margin-bottom: var(--space-4);
+  overflow: hidden;
 }
 
-.viki-hero-stat-num {
-  font-family: var(--font-serif);
-  font-size: clamp(48px, 5vw, 56px);
-  font-weight: 400;
-  color: var(--white);
-  line-height: 1;
-}
-
-.viki-hero-stat-num span {
-  font-size: clamp(20px, 2vw, 24px);
-  color: var(--coral-light);
-}
-
-.viki-hero-stat-label {
-  font-family: var(--font-sans);
-  font-size: var(--btn-font-size);
-  color: rgba(242, 232, 220, 0.45);
-  margin-top: var(--space-2);
-  line-height: 1.5;
-}
-
-.viki-hero-stat-label strong {
-  color: var(--white);
-}
-
-.viki-hero-stat-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-}
-
-.viki-hero-stat-sm {
-  background: rgba(255, 255, 255, 0.04);
-  border: var(--border-width-sub) solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-}
-
-.viki-hero-stat-sm .num {
-  font-family: var(--font-serif);
-  font-size: clamp(28px, 3vw, 32px);
-  color: var(--white);
-}
-
-.viki-hero-stat-sm .num span {
-  font-size: var(--text-base);
-  color: var(--coral-light);
-}
-
-.viki-hero-stat-sm .lbl {
-  font-family: var(--font-sans);
-  font-size: var(--label-size);
-  color: rgba(242, 232, 220, 0.4);
-  margin-top: var(--space-1);
-  line-height: 1.4;
+.viki-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── Tab Grid (Chapter 5) ── */
@@ -221,10 +172,17 @@
   line-height: 1.4;
 }
 
+/* ── Ch2 Persona Images ── */
+.ch2-persona-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
 /* ── Persona Cards ── */
 .persona-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
   margin-top: var(--space-8);
 }
@@ -233,14 +191,7 @@
   background: var(--white);
   border: var(--border-width-sub) solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: var(--space-6);
-}
-
-.persona-card .persona-name {
-  font-family: var(--font-serif);
-  font-size: var(--text-2xl);
-  color: var(--near-black);
-  margin-bottom: var(--space-1);
+  padding: var(--space-8);
 }
 
 .persona-card .persona-type {
@@ -250,15 +201,48 @@
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--coral);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.persona-card .persona-name {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--near-black);
+  margin-bottom: var(--space-3);
 }
 
 .persona-card .persona-detail {
   font-family: var(--font-sans);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--warm-gray);
   line-height: var(--leading-normal);
-  margin-bottom: var(--space-2);
+}
+
+/* ── Ch3 Highlights ── */
+.ch3-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.ch3-highlight-item {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: #fff;
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255, 255, 255, 0.06);
+  border: var(--border-width-sub) solid var(--border-dark);
+  border-radius: var(--radius-md);
+}
+
+/* ── Ch3 Images ── */
+.ch3-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
 }
 
 /* ── Insight Cards ── */
@@ -362,7 +346,15 @@
     gap: var(--space-3);
   }
 
+  .ch2-persona-images {
+    grid-template-columns: 1fr;
+  }
+
   .persona-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ch3-images {
     grid-template-columns: 1fr;
   }
 
