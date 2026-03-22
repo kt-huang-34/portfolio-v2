@@ -86,6 +86,22 @@ export function VikiShowPage() {
       </div>
 
       {/* ══════════════════════════════════════════════════════════
+          BEFORE / AFTER
+      ══════════════════════════════════════════════════════════ */}
+      <section className="chapter reveal" id="before-after">
+        <div className="section-label">Before &amp; After</div>
+        <h2 className="chapter-title">
+          The design <em>transformation</em>
+        </h2>
+        <div className="img-card">
+          <img
+            src="/images/viki-before-after.png"
+            alt="Viki show page — before and after redesign"
+          />
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
           CH 1 — THE CRISIS IN DATA
       ══════════════════════════════════════════════════════════ */}
       <section className="chapter dark reveal" id="ch1">
@@ -231,47 +247,48 @@ export function VikiShowPage() {
             <h2 className="chapter-title">
               All the critical info<br /><em>in one glance</em>
             </h2>
-            <div className="pull-quote">
-              &ldquo;Everything a user needs to decide to watch must sit above the fold — visible in the first 3 seconds. Not behind a tab. Not requiring a scroll. Right there.&rdquo;
-            </div>
             <p className="chapter-body">
-              The single most consequential design decision of the project: everything a user needs to decide to watch must sit above the fold. This became the principle that governed every layout decision across web, iOS, and Android.
+              Key finding: everything a user needs to decide to watch must be <strong>above the fold — visible in the first 3 seconds</strong>. This single principle governed every layout decision across web, iOS, and Android.
             </p>
           </div>
           <div>
             <div className="img-card">
-              <ImgPlaceholder label="Main info wireframe — above-the-fold IA" />
+              <img
+                src="/images/viki-element-in-1-glance.png"
+                alt="Main info wireframe — above-the-fold IA"
+              />
               <div className="cap">Rating, Cast, Synopsis, Genre, Play — all visible in the first glance.</div>
             </div>
           </div>
         </div>
 
         <p className="chapter-body" style={{ marginTop: 'var(--space-10)', marginBottom: 'var(--space-8)' }}>
-          Beyond the above-fold principle, we restructured the tab navigation from a confusing mix into four clearly owned zones — each with an explicit team accountable for its content.
+          We restructured tabs into <strong>four clearly owned zones</strong> — each with a team accountable for its content.
         </p>
 
         <div className="tab-grid">
           <div className="tab-grid-item">
-            <div className="tab-name">About</div>
+            <div className="tab-name">📖 About</div>
             <div className="tab-content">Trailers, Clips, Synopsis, Cast, News</div>
             <div className="tab-owner">Content Ops Team</div>
           </div>
           <div className="tab-grid-item">
-            <div className="tab-name">Episodes</div>
+            <div className="tab-name">🎬 Episodes</div>
             <div className="tab-content">No. of episodes, Find episodes</div>
             <div className="tab-owner">Content Ops Team</div>
           </div>
           <div className="tab-grid-item">
-            <div className="tab-name">Subtitle Team</div>
+            <div className="tab-name">💬 Subtitle Team</div>
             <div className="tab-content">Community appreciation, Join</div>
             <div className="tab-owner">Subtitle Community Team</div>
           </div>
           <div className="tab-grid-item">
-            <div className="tab-name">Reviews</div>
+            <div className="tab-name">⭐ Reviews</div>
             <div className="tab-content">Ratings, Reviews, Comments</div>
             <div className="tab-owner">Viewer Community Team</div>
           </div>
         </div>
+
       </section>
 
       {/* ══════════════════════════════════════════════════════════
@@ -293,9 +310,26 @@ export function VikiShowPage() {
           </div>
           <div>
             <div className="img-card">
-              <ImgPlaceholder label="Design system — Typography scale, color tokens, component states" />
-              <div className="cap">Noto Sans typeface, #0C9BFF primary blue, 7-level type scale, documented component states across dark mode.</div>
+              <img
+                src="/images/viki-design-system-01.png"
+                alt="Design system — Typography scale and color tokens"
+              />
             </div>
+          </div>
+        </div>
+
+        <div className="two-col" style={{ marginTop: 'var(--space-8)' }}>
+          <div className="img-card">
+            <img
+              src="/images/viki-design-system-02.png"
+              alt="Design system — Component patterns"
+            />
+          </div>
+          <div className="img-card">
+            <img
+              src="/images/viki-design-system-03.png"
+              alt="Design system — Interaction states"
+            />
           </div>
         </div>
       </section>

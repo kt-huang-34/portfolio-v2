@@ -887,6 +887,39 @@ footer {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.chapter-body strong {
+  font-weight: 600;
+  color: var(--near-black);
+}
+
+.chapter.dark .chapter-body strong,
+.chapter.navy .chapter-body strong {
+  color: var(--cream);
+}
+
+.chapter.coral .chapter-body strong {
+  color: var(--white);
+}
+
+/* ── Chapter Subtitle ── */
+.chapter-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--near-black);
+}
+
+.chapter.dark .chapter-subtitle,
+.chapter.navy .chapter-subtitle {
+  color: var(--white);
+}
+
+.chapter.coral .chapter-subtitle {
+  color: var(--white);
+}
+
 /* ── Pull Quote ── */
 .pull-quote {
   font-family: var(--font-serif);
