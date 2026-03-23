@@ -763,8 +763,16 @@ footer {
   .three-col { grid-template-columns: 1fr; }
   .mobile-trio { grid-template-columns: 1fr; max-width: 280px; margin-inline: auto; }
   .stat-strip { grid-template-columns: 1fr 1fr; }
+  .stat-item { padding: var(--space-4) var(--space-5); }
   .chapter { padding: var(--space-12) var(--space-5); }
   .case-nav { padding: var(--space-12) var(--space-5); flex-direction: column; gap: var(--space-8); }
+
+  /* ── Images overflow prevention ── */
+  .img-card img,
+  .img-card-light img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════

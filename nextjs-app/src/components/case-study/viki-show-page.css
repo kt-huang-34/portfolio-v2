@@ -390,51 +390,6 @@
   color: rgba(255, 255, 255, 0.65);
 }
 
-/* ══════════════════════════════════════════════════════════════
-   RESPONSIVE — Viki-specific
-   ══════════════════════════════════════════════════════════════ */
-@media (max-width: 768px) {
-  .viki-hero {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
-    padding: calc(var(--space-section) + var(--space-8)) var(--space-5) var(--space-12);
-  }
-
-  .viki-hero-meta {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-
-  .tab-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
-  }
-
-  .ch2-persona-images {
-    grid-template-columns: 1fr;
-  }
-
-  .persona-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ch3-images {
-    grid-template-columns: 1fr;
-  }
-
-  .insight-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .results-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .results-platform-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ── Ch 7 — Mobile Final Design ── */
 #ch7 > .two-col {
   grid-template-columns: 3fr 2fr;
@@ -487,8 +442,106 @@
   max-width: 100%;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — Viki-specific
+   ══════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ── Hero ── */
+  .viki-hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    padding: calc(var(--space-section) + var(--space-8)) var(--space-5) var(--space-12);
+  }
+
+  .viki-hero-title {
+    margin-bottom: var(--space-6);
+  }
+
+  .viki-hero-meta {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* ── Tab Grid ── */
+  .tab-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  /* ── Ch2 Persona ── */
+  .ch2-persona-images {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-card {
+    padding: var(--space-6);
+  }
+
+  /* ── Ch3 ── */
+  .ch3-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .ch3-images {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Insight Grid ── */
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Ch7 & Ch9 — Custom two-col ratios ── */
+  #ch7 > .two-col,
+  #ch9 > .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  #ch7 .img-card img,
+  #ch9 .img-card-light img {
+    max-width: 100%;
+  }
+
+  .ch7-interactions {
+    margin-top: var(--space-12);
+  }
+
   .ch7-interaction-trio {
     grid-template-columns: 1fr;
+    gap: var(--space-6);
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  /* ── Results ── */
+  .results-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .results-platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-card {
+    padding: var(--space-6);
+  }
+
+  .metric-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .metric-stat {
+    text-align: left;
+  }
+
+  .metric-score-box {
+    width: 100%;
+    justify-content: center;
   }
 }
