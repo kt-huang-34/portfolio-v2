@@ -2,6 +2,12 @@
    VIKI SHOW PAGE — Case Study Styles
    ══════════════════════════════════════════════════════════════ */
 
+/* ── Page Max Width ── */
+.viki-page > * {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
 /* ── Hero ── */
 .viki-hero {
   background: var(--dark-navy);
@@ -367,6 +373,64 @@
   }
 
   .beat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Ch 7 — Mobile Final Design ── */
+#ch7 > .two-col {
+  grid-template-columns: 3fr 2fr;
+}
+
+/* ── Ch 9 — Reviews Feature ── */
+#ch9 > .two-col {
+  grid-template-columns: 3fr 2fr;
+}
+
+#ch9 .img-card-light img {
+  max-width: 65%;
+  margin: 0 auto;
+  display: block;
+}
+
+#ch7 .img-card img {
+  max-width: 65%;
+  margin: 0 auto;
+  display: block;
+}
+
+.ch7-interactions {
+  margin-top: var(--space-section);
+}
+
+.chapter-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--white);
+  margin-bottom: var(--space-6);
+}
+
+.chapter-subtitle em {
+  font-style: italic;
+  color: var(--viki-blue);
+}
+
+.ch7-interaction-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.ch7-interaction-trio .img-card img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ch7-interaction-trio {
     grid-template-columns: 1fr;
   }
 }

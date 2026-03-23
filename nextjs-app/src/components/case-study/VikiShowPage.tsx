@@ -16,7 +16,7 @@ export function VikiShowPage() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="viki-page">
       {/* ══════════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════════ */}
@@ -338,13 +338,13 @@ export function VikiShowPage() {
           CH 7 — MOBILE FINAL DESIGN
       ══════════════════════════════════════════════════════════ */}
       <section className="chapter navy reveal" id="ch7">
-        <div className="chapter-num">Chapter 07</div>
-        <div className="eyebrow">The Work — Mobile</div>
-        <h2 className="chapter-title">
-          Mobile-first,<br /><em>decision-first</em>
-        </h2>
         <div className="two-col">
           <div>
+            <div className="chapter-num">Chapter 07</div>
+            <div className="eyebrow">The Work — Mobile</div>
+            <h2 className="chapter-title">
+              Mobile-first,<br /><em>decision-first</em>
+            </h2>
             <p className="chapter-body">
               The mobile redesign brought the critical information architecture to life on the primary platform. Rating, episode count, genre, and synopsis sit in immediate view — no scroll required. One large blue play button dominates. The Watchlist, Rate, and Share actions collapse into an icon row below it.
               <br /><br />
@@ -353,21 +353,45 @@ export function VikiShowPage() {
           </div>
           <div>
             <div className="img-card">
-              <ImgPlaceholder label="Mobile reviews page" />
-              <div className="cap">Reviews became a first-class citizen — not an afterthought.</div>
+              <img
+                src="/images/viki-final-design.gif"
+                alt="Viki mobile show page — final design"
+              />
             </div>
           </div>
         </div>
 
-        <div className="mobile-trio">
-          <div className="img-card">
-            <ImgPlaceholder label="Mobile — Show page view 1" />
-          </div>
-          <div className="img-card">
-            <ImgPlaceholder label="Mobile — Show page view 2" />
-          </div>
-          <div className="img-card">
-            <ImgPlaceholder label="Mobile — Show page view 3" />
+        <div className="ch7-interactions">
+          <div className="eyebrow">Detail Interactions</div>
+          <h3 className="chapter-subtitle">
+            Simple actions,<br /><em>bigger engagement</em>
+          </h3>
+          <p className="chapter-body">
+            We kept the core interactions straightforward — add to watchlist, leave a review, read the synopsis. No learning curve, no hidden menus. Each micro-interaction was designed to feel instant and rewarding, driving engagement without adding complexity.
+          </p>
+
+          <div className="ch7-interaction-trio">
+            <div className="img-card">
+              <img
+                src="/images/viki-reviews.gif"
+                alt="Leave a review interaction"
+              />
+              <div className="cap">Leave a review</div>
+            </div>
+            <div className="img-card">
+              <img
+                src="/images/viki-synopsis.gif"
+                alt="Read synopsis interaction"
+              />
+              <div className="cap">Read synopsis</div>
+            </div>
+            <div className="img-card">
+              <img
+                src="/images/viki-add-watchlist.gif"
+                alt="Add to watchlist interaction"
+              />
+              <div className="cap">Add to watchlist</div>
+            </div>
           </div>
         </div>
       </section>
@@ -386,13 +410,27 @@ export function VikiShowPage() {
         </p>
 
         <div className="img-card" style={{ marginBottom: 'var(--space-8)' }}>
-          <ImgPlaceholder label="Desktop — Show page (Destiny of White Snake)" />
+          <img
+            src="/images/viki-web-cinematic.png"
+            alt="Desktop — Cinematic show page"
+          />
           <div className="cap">Full-bleed hero, info consolidated on the left, dominant play CTA. Tabs divide About / Episodes / Subtitle Team / Reviews.</div>
         </div>
 
-        <div className="img-card">
-          <ImgPlaceholder label="Desktop — Show page (Sh**ting Stars)" />
+        <div className="img-card" style={{ marginBottom: 'var(--space-8)' }}>
+          <img
+            src="/images/viki-web-fullpage.gif"
+            alt="Desktop — Full page scroll"
+          />
           <div className="cap">The IA is invisible — which means it&rsquo;s working. Users find what they need without thinking about it.</div>
+        </div>
+
+        <div className="img-card">
+          <img
+            src="/images/viki-web-add-watchlist.gif"
+            alt="Desktop — Add to watchlist interaction"
+          />
+          <div className="cap">Add to watchlist — instant feedback, zero friction.</div>
         </div>
       </section>
 
@@ -415,7 +453,10 @@ export function VikiShowPage() {
           </div>
           <div>
             <div className="img-card-light">
-              <ImgPlaceholder label="Cast, rating, genre exploration + Subtitle team redesign" />
+              <img
+                src="/images/viki-scroll-reviews.gif"
+                alt="Scrolling through reviews on the show page"
+              />
               <div className="cap">Portrait cards, visual genre word cloud, and community volunteer celebration — the differentiator.</div>
             </div>
           </div>
