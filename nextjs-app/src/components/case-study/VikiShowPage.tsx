@@ -476,21 +476,67 @@ export function VikiShowPage() {
           We measured across four dimensions: user satisfaction, active viewer conversion, feature engagement, and business conversion. Every single metric moved in the right direction.
         </p>
 
-        <div className="beat-grid">
-          <div className="beat-card">
-            <div className="beat-label">Conversion</div>
-            <div className="beat-stat">+6<span>%</span></div>
-            <div className="beat-desc">Active viewer conversion — users who land on the show page now actually press play.</div>
+        <div className="results-platform-grid">
+          {/* Web Card */}
+          <div className="platform-card">
+            <div className="platform-header"><span className="platform-emoji">💻</span>&nbsp;&nbsp;WEB</div>
+            <div className="metric-row">
+              <span className="metric-label">Convert active viewer (play video)</span>
+              <span className="metric-stat">↑ 6%</span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">User satisfaction score</span>
+              <div className="metric-score-box">
+                <div className="score-value">
+                  <span className="score-num">4.01</span>
+                  <span className="score-sub">Old page</span>
+                </div>
+                <span className="score-arrow">&rarr;</span>
+                <div className="score-value score-value-new">
+                  <span className="score-num score-num-new">4.25</span>
+                  <span className="score-sub">New page</span>
+                </div>
+              </div>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Subscription page traffic</span>
+              <span className="metric-stat">↑ 140%</span>
+            </div>
+            <div className="metric-row metric-row-last">
+              <span className="metric-label">Key feature adoption</span>
+              <span className="metric-stat">↑ 150%</span>
+            </div>
           </div>
-          <div className="beat-card">
-            <div className="beat-label">Satisfaction</div>
-            <div className="beat-stat">4.01<span>→4.25</span></div>
-            <div className="beat-desc">Web satisfaction. Mobile jumped from 3.90 to 4.43 — a 13.6% improvement.</div>
-          </div>
-          <div className="beat-card">
-            <div className="beat-label">Business Impact</div>
-            <div className="beat-stat">↑140<span>%</span></div>
-            <div className="beat-desc">Subscription page traffic on web. Feature adoption up 150%. Mobile: +39% sub traffic, +38% adoption.</div>
+
+          {/* Mobile Card */}
+          <div className="platform-card">
+            <div className="platform-header"><span className="platform-emoji">📱</span>&nbsp;&nbsp;MOBILE</div>
+            <div className="metric-row">
+              <span className="metric-label">Convert active viewer (play video)</span>
+              <span className="metric-stat">↑ 6%</span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">User satisfaction score</span>
+              <div className="metric-score-box">
+                <div className="score-value">
+                  <span className="score-num">3.90</span>
+                  <span className="score-sub">Old page</span>
+                </div>
+                <span className="score-arrow">&rarr;</span>
+                <div className="score-value score-value-new">
+                  <span className="score-num score-num-new">4.43</span>
+                  <span className="score-sub">New page</span>
+                </div>
+              </div>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Subscription page traffic</span>
+              <span className="metric-stat">↑ 39%</span>
+            </div>
+            <div className="metric-row metric-row-last">
+              <span className="metric-label">Key feature adoption</span>
+              <span className="metric-stat">↑ 38%</span>
+            </div>
           </div>
         </div>
       </section>
