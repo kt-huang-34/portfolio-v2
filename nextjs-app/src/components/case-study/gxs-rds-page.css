@@ -2,6 +2,12 @@
    GXS RDS PAGE — Case Study Styles
    ══════════════════════════════════════════════════════════════ */
 
+/* ── Page Max Width ── */
+.gxs-page > * {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
 /* ── Hero ── */
 .gxs-hero {
   background: var(--dark-navy);

@@ -8,7 +8,7 @@ export function GxsRdsPage() {
   useScrollReveal();
 
   return (
-    <main>
+    <main className="gxs-page">
       {/* ══════════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════════ */}
@@ -125,10 +125,10 @@ export function GxsRdsPage() {
         <div className="chapter-num">Chapter 03</div>
         <div className="eyebrow">My Role</div>
         <h2 className="chapter-title">
-          Lead Designer across<br /><em>3 organisations</em>
+          One designer bridging<br /><em>3 organisations</em>
         </h2>
         <p className="chapter-body">
-          This project was 6+ months of ongoing work. My responsibilities spanned design, facilitation, system architecture, and cross-functional negotiation:
+          As Lead Designer, I owned design, facilitation, system architecture, and cross-functional negotiation across all three banks over 6+ months:
         </p>
 
         <div className="rds-timeline">
@@ -171,14 +171,14 @@ export function GxsRdsPage() {
         <div className="chapter-num">Chapter 04</div>
         <div className="eyebrow">Process</div>
         <h2 className="chapter-title">
-          How we<br /><em>built it</em>
+          Alignment first,<br /><em>then architecture</em>
         </h2>
 
         {/* Step 1 */}
         <div className="rds-process-step">
           <div className="rds-step-num">1</div>
           <div className="rds-step-body">
-            <h3>Aligning on principles through workshops</h3>
+            <h3>Shared principles before shared components</h3>
             <p>
               Before touching a single component, we needed agreement on what the system was <em>for</em>. I ran principle workshops with designers from all 3 banks in January 2024 &mdash; using FigJam for live voting and mind-mapping. Over 100 votes were cast. The output: 3 agreed principles and a shared understanding of what the DS should enable for designers vs. what the system itself should do.
             </p>
@@ -199,7 +199,7 @@ export function GxsRdsPage() {
         <div className="rds-process-step">
           <div className="rds-step-num">2</div>
           <div className="rds-step-body">
-            <h3>Running the component naming audit</h3>
+            <h3>One language for all components</h3>
             <p>
               8 component categories were audited across all 3 local systems. Each category was mapped from its local naming convention to an agreed regional standard &mdash; resolving conflicts and surfacing gaps.
             </p>
@@ -253,7 +253,7 @@ export function GxsRdsPage() {
         <div className="rds-process-step">
           <div className="rds-step-num">3</div>
           <div className="rds-step-body">
-            <h3>Getting engineering buy-in &mdash; MSME as the pilot</h3>
+            <h3>Proving value through a live pilot</h3>
             <p>
               The hardest part wasn&rsquo;t designing the system &mdash; it was convincing engineering leadership it was worth building in parallel with live product work. Over 6 months of weekly syncs with Engineering Manager Prateek, we worked through scope, timelines, and a key tension: stakeholders wanted everything by Q3 2024. Engineering&rsquo;s reality: Grab&rsquo;s equivalent system took 2.5 years.
             </p>
@@ -295,7 +295,7 @@ export function GxsRdsPage() {
         <div className="chapter-num">Chapter 05</div>
         <div className="eyebrow">Outcome</div>
         <h2 className="chapter-title">
-          What we shipped<br />and what changed
+          From 3 fragmented systems<br /><em>to one shared foundation</em>
         </h2>
 
         <div className="rds-impact-grid">
@@ -314,10 +314,10 @@ export function GxsRdsPage() {
         </div>
 
         <p className="chapter-body">
-          The Regional DS Roadmap was locked down and shared with PMs and Tech in March 2024. The MY team has since taken over project leadership &mdash; a positive sign that ownership is distributing across the region. The next component batch (Header, Snackbar, Text field, List) is actively in progress.
+          The Regional DS Roadmap was locked down and shared with PMs and Tech in March 2024. The MY team has since taken over project leadership &mdash; proof that ownership is distributing across the region. The next component batch (Header, Snackbar, Text field, List) is actively in progress.
         </p>
         <p className="chapter-body" style={{ marginTop: 'var(--space-4)' }}>
-          The foundation tokens &mdash; Typography and Color &mdash; have been trialled with all 3 banks. Homepage components are being migrated. The system is live and growing.
+          Foundation tokens &mdash; Typography and Color &mdash; have been trialled with all 3 banks. Homepage components are being migrated. The system is live and growing.
         </p>
 
         <div className="rds-video-grid">
@@ -373,10 +373,10 @@ export function GxsRdsPage() {
 
         <div className="eyebrow" style={{ marginTop: 'var(--space-section)' }}>From System to Screens</div>
         <h3 className="chapter-title">
-          Applying the design system<br /><em>into a central library</em>
+          One library all<br /><em>3 banks pull from</em>
         </h3>
         <p className="chapter-body">
-          With the regional tokens and components locked down, we applied them across real product screens &mdash; unifying brand, typography, iconography, and layout into a single shared Figma library that all three banks pull from. Every component maps back to a governed source of truth.
+          With the regional tokens and components locked down, we applied them across real product screens &mdash; unifying brand, typography, iconography, and layout into a single shared Figma library. Every component maps back to a governed source of truth.
         </p>
 
         <div className="rds-library-images">
