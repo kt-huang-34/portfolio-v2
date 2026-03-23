@@ -298,14 +298,14 @@ export function VikiShowPage() {
         <div className="two-col">
           <div>
             <div className="chapter-num">Chapter 06</div>
-            <div className="eyebrow">Foundation</div>
+            <div className="eyebrow">Design System</div>
             <h2 className="chapter-title">
-              Building the system<br /><em>before the screen</em>
+              Viki&rsquo;s first<br /><em>design system</em>
             </h2>
             <p className="chapter-body">
-              Before redesigning the show page, I led the creation of Viki&rsquo;s first formal design system — standardising typography (Noto Sans, 7-level scale), colour tokens, component patterns, and interaction states across all three platforms.
+              Before any screen redesign, I built the foundation — typography, colour tokens, component patterns, and interaction states standardised across all three platforms.
               <br /><br />
-              This wasn&rsquo;t just a design tool — it became the foundation that let a team of 4 designers move in sync, and gave engineering a clear specification language for every state and variant.
+              This gave 4 designers a shared language and engineering a clear spec for every state and variant.
             </p>
           </div>
           <div>
@@ -341,14 +341,14 @@ export function VikiShowPage() {
         <div className="two-col">
           <div>
             <div className="chapter-num">Chapter 07</div>
-            <div className="eyebrow">The Work — Mobile</div>
+            <div className="eyebrow">Final Design — Mobile</div>
             <h2 className="chapter-title">
-              Mobile-first,<br /><em>decision-first</em>
+              Mobile show page<br /><em>redesigned</em>
             </h2>
             <p className="chapter-body">
-              The mobile redesign brought the critical information architecture to life on the primary platform. Rating, episode count, genre, and synopsis sit in immediate view — no scroll required. One large blue play button dominates. The Watchlist, Rate, and Share actions collapse into an icon row below it.
+              Rating, episode count, genre, and synopsis all visible without scrolling. One dominant play button. Watchlist, Rate, and Share collapsed into an icon row.
               <br /><br />
-              The tabbed navigation sits cleanly at the bottom of the show information block, keeping the experience lightweight and focused.
+              Tabbed navigation keeps everything lightweight and focused.
             </p>
           </div>
           <div>
@@ -364,10 +364,10 @@ export function VikiShowPage() {
         <div className="ch7-interactions">
           <div className="eyebrow">Detail Interactions</div>
           <h3 className="chapter-subtitle">
-            Simple actions,<br /><em>bigger engagement</em>
+            Micro-interactions<br /><em>that drive engagement</em>
           </h3>
           <p className="chapter-body">
-            We kept the core interactions straightforward — add to watchlist, leave a review, read the synopsis. No learning curve, no hidden menus. Each micro-interaction was designed to feel instant and rewarding, driving engagement without adding complexity.
+            Watchlist, reviews, synopsis — each interaction designed to feel instant and rewarding. No learning curve, no hidden menus.
           </p>
 
           <div className="ch7-interaction-trio">
@@ -401,12 +401,12 @@ export function VikiShowPage() {
       ══════════════════════════════════════════════════════════ */}
       <section className="chapter dark reveal" id="ch8">
         <div className="chapter-num">Chapter 08</div>
-        <div className="eyebrow">The Work — Desktop</div>
+        <div className="eyebrow">Final Design — Desktop</div>
         <h2 className="chapter-title">
-          Cinematic, structured,<br /><em>conversion-focused</em>
+          Desktop show page<br /><em>redesigned</em>
         </h2>
         <p className="chapter-body" style={{ marginBottom: 'var(--space-12)' }}>
-          The desktop experience leaned into Viki&rsquo;s cinematic content — a full-bleed hero image, show information consolidated on the left, and a persistent play CTA. The IA becomes invisible, which is exactly the point: users find what they need without thinking about it.
+          Full-bleed cinematic hero, show info consolidated on the left, persistent play CTA. The IA is invisible — which means it&rsquo;s working.
         </p>
 
         <div className="img-card" style={{ marginBottom: 'var(--space-8)' }}>
@@ -443,12 +443,12 @@ export function VikiShowPage() {
             <div className="chapter-num">Chapter 09</div>
             <div className="eyebrow">Community</div>
             <h2 className="chapter-title">
-              Reviews as a<br /><em>trust signal</em>
+              Community &amp; cast<br /><em>exploration</em>
             </h2>
             <p className="chapter-body">
-              We experimented with surfacing the cast more powerfully — portrait cards with names, a visual genre word cloud, and the rating displayed prominently. These explorations pushed how we balanced visual delight with information density.
+              Portrait cards, genre word clouds, and prominent ratings — balancing visual delight with information density.
               <br /><br />
-              One of the most unique aspects of Viki is its community-powered subtitling. We redesigned the Subtitle Team tab to celebrate these volunteers — the team name, the love count, the member roles. This was about community pride, not just information.
+              We also redesigned the Subtitle Team tab to celebrate Viki&rsquo;s community-powered volunteers — team names, love counts, and member roles.
             </p>
           </div>
           <div>
@@ -470,10 +470,10 @@ export function VikiShowPage() {
         <div className="chapter-num">Chapter 10</div>
         <div className="eyebrow">Impact</div>
         <h2 className="chapter-title">
-          The numbers<br />told the story
+          Results &amp;<br /><em>impact</em>
         </h2>
         <p className="chapter-body" style={{ marginBottom: 'var(--space-12)', maxWidth: '600px' }}>
-          We measured across four dimensions: user satisfaction, active viewer conversion, feature engagement, and business conversion. Every single metric moved in the right direction.
+          User satisfaction, active viewer conversion, feature adoption, and subscription traffic — every metric moved in the right direction.
         </p>
 
         <div className="results-platform-grid">
@@ -539,6 +539,16 @@ export function VikiShowPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          LEARNING — Pull Quote
+      ══════════════════════════════════════════════════════════ */}
+      <section className="chapter coral viki-learning-section reveal">
+        <blockquote className="viki-block-quote">
+          &ldquo;This project taught me that IA isn&rsquo;t about wireframes — it&rsquo;s about understanding what someone needs in the exact moment they&rsquo;re deciding. We had 3–5 seconds. Every pixel had to earn its place.&rdquo;
+        </blockquote>
+        <cite className="viki-cite">— Tina Huang, Lead Product Designer</cite>
       </section>
 
     </main>
