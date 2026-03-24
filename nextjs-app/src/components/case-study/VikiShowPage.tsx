@@ -99,6 +99,14 @@ export function VikiShowPage() {
             alt="Viki show page — before and after redesign"
           />
         </div>
+
+        {/* ── My Role & Contribution ── */}
+        <div className="role-contrib">
+          <div className="eyebrow">My Role &amp; Contribution</div>
+          <p className="chapter-body">
+            As <strong>Lead Product Designer</strong>, I owned the end-to-end redesign across web, iOS, and Android &mdash; from data analysis and user research through IA restructuring, A/B testing, and cross-functional alignment. I also built the <strong>show page design system</strong>, a shared component library of reusable patterns (hero layouts, metadata blocks, episode cards, tab structures) that ensured visual consistency across three platforms and reduced design-to-engineering handoff time.
+          </p>
+        </div>
       </section>
 
       {/* ══════════════════════════════════════════════════════════
