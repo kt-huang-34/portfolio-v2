@@ -196,7 +196,7 @@ export function BeeBobPage() {
             </p>
           </div>
           <div className="img-card">
-            <ImgPlaceholder label="Fragmented tooling — 5 disconnected subscriptions" />
+            <img src="/images/beebob-problem-03.png" alt="Fragmented tooling — 5 disconnected subscriptions" />
           </div>
         </div>
       </section>
@@ -256,11 +256,6 @@ export function BeeBobPage() {
         <p className="chapter-body">
           Every study runs through the same five-stage pipeline. Instead of context-switching between platforms, the researcher stays in one place. The AI agent handles handoffs that used to be manual &mdash; screener generation, participant qualification, scheduling coordination.
         </p>
-
-        <div className="bb-signal">
-          <div className="bb-signal-label">Design direction</div>
-          <p>Five separate tools &mdash; recruiting, screening, scheduling, interviewing, synthesis &mdash; <strong>now all in one pipeline inside BeeBob.</strong> Designed with an AI agent mindset: each stage knows what comes next and prepares for it.</p>
-        </div>
 
         {/* Pipeline Steps */}
         <div className="bb-pipeline">
@@ -334,36 +329,9 @@ export function BeeBobPage() {
           </div>
         </div>
 
-        {/* Shared Layer */}
-        <div className="bb-shared-layer">
-          <span className="bb-shared-label">Shared across both &mdash;</span>
-          <span className="bb-shared-chip">Study Setup</span>
-          <span className="bb-shared-chip">AI Screener</span>
-          <span className="bb-shared-chip">Qualification</span>
-          <span className="bb-shared-chip">Quality Checker</span>
-          <span className="bb-shared-chip">Pipeline View</span>
-        </div>
 
-        {/* Trust Spectrum Bar */}
-        <div className="bb-spectrum">
-          <div className="bb-spec-side">
-            <div className="bb-spec-head bb-spec-ops">Research Ops</div>
-            <div className="bb-spec-title">Human stays in the loop</div>
-            <div className="bb-spec-item">AI handles recruitment, screening, and scheduling</div>
-            <div className="bb-spec-item">Researcher conducts the session</div>
-            <div className="bb-spec-item">Methodology is fully researcher-controlled</div>
-            <div className="bb-spec-item">Best for: moderated, nuanced, sensitive research</div>
-          </div>
-          <div className="bb-spec-mid">trust spectrum</div>
-          <div className="bb-spec-side">
-            <div className="bb-spec-head bb-spec-ai">AI Interview</div>
-            <div className="bb-spec-title">AI runs the pipeline</div>
-            <div className="bb-spec-item">AI handles recruitment through to synthesised insight</div>
-            <div className="bb-spec-item">No timezone constraints &mdash; participants respond on their own time</div>
-            <div className="bb-spec-item">Real-time translation into participant&rsquo;s language</div>
-            <div className="bb-spec-item">Speed and cost reduction previously only possible with agencies</div>
-          </div>
-        </div>
+
+
 
         <div className="bb-prompts">
           <div className="bb-prompt">
@@ -376,17 +344,7 @@ export function BeeBobPage() {
           </div>
         </div>
 
-        {/* Closing Synthesis */}
-        <div className="bb-flags">
-          <div className="bb-flag bb-flag-red">
-            <div className="bb-flag-label">What this could have been</div>
-            Five features in a dashboard. Two separate products. No unifying design principle. No path for researchers to grow their trust in AI.
-          </div>
-          <div className="bb-flag bb-flag-green">
-            <div className="bb-flag-label">What it became</div>
-            One pipeline consolidating five tools. Two modes calibrated to trust. A researcher starts with what they need &mdash; and the platform adapts as their confidence in AI grows.
-          </div>
-        </div>
+
       </section>
 
       {/* 3C: Shipped Work (from Ch06) */}
