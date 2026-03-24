@@ -205,49 +205,70 @@ export function BeeBobPage() {
           SECTION 3 — THE SOLUTION (Ch03 + Ch00b + Ch06 + Trust Spectrum)
       ══════════════════════════════════════════════════════════════ */}
 
-      {/* 3A: The Solution & How It Works (merged) */}
+      {/* 3A: The Solution — Two Directions */}
       <section className="chapter light reveal" id="bb-s3">
         <div className="chapter-num">Chapter 03</div>
         <div className="eyebrow">The Solution</div>
         <h2 className="chapter-title">
-          Not one product &mdash;<br /><em>two modes for two needs</em>
+          Two design directions &mdash;<br /><em>one product</em>
         </h2>
 
-        <div className="bb-signal">
-          <div className="bb-signal-label">The moment it unlocked</div>
-          <p>We had been trying to own the research process. The real insight was simpler: researchers already own that process. They just need a co-pilot for the parts that slow them down.</p>
+        <p className="chapter-body">
+          BeeBob&rsquo;s solution wasn&rsquo;t a single insight &mdash; it was two. First, that researchers shouldn&rsquo;t need five tools to run one study. Second, that AI should enhance their work, not replace it. These two directions shaped every design decision.
+        </p>
+
+        {/* Direction Overview Cards */}
+        <div className="bb-directions">
+          <div className="bb-direction-card">
+            <div className="bb-direction-label">Direction A</div>
+            <div className="bb-direction-title">5 tools into 1 place</div>
+            <div className="bb-direction-body">
+              Researchers use separate tools for recruiting, screening, scheduling, interviewing, and synthesis. BeeBob consolidates the entire lifecycle into a single platform &mdash; designed from day one with an AI agent mindset.
+            </div>
+            <div className="bb-direction-tags">
+              <span className="bb-direction-tag">Consolidation</span>
+              <span className="bb-direction-tag">AI Agent</span>
+              <span className="bb-direction-tag">Single Source of Truth</span>
+            </div>
+          </div>
+          <div className="bb-direction-card">
+            <div className="bb-direction-label">Direction B</div>
+            <div className="bb-direction-title">Two paths &mdash; enhance, don&rsquo;t replace</div>
+            <div className="bb-direction-body">
+              Not every researcher trusts AI the same way. BeeBob offers two modes so the human is always in the loop to gatekeep the quality of the work. The researcher decides how much AI to let in.
+            </div>
+            <div className="bb-direction-tags">
+              <span className="bb-direction-tag">Human-in-the-Loop</span>
+              <span className="bb-direction-tag">Trust Spectrum</span>
+              <span className="bb-direction-tag">Two Modes</span>
+            </div>
+          </div>
         </div>
 
-        <div className="bb-prompts">
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>BeeBob is not a research tool &mdash; it is a co-pilot for people who already know how to do research.</strong> Researchers arrive with their own plan, their own questions, their own methodology. BeeBob does not replace that thinking. It handles everything the thinking gets stuck on &mdash; recruiting, screening, scheduling, synthesis. Within that co-pilot frame, researchers still need to choose how much AI they trust in any given study. That choice became the trust spectrum: one platform, two modes, one decision point at the start of every study.</p>
-          </div>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p>We arrived at it through two signals. Expert consultations kept surfacing the same pattern: researchers came to every session with their own research plan already formed. The second signal came from a private beta user: &ldquo;I&rsquo;d use it for scheduling, but I&rsquo;m not ready to let it talk to my participants.&rdquo; That&rsquo;s not resistance to AI &mdash; it is a well-calibrated position.</p>
-          </div>
+        {/* ── Direction A Deep-Dive ── */}
+        <div className="bb-direction-header">
+          <div className="bb-direction-label">Direction A</div>
+          <h3 className="chapter-title">
+            Five tools, one pipeline &mdash;<br /><em>designed as an AI agent</em>
+          </h3>
         </div>
-
-        <div className="bb-flags">
-          <div className="bb-flag bb-flag-red">
-            <div className="bb-flag-label">Red flag</div>
-            &ldquo;We explored multiple directions and aligned on the one that tested best.&rdquo;
-          </div>
-          <div className="bb-flag bb-flag-green">
-            <div className="bb-flag-label">Green flag</div>
-            &ldquo;We had been solving the wrong problem. Trust, not efficiency. Here&rsquo;s the sentence that made us see it.&rdquo;
-          </div>
-        </div>
-
-        {/* How It Works */}
-        <h3 className="chapter-title" style={{ marginTop: 'var(--space-section)' }}>
-          One pipeline.<br /><em>Two paths through it.</em>
-        </h3>
 
         <p className="chapter-body">
-          BeeBob covers the full research ops lifecycle. Every study runs through the same five-stage pipeline. The researcher chooses at the start whether they want to stay in the room (Research Ops) or hand the session to AI (AI Interview).
+          Every study runs through the same five-stage pipeline. Instead of context-switching between platforms, the researcher stays in one place. The AI agent handles handoffs that used to be manual &mdash; screener generation, participant qualification, scheduling coordination.
         </p>
+
+        {/* Consolidation Visual */}
+        <div className="bb-consolidation">
+          <div className="bb-tools-before">
+            <span className="bb-tool-chip">Recruiting</span>
+            <span className="bb-tool-chip">Screening</span>
+            <span className="bb-tool-chip">Scheduling</span>
+            <span className="bb-tool-chip">Interviewing</span>
+            <span className="bb-tool-chip">Synthesis</span>
+          </div>
+          <div className="bb-consolidation-arrow">&rarr;</div>
+          <div className="bb-tool-unified">BeeBob</div>
+        </div>
 
         {/* Pipeline Steps */}
         <div className="bb-pipeline">
@@ -277,6 +298,29 @@ export function BeeBobPage() {
             <div className="bb-pipe-sub">Auto-insights or researcher analysis</div>
           </div>
         </div>
+
+        <div className="bb-prompts">
+          <div className="bb-prompt">
+            <div className="bb-prompt-dot" />
+            <p><strong>AI agent mindset:</strong> Every stage was designed as a step in an autonomous pipeline, not a feature bolted onto a dashboard. The AI knows what comes next and prepares for it.</p>
+          </div>
+          <div className="bb-prompt">
+            <div className="bb-prompt-dot" />
+            <p><strong>Shared context across stages:</strong> Participant data, screening criteria, and study goals flow through the pipeline without manual re-entry. No more copy-paste between tools.</p>
+          </div>
+        </div>
+
+        {/* ── Direction B Deep-Dive ── */}
+        <div className="bb-direction-header">
+          <div className="bb-direction-label">Direction B</div>
+          <h3 className="chapter-title">
+            Two paths through it &mdash;<br /><em>researcher decides</em>
+          </h3>
+        </div>
+
+        <p className="chapter-body">
+          We should not replace anyone&rsquo;s work &mdash; we should enhance their productivity. The researcher chooses at study setup whether they want to stay in the room or hand the session to AI. Both paths share the same pipeline infrastructure &mdash; only the session and synthesis steps diverge.
+        </p>
 
         {/* Two Flow Comparison */}
         <div className="bb-flow-compare">
@@ -309,7 +353,7 @@ export function BeeBobPage() {
         </div>
 
         {/* Trust Spectrum Bar */}
-        <div className="bb-spectrum" style={{ marginTop: 'var(--space-10)' }}>
+        <div className="bb-spectrum">
           <div className="bb-spec-side">
             <div className="bb-spec-head bb-spec-ops">Research Ops</div>
             <div className="bb-spec-title">Human stays in the loop</div>
@@ -329,14 +373,26 @@ export function BeeBobPage() {
           </div>
         </div>
 
-        <div className="bb-flags" style={{ marginTop: 'var(--space-6)' }}>
+        <div className="bb-prompts">
+          <div className="bb-prompt">
+            <div className="bb-prompt-dot" />
+            <p><strong>Human-in-the-loop by design:</strong> Research Ops mode keeps the researcher in the session. AI handles everything around it &mdash; recruiting, screening, scheduling &mdash; but the methodology stays fully researcher-controlled.</p>
+          </div>
+          <div className="bb-prompt">
+            <div className="bb-prompt-dot" />
+            <p><strong>Trust builds over time:</strong> A researcher might start with Research Ops when the topic is sensitive, then switch to AI Interview for a follow-up concept test at scale. The product grows with their trust.</p>
+          </div>
+        </div>
+
+        {/* Closing Synthesis */}
+        <div className="bb-flags">
           <div className="bb-flag bb-flag-red">
             <div className="bb-flag-label">What this could have been</div>
-            Two separate products. Two codebases. Two onboarding flows. Higher development cost. No cross-sell path.
+            Five features in a dashboard. Two separate products. No unifying design principle. No path for researchers to grow their trust in AI.
           </div>
           <div className="bb-flag bb-flag-green">
             <div className="bb-flag-label">What it became</div>
-            One platform. A researcher starts with Research Ops when they need methodological control &mdash; and moves to AI Interview when they need scale. The product grows with their trust in AI.
+            One pipeline consolidating five tools. Two modes calibrated to trust. A researcher starts with what they need &mdash; and the platform adapts as their confidence in AI grows.
           </div>
         </div>
       </section>
