@@ -257,17 +257,9 @@ export function BeeBobPage() {
           Every study runs through the same five-stage pipeline. Instead of context-switching between platforms, the researcher stays in one place. The AI agent handles handoffs that used to be manual &mdash; screener generation, participant qualification, scheduling coordination.
         </p>
 
-        {/* Consolidation Visual */}
-        <div className="bb-consolidation">
-          <div className="bb-tools-before">
-            <span className="bb-tool-chip">Recruiting</span>
-            <span className="bb-tool-chip">Screening</span>
-            <span className="bb-tool-chip">Scheduling</span>
-            <span className="bb-tool-chip">Interviewing</span>
-            <span className="bb-tool-chip">Synthesis</span>
-          </div>
-          <div className="bb-consolidation-arrow">&rarr;</div>
-          <div className="bb-tool-unified">BeeBob</div>
+        <div className="bb-signal">
+          <div className="bb-signal-label">Design direction</div>
+          <p>Five separate tools &mdash; recruiting, screening, scheduling, interviewing, synthesis &mdash; <strong>now all in one pipeline inside BeeBob.</strong> Designed with an AI agent mindset: each stage knows what comes next and prepares for it.</p>
         </div>
 
         {/* Pipeline Steps */}
