@@ -269,6 +269,11 @@
   margin-top: var(--space-8);
 }
 
+.bb-role-grid-6 {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 0;
+}
+
 .bb-role-card {
   background: var(--white);
   border: var(--border-width-sub) solid var(--border-light);
@@ -897,6 +902,95 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   LIGHT-MODE OVERRIDES — Pipeline, Flow Compare, Shared Layer, Spectrum
+   ══════════════════════════════════════════════════════════════ */
+.chapter.light .bb-pipe-step {
+  background: rgba(26, 23, 20, 0.03);
+  border-color: var(--border-light);
+}
+
+.chapter.light .bb-pipe-num {
+  color: var(--coral);
+}
+
+.chapter.light .bb-pipe-name {
+  color: var(--near-black);
+}
+
+.chapter.light .bb-pipe-sub {
+  color: var(--warm-gray);
+}
+
+.chapter.light .bb-flow-box {
+  background: rgba(26, 23, 20, 0.03);
+  border-color: var(--border-light);
+}
+
+.chapter.light .bb-flow-ai {
+  color: var(--coral);
+}
+
+.chapter.light .bb-flow-title {
+  color: var(--near-black);
+}
+
+.chapter.light .bb-flow-item {
+  color: var(--warm-gray);
+  border-bottom-color: var(--border-light);
+}
+
+.chapter.light .bb-flow-item::before {
+  color: var(--warm-gray-lt);
+}
+
+.chapter.light .bb-shared-layer {
+  background: rgba(26, 23, 20, 0.03);
+  border-color: var(--border-light);
+}
+
+.chapter.light .bb-shared-label {
+  color: var(--warm-gray-lt);
+}
+
+.chapter.light .bb-shared-chip {
+  color: var(--warm-gray);
+  background: rgba(26, 23, 20, 0.04);
+  border-color: var(--border-light);
+}
+
+.chapter.light .bb-spectrum {
+  border-color: var(--border-light);
+}
+
+.chapter.light .bb-spec-side {
+  background: rgba(26, 23, 20, 0.03);
+}
+
+.chapter.light .bb-spec-mid {
+  background: var(--cream-deep);
+  border-left-color: var(--border-light);
+  border-right-color: var(--border-light);
+  color: var(--warm-gray-lt);
+}
+
+.chapter.light .bb-spec-ai {
+  color: var(--coral);
+}
+
+.chapter.light .bb-spec-title {
+  color: var(--near-black);
+}
+
+.chapter.light .bb-spec-item {
+  color: var(--warm-gray);
+  border-bottom-color: var(--border-light);
+}
+
+.chapter.light .bb-spec-item::before {
+  color: var(--warm-gray-lt);
+}
+
+/* ══════════════════════════════════════════════════════════════
    BIG STATS (Impact section)
    ══════════════════════════════════════════════════════════════ */
 .bb-big-stats {
@@ -1141,6 +1235,10 @@
   /* ── Role Grid ── */
   .bb-role-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bb-role-grid-6 {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* ── Pipeline ── */
