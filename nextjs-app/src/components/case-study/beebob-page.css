@@ -2834,3 +2834,234 @@
     padding: var(--space-6) var(--space-4);
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — Extra Small Screens (480px and below)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* ── Hero ── */
+  .bb-hero {
+    padding: calc(var(--space-section)) var(--space-4) var(--space-8);
+    gap: var(--space-6);
+  }
+
+  .bb-hero-eyebrow {
+    font-size: 9px;
+    margin-bottom: var(--space-4);
+  }
+
+  .bb-hero-title {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: var(--space-5);
+  }
+
+  .bb-hero-meta {
+    gap: var(--space-3);
+  }
+
+  .bb-hero-meta-item .label {
+    font-size: 9px;
+  }
+
+  .bb-hero-meta-item .val {
+    font-size: var(--text-sm);
+  }
+
+  .bb-hero-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  /* ── Stat Strip ── */
+  .bb-stat-strip {
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .stat-item .lbl {
+    font-size: 9px;
+  }
+
+  .stat-item .num {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  /* ── Chapters ── */
+  .chapter {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .chapter-num {
+    font-size: 9px;
+  }
+
+  .chapter-title {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .chapter-body {
+    font-size: var(--text-sm);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+  }
+
+  /* ── Two Column ── */
+  .two-col {
+    gap: var(--space-4);
+  }
+
+  /* ── Role Tags ── */
+  .bb-role-tags-visual {
+    gap: var(--space-2);
+  }
+
+  .bb-role-chip {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* ── Pipeline V2 ── */
+  .bb-pipeline-v2 {
+    padding: var(--space-4) var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .bb-pipe-v2 {
+    min-width: 60px;
+    padding: var(--space-2);
+  }
+
+  .bb-pipe-v2-num {
+    font-size: 9px;
+  }
+
+  .bb-pipe-v2-icon {
+    font-size: 20px;
+  }
+
+  .bb-pipe-v2-name {
+    font-size: 9px;
+  }
+
+  .bb-pipeline-label {
+    font-size: 9px;
+  }
+
+  /* ── Flow Sections ── */
+  .bb-flow-section {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .bb-flow-section-title {
+    font-size: var(--text-md);
+  }
+
+  .bb-flow-section-desc {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Flowchart ── */
+  .bb-flowchart {
+    padding: var(--space-4);
+  }
+
+  .bb-flow-node {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .bb-flow-branch-lines {
+    width: 100px;
+  }
+
+  .bb-flow-path-title {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Steps ── */
+  .bb-step-header {
+    gap: var(--space-3);
+  }
+
+  .bb-step-num {
+    width: 28px;
+    height: 28px;
+    font-size: var(--text-sm);
+  }
+
+  .bb-step-title {
+    font-size: var(--text-md);
+  }
+
+  .bb-step-desc {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Conflict Cards ── */
+  .bb-conflict-card {
+    padding: var(--space-4);
+  }
+
+  .bb-conflict-title {
+    font-size: var(--text-sm);
+  }
+
+  .bb-conflict-perspective p {
+    font-size: var(--text-sm);
+  }
+
+  .bb-conflict-lesson {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Impact Section ── */
+  .bb-impact {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .bb-impact-title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .bb-impact-num {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .bb-impact-label {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Image Cards ── */
+  .img-card,
+  .img-card-light {
+    border-radius: var(--radius-md);
+  }
+
+  .cap {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* ── Intro Quote ── */
+  .bb-intro-quote {
+    font-size: var(--text-md);
+    padding: 0 var(--space-2);
+  }
+
+  /* ── Prompts / Learnings ── */
+  .bb-prompt p {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Try CTA ── */
+  .bb-try-button {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .bb-try-hint {
+    font-size: var(--text-xs);
+  }
+}

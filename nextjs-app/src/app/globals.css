@@ -775,6 +775,174 @@ footer {
   }
 }
 
+/* ----------------------------------------------------------
+   15. Responsive — Extra Small (<480px)
+   ---------------------------------------------------------- */
+@media (max-width: 480px) {
+  /* Nav adjustments */
+  nav {
+    padding: 0 var(--space-4);
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-size: var(--text-md);
+  }
+
+  .nav-links {
+    width: 260px;
+    padding: 90px var(--space-6) var(--space-6);
+    gap: var(--space-5);
+  }
+
+  .nav-links a:not(.btn-base):not(.btn-primary) {
+    font-size: var(--text-md);
+  }
+
+  /* Footer */
+  footer {
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  footer span {
+    font-size: var(--text-xs);
+  }
+
+  /* Buttons smaller on very small screens */
+  .btn-primary,
+  .btn-ghost,
+  .btn-ghost-light {
+    height: 40px;
+    padding: 0 var(--space-5);
+    font-size: 12px;
+  }
+
+  .btn-sm {
+    height: 32px;
+    padding: 0 var(--space-4);
+    font-size: 11px;
+  }
+
+  /* Tags smaller */
+  .tag-outline,
+  .tag-fill,
+  .tag-muted {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  /* ── Case Study Mobile ── */
+  .chapter {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .chapter-title {
+    font-size: clamp(24px, 7vw, 32px);
+    margin-bottom: var(--space-6);
+  }
+
+  .chapter-body {
+    font-size: var(--text-sm);
+    max-width: 100%;
+  }
+
+  .chapter-subtitle {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    margin-bottom: var(--space-3);
+  }
+
+  .chapter-num {
+    font-size: 9px;
+    margin-bottom: var(--space-3);
+  }
+
+  .two-col {
+    gap: var(--space-6);
+  }
+
+  .stat-strip {
+    padding: var(--space-4);
+    gap: var(--space-2);
+  }
+
+  .stat-item {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .stat-item .lbl {
+    font-size: 9px;
+    margin-bottom: var(--space-1);
+  }
+
+  .stat-item .num {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .stat-item .num span {
+    font-size: 11px;
+  }
+
+  .case-nav {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .case-nav-link .dir {
+    font-size: 9px;
+  }
+
+  .case-nav-link .pname {
+    font-size: clamp(16px, 4vw, 18px);
+  }
+
+  /* Image cards */
+  .img-card,
+  .img-card-light {
+    border-radius: var(--radius-md);
+  }
+
+  .cap {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .img-placeholder {
+    min-height: 180px;
+    padding: var(--space-5);
+  }
+
+  .img-placeholder-label {
+    font-size: var(--text-xs);
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    font-size: clamp(16px, 4.5vw, 22px);
+    padding-left: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  /* Mobile trio */
+  .mobile-trio {
+    max-width: 100%;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  /* Metrics */
+  .metric-num {
+    font-size: var(--text-2xl);
+  }
+
+  .metric-label {
+    font-size: 9px;
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════
    CASE STUDY — Shared Components
    ══════════════════════════════════════════════════════════════ */

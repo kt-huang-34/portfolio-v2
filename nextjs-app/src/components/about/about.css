@@ -436,3 +436,126 @@
     cursor: auto;
   }
 }
+
+/* Extra small screens (phones 480px and below) */
+@media (max-width: 480px) {
+  .about-page-hero {
+    padding: 80px var(--space-4) var(--space-8);
+  }
+
+  .about-page-name {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
+  .about-page-tagline {
+    font-size: 14px;
+  }
+
+  .about-page-hero-meta {
+    margin-top: var(--space-6);
+    padding-top: var(--space-5);
+    gap: var(--space-3);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-body-section {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .about-body-grid {
+    gap: var(--space-8);
+  }
+
+  .about-bio-text {
+    font-size: var(--text-sm);
+  }
+
+  .about-edu-degree {
+    font-size: var(--text-sm);
+  }
+
+  .about-edu-school {
+    font-size: var(--text-xs);
+  }
+
+  .about-right-col {
+    gap: var(--space-6);
+  }
+
+  .skill-chip-light {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-xs);
+  }
+
+  .skill-chip-light strong {
+    font-size: var(--text-sm);
+  }
+
+  .about-podcast-card {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .about-podcast-icon {
+    font-size: var(--text-2xl);
+  }
+
+  .about-podcast-label {
+    font-size: 9px;
+  }
+
+  .about-podcast-title {
+    font-size: var(--text-lg);
+  }
+
+  .about-podcast-desc {
+    font-size: var(--text-xs);
+  }
+
+  .about-podcast-stats {
+    gap: var(--space-1);
+  }
+
+  .about-speaking-item {
+    padding: var(--space-3) var(--space-2);
+    margin: 0 calc(-1 * var(--space-2));
+  }
+
+  .about-speaking-year {
+    font-size: var(--text-xs);
+  }
+
+  .about-speaking-title {
+    font-size: var(--text-sm);
+  }
+
+  .about-speaking-meta {
+    font-size: var(--text-xs);
+  }
+
+  .speaking-link-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .about-award-card {
+    padding: var(--space-4);
+  }
+
+  .about-award-icon {
+    font-size: var(--text-2xl);
+  }
+
+  .about-award-title {
+    font-size: var(--text-sm);
+  }
+
+  .about-award-sub {
+    font-size: var(--text-xs);
+  }
+
+  .case-study-placeholder {
+    padding: var(--space-10) var(--space-4);
+  }
+}

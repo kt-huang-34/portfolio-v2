@@ -212,4 +212,81 @@
   .chat-input {
     cursor: auto;
   }
+
+  .tina-avatar-area {
+    height: 200px;
+  }
+
+  .tina-chat-body {
+    min-height: 180px;
+    max-height: 200px;
+  }
+
+  .chat-bubble {
+    max-width: 85%;
+  }
+
+  .chat-input {
+    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-3);
+  }
+
+  .chat-send-btn {
+    padding: 0 var(--space-3);
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .tina-avatar-area {
+    height: 160px;
+  }
+
+  .tina-chat-body {
+    min-height: 140px;
+    max-height: 160px;
+    padding: var(--space-2);
+  }
+
+  .chat-bubble {
+    max-width: 90%;
+    font-size: 11px;
+    padding: var(--space-2) var(--space-2);
+  }
+
+  .chat-avatar {
+    width: 20px;
+    height: 20px;
+    font-size: 7px;
+  }
+
+  .avatar-badge {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+
+  .avatar-live-dot {
+    font-size: 8px;
+    padding: 2px 6px;
+    gap: 3px;
+  }
+
+  .live-pulse {
+    width: 5px;
+    height: 5px;
+  }
+
+  .chat-input {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-2);
+  }
+
+  .chat-input::placeholder {
+    font-size: 10px;
+  }
+
+  .chat-send-btn {
+    padding: 0 var(--space-2);
+    font-size: 9px;
+  }
 }

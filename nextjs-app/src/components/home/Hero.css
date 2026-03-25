@@ -326,5 +326,75 @@
     right: auto;
     transform: none;
     width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Extra small screens (phones 480px and below) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px var(--space-4) var(--space-8);
+    gap: var(--space-6);
+  }
+
+  .hero-name {
+    font-size: clamp(32px, 11vw, 44px);
+  }
+
+  .hero-role {
+    font-size: 14px;
+  }
+
+  .hero-desc {
+    font-size: var(--text-sm);
+  }
+
+  .hero-ctas {
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero-metrics {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+  }
+
+  .hero-right {
+    gap: var(--space-3);
+  }
+
+  /* Smaller retro windows */
+  .retro-titlebar {
+    padding: 5px var(--space-2);
+    font-size: 9px;
+  }
+
+  .retro-titlebar-btn {
+    width: 12px;
+    height: 12px;
+    font-size: 7px;
+  }
+
+  .win-skills-body {
+    padding: var(--space-2);
+    gap: var(--space-1);
+  }
+
+  .skill-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  .win-project-img {
+    height: 90px;
+  }
+
+  .win-project-info {
+    padding: var(--space-2);
+  }
+
+  .win-project-title {
+    font-size: var(--text-xs);
   }
 }

@@ -440,3 +440,117 @@
     gap: var(--space-3);
   }
 }
+
+/* Extra small screens (phones 480px and below) */
+@media (max-width: 480px) {
+  /* Marquee */
+  .marquee-item {
+    font-size: 9px;
+    padding: 0 var(--space-4);
+  }
+
+  /* Companies */
+  .companies {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .companies-label {
+    font-size: 9px;
+    margin-bottom: var(--space-6);
+  }
+
+  .companies-logos {
+    gap: var(--space-4);
+  }
+
+  .company-logo {
+    font-size: var(--text-sm);
+  }
+
+  /* Selected Work header */
+  .section-intro {
+    padding: var(--space-6) var(--space-4) 0;
+  }
+
+  .section-intro h2 {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .section-intro-sub {
+    font-size: var(--text-xs);
+  }
+
+  /* Work Grid */
+  .work-grid {
+    padding: var(--space-4) var(--space-4) var(--space-10);
+    gap: var(--space-4);
+  }
+
+  .work-img {
+    height: 180px;
+  }
+
+  .work-info {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .work-co {
+    font-size: 9px;
+  }
+
+  .work-title {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+
+  .work-tags {
+    gap: var(--space-1);
+  }
+
+  /* About Teaser */
+  .about-teaser {
+    padding: var(--space-10) var(--space-4);
+    gap: var(--space-6);
+    margin-top: var(--space-10);
+  }
+
+  .portrait-skills {
+    width: 100%;
+  }
+
+  .about-teaser-heading {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .about-teaser-body {
+    font-size: var(--text-sm);
+  }
+
+  .about-teaser-chips {
+    gap: var(--space-1);
+    margin-bottom: var(--space-6);
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: var(--space-10) var(--space-4) var(--space-12);
+  }
+
+  .contact-heading {
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  .contact-sub {
+    font-size: var(--text-sm);
+  }
+
+  .contact-actions {
+    width: 100%;
+  }
+
+  .contact-actions .btn-primary,
+  .contact-actions .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}

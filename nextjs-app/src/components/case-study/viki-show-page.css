@@ -582,3 +582,177 @@
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: var(--tracking-wide);
 }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — Extra Small Screens (480px and below)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* ── Hero ── */
+  .viki-hero {
+    padding: calc(var(--space-section)) var(--space-4) var(--space-8);
+    gap: var(--space-6);
+  }
+
+  .viki-hero-eyebrow {
+    font-size: 9px;
+  }
+
+  .viki-hero-title {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: var(--space-4);
+  }
+
+  .viki-hero-meta-item .label {
+    font-size: 9px;
+  }
+
+  .viki-hero-meta-item .val {
+    font-size: var(--text-sm);
+  }
+
+  .viki-hero-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  /* ── Stat Strip ── */
+  .stat-strip {
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-3);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-item .lbl {
+    font-size: 9px;
+  }
+
+  .stat-item .num {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  /* ── Chapters ── */
+  .chapter {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .chapter-num {
+    font-size: 9px;
+  }
+
+  .chapter-title {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .chapter-body {
+    font-size: var(--text-sm);
+  }
+
+  .chapter-subtitle {
+    font-size: clamp(20px, 5vw, 26px);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+  }
+
+  /* ── Two Column ── */
+  .two-col {
+    gap: var(--space-4);
+  }
+
+  /* ── Tab Grid ── */
+  .tab-grid {
+    gap: var(--space-2);
+  }
+
+  .tab-grid-item {
+    padding: var(--space-3);
+  }
+
+  .tab-name {
+    font-size: var(--text-sm);
+  }
+
+  .tab-content {
+    font-size: var(--text-xs);
+  }
+
+  .tab-owner {
+    font-size: 9px;
+  }
+
+  /* ── Persona Cards ── */
+  .persona-card {
+    padding: var(--space-4);
+  }
+
+  .persona-type {
+    font-size: 9px;
+  }
+
+  .persona-name {
+    font-size: var(--text-sm);
+  }
+
+  .persona-detail {
+    font-size: var(--text-xs);
+  }
+
+  /* ── Ch3 Highlights ── */
+  .ch3-highlight-item {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* ── Ch7 Interactions ── */
+  .ch7-interaction-trio {
+    max-width: 100%;
+  }
+
+  /* ── Platform Cards ── */
+  .platform-card {
+    padding: var(--space-4);
+  }
+
+  .platform-header {
+    font-size: var(--text-xs);
+  }
+
+  .metric-label {
+    font-size: var(--text-xs);
+  }
+
+  .metric-stat {
+    font-size: var(--text-md);
+  }
+
+  .score-num {
+    font-size: var(--text-xl);
+  }
+
+  /* ── Image Cards ── */
+  .img-card,
+  .img-card-light {
+    border-radius: var(--radius-md);
+  }
+
+  .cap {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* ── Block Quote ── */
+  .viki-block-quote {
+    font-size: clamp(18px, 5vw, 28px);
+    padding: 0 var(--space-2);
+  }
+
+  .viki-cite {
+    font-size: var(--text-xs);
+  }
+
+  /* ── Role Contrib ── */
+  .role-contrib {
+    padding: var(--space-4);
+  }
+}

@@ -232,3 +232,75 @@
     height: 200px;
   }
 }
+
+/* Extra small screens (phones 480px and below) */
+@media (max-width: 480px) {
+  .featured-section {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .feat-header {
+    margin-bottom: var(--space-6);
+    gap: var(--space-2);
+  }
+
+  .feat-header h2 {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .feat-header-sub {
+    font-size: 9px;
+  }
+
+  .feat-see-all {
+    font-size: 9px;
+  }
+
+  .feat-grid {
+    gap: var(--space-4);
+  }
+
+  .feat-card {
+    border-radius: var(--radius-md);
+  }
+
+  .feat-card-num {
+    font-size: 9px;
+    top: var(--space-3);
+    left: var(--space-3);
+  }
+
+  .feat-img {
+    height: 180px;
+  }
+
+  .feat-body {
+    padding: var(--space-4);
+  }
+
+  .feat-company-row {
+    margin-bottom: var(--space-2);
+  }
+
+  .feat-company {
+    font-size: 9px;
+  }
+
+  .feat-year {
+    font-size: 9px;
+  }
+
+  .feat-title {
+    font-size: var(--text-md);
+    margin-bottom: var(--space-2);
+  }
+
+  .feat-desc {
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-3);
+  }
+
+  .feat-outcome {
+    font-size: var(--text-xs);
+  }
+}

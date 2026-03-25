@@ -863,3 +863,189 @@
     padding: var(--space-20) var(--space-5);
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE — Extra Small Screens (480px and below)
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* ── Hero ── */
+  .gxs-hero {
+    padding: calc(var(--space-section)) var(--space-4) var(--space-8);
+    gap: var(--space-6);
+  }
+
+  .gxs-hero-eyebrow {
+    font-size: 9px;
+  }
+
+  .gxs-hero-title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .gxs-hero-sub {
+    font-size: var(--text-sm);
+  }
+
+  .gxs-hero-meta-item .label {
+    font-size: 9px;
+  }
+
+  .gxs-hero-meta-item .val {
+    font-size: var(--text-sm);
+  }
+
+  .gxs-hero-video {
+    max-height: 400px;
+  }
+
+  /* ── Stat Strip ── */
+  .stat-strip {
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .stat-item .lbl {
+    font-size: 9px;
+  }
+
+  .stat-item .num {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  /* ── Chapters ── */
+  .chapter {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .chapter-num {
+    font-size: 9px;
+  }
+
+  .chapter-title {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .chapter-body {
+    font-size: var(--text-sm);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+  }
+
+  /* ── Two Column ── */
+  .two-col {
+    gap: var(--space-4);
+  }
+
+  /* ── Timeline ── */
+  .rds-timeline {
+    gap: var(--space-4);
+    padding-left: var(--space-4);
+  }
+
+  .rds-tl-dot {
+    font-size: 20px;
+  }
+
+  .rds-tl-date {
+    font-size: 9px;
+  }
+
+  .rds-tl-title {
+    font-size: var(--text-sm);
+  }
+
+  .rds-tl-content p {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Process Steps ── */
+  .rds-step-num {
+    width: 28px;
+    height: 28px;
+    font-size: var(--text-sm);
+  }
+
+  .rds-step-body h3 {
+    font-size: var(--text-md);
+  }
+
+  .rds-step-body p {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Audit Grid ── */
+  .rds-audit-item {
+    padding: var(--space-3);
+  }
+
+  .rds-audit-cat {
+    font-size: var(--text-xs);
+  }
+
+  .rds-audit-from,
+  .rds-audit-to {
+    font-size: var(--text-xs);
+  }
+
+  /* ── Comparison ── */
+  .rds-comparison-col {
+    padding: var(--space-4);
+  }
+
+  .rds-comparison-head {
+    font-size: var(--text-xs);
+  }
+
+  .rds-comparison-col li {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Impact Grid ── */
+  .rds-impact-card {
+    padding: var(--space-5);
+  }
+
+  .rds-impact-num {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .rds-impact-label {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Video Grid ── */
+  .rds-video-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .rds-video-card {
+    max-height: 280px;
+  }
+
+  /* ── Image Cards ── */
+  .img-card,
+  .img-card-light {
+    border-radius: var(--radius-md);
+  }
+
+  .cap {
+    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  /* ── Learning Section ── */
+  .rds-learning-section {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .rds-block-quote {
+    font-size: clamp(18px, 5vw, 28px);
+  }
+
+  .rds-cite {
+    font-size: var(--text-xs);
+  }
+}
