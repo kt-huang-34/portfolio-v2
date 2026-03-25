@@ -64,8 +64,13 @@ export function BeeBobPage() {
             </div>
           </div>
         </div>
-        <div className="bb-hero-image-wrap">
-          <ImgPlaceholder label="Product hero — BeeBob dashboard overview" />
+        <div className="bb-hero-image-wrap card-surface">
+          <iframe
+            src="https://player.vimeo.com/video/1176853429?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            title="BeeBob AI Demo"
+          />
         </div>
       </section>
 
@@ -83,7 +88,7 @@ export function BeeBobPage() {
         </div>
         <div className="stat-item">
           <div className="lbl">Tools Consolidated</div>
-          <div className="num">5<span>&rarr;1</span></div>
+          <div className="num">4<span>&rarr;1</span></div>
         </div>
         <div className="stat-item">
           <div className="lbl">Solo Designer</div>
@@ -96,7 +101,8 @@ export function BeeBobPage() {
       ══════════════════════════════════════════════════════════ */}
       <section className="chapter dark bb-intro reveal">
         <blockquote className="bb-intro-quote">
-          <strong>Product ships weekly. Insights arrive monthly.</strong> Researchers already know what they want to find out. They come with a plan, a question, and a point of view. What slows them down is everything that happens before and after the session. <strong>BeeBob is the co-pilot that handles the ops &mdash; so the researcher stays in the role they were hired for.</strong>
+          Product ships weekly. However, insights arrive monthly.<br />
+          <strong>BeeBob handles the Ops so researchers can get insights faster.</strong>
         </blockquote>
       </section>
 
@@ -109,52 +115,17 @@ export function BeeBobPage() {
         <h2 className="chapter-title">
           Co-founder wearing<br /><em>every hat</em>
         </h2>
-        <p className="chapter-body" style={{ marginBottom: 'var(--space-10)' }}>
-          As co-founder of a 2-person startup, there is no handoff &mdash; there is only ownership. My co-founder handles the AI model and backend infrastructure. Everything else is mine.
+        <p className="chapter-body">
+          We&rsquo;re a 2-person team. My co-founder handles AI and backend. Everything else &mdash; from product strategy to pixel-perfect front-end &mdash; is mine.
         </p>
 
-        <div className="bb-role-grid bb-role-grid-6">
-          <div className="bb-role-card">
-            <div className="bb-role-tag">Product</div>
-            <div className="bb-role-name">PM</div>
-            <div className="bb-role-desc">Roadmap, prioritisation, scope decisions, feature strategy</div>
-          </div>
-          <div className="bb-role-card">
-            <div className="bb-role-tag">Design</div>
-            <div className="bb-role-name">Product Design</div>
-            <div className="bb-role-desc">Flows, screens, component library, AI state patterns</div>
-          </div>
-          <div className="bb-role-card">
-            <div className="bb-role-tag">Engineering</div>
-            <div className="bb-role-name">Front-end Dev</div>
-            <div className="bb-role-desc">UI implementation, component system, responsive builds</div>
-          </div>
-          <div className="bb-role-card">
-            <div className="bb-role-tag">AI</div>
-            <div className="bb-role-name">Prompt Engineering</div>
-            <div className="bb-role-desc">Screener generation, AI interview logic, output quality</div>
-          </div>
-          <div className="bb-role-card">
-            <div className="bb-role-tag">Growth</div>
-            <div className="bb-role-name">Sales</div>
-            <div className="bb-role-desc">User acquisition, demos, beta outreach, waitlist growth</div>
-          </div>
-          <div className="bb-role-card">
-            <div className="bb-role-tag">Research</div>
-            <div className="bb-role-name">User Interviews</div>
-            <div className="bb-role-desc">5 in-depth sessions, expert consultations, beta validation</div>
-          </div>
-        </div>
-
-        <div className="bb-prompts" style={{ marginTop: 'var(--space-10)' }}>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p>Business stakes: researchers were leaving for tools that handled one part of the ops problem better. BeeBob needed to replace five separate subscriptions with one coherent platform &mdash; or it wouldn&rsquo;t survive as a business.</p>
-          </div>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p>My co-founder handled the AI model integrations. I handled everything from &ldquo;what are we building&rdquo; to &ldquo;how does every state communicate uncertainty to the user&rdquo; &mdash; and then built the front-end myself.</p>
-          </div>
+        <div className="bb-role-tags-visual">
+          <span className="bb-role-chip">Product</span>
+          <span className="bb-role-chip">Design</span>
+          <span className="bb-role-chip">Front-end</span>
+          <span className="bb-role-chip">Prompt Eng</span>
+          <span className="bb-role-chip">Sales</span>
+          <span className="bb-role-chip">Research</span>
         </div>
       </section>
 
@@ -174,7 +145,7 @@ export function BeeBobPage() {
         <div className="two-col" style={{ marginTop: 'var(--space-10)' }}>
           <div className="img-card">
             <img src="/images/beebob-problem-01.png" alt="Problem — fragmented research ops workflow" />
-            <div className="cap">The broken pipeline &mdash; 5 disconnected tools, context lost at every handoff</div>
+            <div className="cap">The broken pipeline &mdash; 4 disconnected tools, context lost at every handoff</div>
           </div>
           <div className="img-card">
             <img src="/images/beebob-problem-02.png" alt="Problem — timeline mismatch vs sprint cycles" />
@@ -189,10 +160,10 @@ export function BeeBobPage() {
           <div>
             <div className="eyebrow">The Problem &middot; Fragmented Tooling</div>
             <h2 className="chapter-title">
-              Five tools, five subscriptions &mdash;<br /><em>zero shared context</em>
+              Four tools, four subscriptions &mdash;<br /><em>zero shared context</em>
             </h2>
             <p className="chapter-body">
-              The tooling made it worse. Recruiting in one platform, screening in another, scheduling in a third, synthesising in a fourth. Five subscriptions, five logins, zero shared context. Every handoff between tools was a place where participant data, screening criteria, or research context got dropped.
+              The tooling made it worse. Recruiting in one platform, screening in another, scheduling in a third, synthesising in a fourth. Four subscriptions, four logins, zero shared context. Every handoff between tools was a place where participant data, screening criteria, or research context got dropped.
             </p>
           </div>
           <div className="img-card">
@@ -214,141 +185,263 @@ export function BeeBobPage() {
         </h2>
 
         <p className="chapter-body">
-          BeeBob&rsquo;s solution wasn&rsquo;t a single insight &mdash; it was two. First, that researchers shouldn&rsquo;t need five tools to run one study. Second, that AI should enhance their work, not replace it. These two directions shaped every design decision.
+          BeeBob&rsquo;s solution wasn&rsquo;t a single insight &mdash; it was two. First, that researchers shouldn&rsquo;t need four tools to run one study. Second, that AI should enhance their work, not replace it. These two directions shaped every design decision.
         </p>
 
-        {/* Direction Overview Cards */}
-        <div className="bb-directions">
-          <div className="bb-direction-card">
-            <div className="bb-direction-label">Direction A</div>
-            <div className="bb-direction-title">5 tools into 1 place</div>
-            <div className="bb-direction-body">
-              Researchers use separate tools for recruiting, screening, scheduling, interviewing, and synthesis. BeeBob consolidates the entire lifecycle into a single platform &mdash; designed from day one with an AI agent mindset.
-            </div>
-            <div className="bb-direction-tags">
-              <span className="bb-direction-tag">Consolidation</span>
-              <span className="bb-direction-tag">AI Agent</span>
-              <span className="bb-direction-tag">Single Source of Truth</span>
-            </div>
-          </div>
-          <div className="bb-direction-card">
-            <div className="bb-direction-label">Direction B</div>
-            <div className="bb-direction-title">Two paths &mdash; enhance, don&rsquo;t replace</div>
-            <div className="bb-direction-body">
-              Not every researcher trusts AI the same way. BeeBob offers two modes so the human is always in the loop to gatekeep the quality of the work. The researcher decides how much AI to let in.
-            </div>
-            <div className="bb-direction-tags">
-              <span className="bb-direction-tag">Human-in-the-Loop</span>
-              <span className="bb-direction-tag">Trust Spectrum</span>
-              <span className="bb-direction-tag">Two Modes</span>
+        {/* ── Direction A ── */}
+        <div className="bb-direction-section">
+          <div className="bb-direction-intro">
+            <div className="bb-direction-emoji-lg">🧩</div>
+            <div className="bb-direction-content">
+              <div className="bb-direction-label">Direction A</div>
+              <h3 className="bb-direction-title-lg">4 tools into 1 place</h3>
+              <p className="bb-direction-body">
+                Researchers use separate tools for recruiting, screening, scheduling, interviewing, and synthesis. BeeBob consolidates the entire lifecycle into a single platform &mdash; designed from day one with an AI agent mindset.
+              </p>
+              <div className="bb-direction-tags">
+                <span className="bb-direction-tag">Consolidation</span>
+                <span className="bb-direction-tag">AI Agent</span>
+                <span className="bb-direction-tag">Single Source of Truth</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* ── Direction A Deep-Dive ── */}
-        <div className="bb-direction-header">
-          <div className="bb-direction-label">Direction A</div>
-          <h3 className="chapter-title">
-            Five tools, one pipeline &mdash;<br /><em>designed as an AI agent</em>
-          </h3>
-        </div>
-
-        <p className="chapter-body">
-          Every study runs through the same five-stage pipeline. Instead of context-switching between platforms, the researcher stays in one place. The AI agent handles handoffs that used to be manual &mdash; screener generation, participant qualification, scheduling coordination.
-        </p>
-
-        {/* Pipeline Steps */}
-        <div className="bb-pipeline">
-          <div className="bb-pipe-step">
-            <div className="bb-pipe-num">01</div>
-            <div className="bb-pipe-name">Study Setup</div>
-            <div className="bb-pipe-sub">Goals, methodology, target audience</div>
+          {/* Pipeline Steps */}
+          <div className="bb-pipeline-v2">
+          <div className="bb-pipe-v2">
+            <div className="bb-pipe-v2-num">01</div>
+            <div className="bb-pipe-v2-icon">📋</div>
+            <div className="bb-pipe-v2-name">Study Setup</div>
           </div>
-          <div className="bb-pipe-step">
-            <div className="bb-pipe-num">02</div>
-            <div className="bb-pipe-name">AI Screener</div>
-            <div className="bb-pipe-sub">Generated in 90s. Criteria-driven qualification</div>
+          <div className="bb-pipe-v2-arrow">&rarr;</div>
+          <div className="bb-pipe-v2">
+            <div className="bb-pipe-v2-num">02</div>
+            <div className="bb-pipe-v2-icon">🎯</div>
+            <div className="bb-pipe-v2-name">AI Screener</div>
           </div>
-          <div className="bb-pipe-step">
-            <div className="bb-pipe-num">03</div>
-            <div className="bb-pipe-name">Participant Pipeline</div>
-            <div className="bb-pipe-sub">Quality check, approval, scheduling</div>
+          <div className="bb-pipe-v2-arrow">&rarr;</div>
+          <div className="bb-pipe-v2">
+            <div className="bb-pipe-v2-num">03</div>
+            <div className="bb-pipe-v2-icon">👥</div>
+            <div className="bb-pipe-v2-name">Participants List</div>
           </div>
-          <div className="bb-pipe-step">
-            <div className="bb-pipe-num">04</div>
-            <div className="bb-pipe-name">Session</div>
-            <div className="bb-pipe-sub">Human-led or AI-moderated</div>
+          <div className="bb-pipe-v2-arrow">&rarr;</div>
+          <div className="bb-pipe-v2">
+            <div className="bb-pipe-v2-num">04</div>
+            <div className="bb-pipe-v2-icon">💬</div>
+            <div className="bb-pipe-v2-name">Interview</div>
           </div>
-          <div className="bb-pipe-step">
-            <div className="bb-pipe-num">05</div>
-            <div className="bb-pipe-name">Synthesis</div>
-            <div className="bb-pipe-sub">Auto-insights or researcher analysis</div>
+          <div className="bb-pipe-v2-arrow">&rarr;</div>
+          <div className="bb-pipe-v2">
+            <div className="bb-pipe-v2-num">05</div>
+            <div className="bb-pipe-v2-icon">✨</div>
+            <div className="bb-pipe-v2-name">Synthesis</div>
           </div>
         </div>
-
-        <div className="bb-prompts">
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>AI agent mindset:</strong> Every stage was designed as a step in an autonomous pipeline, not a feature bolted onto a dashboard. The AI knows what comes next and prepares for it.</p>
-          </div>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Shared context across stages:</strong> Participant data, screening criteria, and study goals flow through the pipeline without manual re-entry. No more copy-paste between tools.</p>
-          </div>
         </div>
 
-        {/* ── Direction B Deep-Dive ── */}
-        <div className="bb-direction-header">
-          <div className="bb-direction-label">Direction B</div>
-          <h3 className="chapter-title">
-            Two paths through it &mdash;<br /><em>researcher decides</em>
-          </h3>
+        {/* ── Direction B ── */}
+        <div className="bb-direction-section">
+          <div className="bb-direction-intro">
+            <div className="bb-direction-emoji-lg">🤝</div>
+            <div className="bb-direction-content">
+              <div className="bb-direction-label">Direction B</div>
+              <h3 className="bb-direction-title-lg">Two paths &mdash; enhance, don&rsquo;t replace</h3>
+              <p className="bb-direction-body">
+                Not every researcher trusts AI the same way. BeeBob offers two modes so the human is always in the loop to gatekeep the quality of the work. The researcher decides how much AI to let in.
+              </p>
+              <div className="bb-direction-tags">
+                <span className="bb-direction-tag">Human-in-the-Loop</span>
+                <span className="bb-direction-tag">Trust Spectrum</span>
+                <span className="bb-direction-tag">Two Modes</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Flowchart + Image */}
+          <div className="bb-flow-with-image">
+            <div className="bb-flowchart">
+              {/* Shared Start */}
+              <div className="bb-flow-shared">
+                <div className="bb-flow-node bb-flow-node-start">
+                  <span>📋</span> Study Setup
+                </div>
+                <div className="bb-flow-arrow-down">&darr;</div>
+                <div className="bb-flow-node bb-flow-node-start">
+                  <span>🎯</span> AI Screener
+                </div>
+              </div>
+
+              {/* Branch Point */}
+              <div className="bb-flow-branch">
+                <div className="bb-flow-branch-label">Researcher chooses</div>
+                <div className="bb-flow-branch-lines"></div>
+              </div>
+
+              {/* Two Paths */}
+              <div className="bb-flow-paths">
+                {/* Research Ops Path */}
+                <div className="bb-flow-path bb-flow-path-ops">
+                  <div className="bb-flow-path-header">
+                    <div className="bb-flow-path-icon">👤</div>
+                    <div className="bb-flow-path-title">Research Ops</div>
+                  </div>
+                  <div className="bb-flow-path-nodes">
+                    <div className="bb-flow-node-sm">Auto scheduling &amp; emails</div>
+                  </div>
+                  <div className="bb-flow-path-best">Best for: nuanced, sensitive topics</div>
+                </div>
+
+                {/* AI Interview Path */}
+                <div className="bb-flow-path bb-flow-path-ai">
+                  <div className="bb-flow-path-header">
+                    <div className="bb-flow-path-icon">🤖</div>
+                    <div className="bb-flow-path-title">AI Interview</div>
+                  </div>
+                  <div className="bb-flow-path-nodes">
+                    <div className="bb-flow-node-sm">AI-moderated session</div>
+                    <div className="bb-flow-arrow-sm">&darr;</div>
+                    <div className="bb-flow-node-sm">Auto-synthesis</div>
+                  </div>
+                  <div className="bb-flow-path-best">Best for: scale, concept testing</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bb-flow-image">
+              <img src="/images/beebob-overall-flow.png" alt="BeeBob overall flow diagram" />
+            </div>
+          </div>
         </div>
-
-        <p className="chapter-body">
-          We should not replace anyone&rsquo;s work &mdash; we should enhance their productivity. The researcher chooses at study setup whether they want to stay in the room or hand the session to AI. Both paths share the same pipeline infrastructure &mdash; only the session and synthesis steps diverge.
-        </p>
-
-        {/* Two Flow Comparison */}
-        <div className="bb-flow-compare">
-          <div className="bb-flow-box">
-            <div className="bb-flow-label bb-flow-ops">Research Ops Flow</div>
-            <div className="bb-flow-title">AI handles the logistics. Human runs the session.</div>
-            <div className="bb-flow-item">AI screens and qualifies participants</div>
-            <div className="bb-flow-item">Auto-scheduling removes calendar coordination</div>
-            <div className="bb-flow-item">Researcher conducts the interview</div>
-            <div className="bb-flow-item">Best for: moderated, sensitive, nuanced topics</div>
-          </div>
-          <div className="bb-flow-box">
-            <div className="bb-flow-label bb-flow-ai">AI Interview Flow</div>
-            <div className="bb-flow-title">AI runs end-to-end. Researcher defines and interprets.</div>
-            <div className="bb-flow-item">Screener &rarr; AI-moderated session</div>
-            <div className="bb-flow-item">Auto-synthesised insights traceable to source</div>
-            <div className="bb-flow-item">Scale previously only possible with agencies</div>
-            <div className="bb-flow-item">Best for: concept testing, large samples</div>
-          </div>
-        </div>
-
-
-
-
-
-        <div className="bb-prompts">
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Human-in-the-loop by design:</strong> Research Ops mode keeps the researcher in the session. AI handles everything around it &mdash; recruiting, screening, scheduling &mdash; but the methodology stays fully researcher-controlled.</p>
-          </div>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Trust builds over time:</strong> A researcher might start with Research Ops when the topic is sensitive, then switch to AI Interview for a follow-up concept test at scale. The product grows with their trust.</p>
-          </div>
-        </div>
-
 
       </section>
 
-      {/* 3C: Shipped Work (from Ch06) */}
+      {/* 3C: Shipped Work — Two Flows */}
       <section className="chapter light reveal" id="bb-s3c">
+        <div className="eyebrow">What We Shipped</div>
+        <h2 className="chapter-title">
+          Two flows, one decision point &mdash;<br /><em>researcher chooses</em>
+        </h2>
+
+        {/* Flow 1: Research Ops */}
+        <div className="bb-flow-section">
+          <div className="bb-flow-section-header">
+            <div className="bb-flow-section-icon">👤</div>
+            <div className="bb-flow-section-title">Research Ops Flow</div>
+          </div>
+          <p className="bb-flow-section-desc">
+            Automates the entire recruitment pipeline &mdash; from screening form to scheduled session. The system handles calendar coordination and sends confirmation emails, so researchers can focus on the research itself.
+          </p>
+
+          {/* High-level flow */}
+          <div className="bb-pipeline-v2">
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">01</div>
+              <div className="bb-pipe-v2-icon">📋</div>
+              <div className="bb-pipe-v2-name">Screener Form</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">02</div>
+              <div className="bb-pipe-v2-icon">🎯</div>
+              <div className="bb-pipe-v2-name">AI Screening</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">03</div>
+              <div className="bb-pipe-v2-icon">📅</div>
+              <div className="bb-pipe-v2-name">Schedule</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">04</div>
+              <div className="bb-pipe-v2-icon">✉️</div>
+              <div className="bb-pipe-v2-name">Auto Email</div>
+            </div>
+          </div>
+
+          <div className="img-card-light">
+            <div className="bb-video-embed">
+              <iframe
+                src="https://player.vimeo.com/video/1176913265?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="BeeBob Research Ops Flow"
+              />
+            </div>
+            <div className="cap">This video showcases how Research Ops is set up in BeeBob AI &mdash; from creating a screener form, to stating your availability, to auto-sending emails.</div>
+          </div>
+
+          <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
+            <div className="img-card-light">
+              <img src="/images/beebob-screener-form-01.png" alt="Screener form step 1" />
+              <div className="cap">Screener form &mdash; step 1</div>
+            </div>
+            <div className="img-card-light">
+              <img src="/images/beebob-screener-form-02.png" alt="Screener form step 2" />
+              <div className="cap">Screener form &mdash; step 2</div>
+            </div>
+          </div>
+
+          {/* Scheduling flow diagram */}
+          <div className="bb-pipeline-v2" style={{ marginTop: 'var(--space-6)' }}>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">01</div>
+              <div className="bb-pipe-v2-icon">🔗</div>
+              <div className="bb-pipe-v2-name">Researcher Sends Invite</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">02</div>
+              <div className="bb-pipe-v2-icon">📅</div>
+              <div className="bb-pipe-v2-name">Participant Selects Availability</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">03</div>
+              <div className="bb-pipe-v2-icon">📹</div>
+              <div className="bb-pipe-v2-name">Auto Send Google Meet</div>
+            </div>
+          </div>
+
+          <div className="img-card-light" style={{ marginTop: 'var(--space-6)' }}>
+            <div className="bb-video-embed">
+              <iframe
+                src="https://player.vimeo.com/video/1176908157?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="BeeBob Scheduling and Email"
+              />
+            </div>
+            <div className="cap">Once participants complete the screener form, their responses are captured in the system. From there, you can send calendar invites &mdash; the system emails participants to collect availability and confirms sessions automatically.</div>
+          </div>
+
+          <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
+            <div className="img-card-light">
+              <img src="/images/beebob-group-list-participant.png" alt="Group list of participants" />
+              <div className="cap">Participant list &mdash; all responses in one view</div>
+            </div>
+            <div className="img-card-light">
+              <img src="/images/beebob-group-list-schedule.png" alt="Group list schedule view" />
+              <div className="cap">Schedule view &mdash; confirmed sessions at a glance</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Flow 2: AI Interview */}
+        <div className="bb-flow-section bb-flow-section-divider">
+          <div className="bb-flow-section-header">
+            <div className="bb-flow-section-icon">🤖</div>
+            <div className="bb-flow-section-title">AI Interview Flow</div>
+          </div>
+          <div className="img-card-light">
+            <VidPlaceholder label="Replace · AI Interview flow video" />
+          </div>
+        </div>
+      </section>
+
+      {/* 3D: Shipped Work (duplicate) */}
+      <section className="chapter light reveal" id="bb-s3d">
         <div className="eyebrow">What We Shipped</div>
         <h2 className="chapter-title">
           Two flows, one decision point &mdash;<br /><em>researcher chooses</em>
@@ -360,49 +453,49 @@ export function BeeBobPage() {
         </div>
 
         <div className="img-card-light" style={{ marginBottom: 'var(--space-6)' }}>
-          <ImgPlaceholder label="Fig 01 — Study setup: brief to screener in under 90 seconds" />
-          <div className="cap">Fig 01 &middot; Study setup &mdash; brief input, AI screener generation, methodology selection</div>
+          <ImgPlaceholder label="Fig 05 — Placeholder" />
+          <div className="cap">Fig 05 &middot; Caption here</div>
         </div>
 
         <div className="two-col" style={{ marginBottom: 'var(--space-6)' }}>
           <div className="img-card-light">
-            <ImgPlaceholder label="Fig 02 — Participant quality checker" />
-            <div className="cap">Fig 02 &middot; AI quality checker &mdash; flags high-risk participants before booking</div>
+            <ImgPlaceholder label="Fig 06 — Placeholder" />
+            <div className="cap">Fig 06 &middot; Caption here</div>
           </div>
           <div className="img-card-light">
-            <ImgPlaceholder label="Fig 03 — Study type selector" />
-            <div className="cap">Fig 03 &middot; Study type selection &mdash; Research Ops vs AI Interview</div>
+            <ImgPlaceholder label="Fig 07 — Placeholder" />
+            <div className="cap">Fig 07 &middot; Caption here</div>
           </div>
         </div>
 
         <div className="img-card-light" style={{ marginBottom: 'var(--space-6)' }}>
-          <ImgPlaceholder label="Fig 04 — Participant pipeline dashboard" />
-          <div className="cap">Fig 04 &middot; Participant pipeline &mdash; single view from screener to booked session</div>
+          <ImgPlaceholder label="Fig 08 — Placeholder" />
+          <div className="cap">Fig 08 &middot; Caption here</div>
         </div>
 
         <div className="two-col" style={{ marginBottom: 'var(--space-8)' }}>
           <div className="img-card-light">
-            <VidPlaceholder label="Replace &middot; Research Ops walkthrough video" />
-            <div className="cap">Vid 01 &middot; Research Ops full flow &mdash; study setup to scheduled session</div>
+            <VidPlaceholder label="Replace · Video placeholder" />
+            <div className="cap">Vid 03 &middot; Caption here</div>
           </div>
           <div className="img-card-light">
-            <VidPlaceholder label="Replace &middot; AI Interview walkthrough video" />
-            <div className="cap">Vid 02 &middot; AI Interview full flow &mdash; screener to synthesised insight</div>
+            <VidPlaceholder label="Replace · Video placeholder" />
+            <div className="cap">Vid 04 &middot; Caption here</div>
           </div>
         </div>
 
         <div className="bb-prompts">
           <div className="bb-prompt">
             <div className="bb-prompt-dot" />
-            <p><strong>Built for uncertainty:</strong> Every AI output has an explicit confidence state. Low confidence = lighter visual weight = clear signal to review before acting. The UI never presents uncertain output as resolved.</p>
+            <p><strong>Point 1:</strong> Description here.</p>
           </div>
           <div className="bb-prompt">
             <div className="bb-prompt-dot" />
-            <p><strong>AI Interview &mdash; designed around participant reality:</strong> The session happens asynchronously, on the participant&rsquo;s schedule. No calendar coordination. No timezone conflicts. Real-time translation into the participant&rsquo;s language was a core capability, not an add-on.</p>
+            <p><strong>Point 2:</strong> Description here.</p>
           </div>
           <div className="bb-prompt">
             <div className="bb-prompt-dot" />
-            <p><strong>What I left behind:</strong> A component library with four AI state patterns &mdash; loading, uncertain, confident, failed &mdash; with documentation mapping each UI state to the model behaviour it represents. Built to survive a model update without a redesign.</p>
+            <p><strong>Point 3:</strong> Description here.</p>
           </div>
         </div>
       </section>
