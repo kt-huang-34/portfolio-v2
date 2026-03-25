@@ -137,20 +137,20 @@ export function BeeBobPage() {
       ══════════════════════════════════════════════════════════ */}
       <div className="stat-strip bb-stat-strip">
         <div className="stat-item">
-          <div className="lbl">Hours Returned / Week</div>
+          <div className="lbl">Researcher hours saved weekly</div>
           <div className="num">15<span>+</span></div>
         </div>
         <div className="stat-item">
-          <div className="lbl">Screener Creation</div>
-          <div className="num">90<span>s</span></div>
+          <div className="lbl">Screener setup (was 2+ hrs)</div>
+          <div className="num">90<span>sec</span></div>
         </div>
         <div className="stat-item">
-          <div className="lbl">Tools Consolidated</div>
+          <div className="lbl">Tools replaced</div>
           <div className="num">4<span>&rarr;1</span></div>
         </div>
         <div className="stat-item">
-          <div className="lbl">Solo Designer</div>
-          <div className="num">0<span>&rarr;1</span></div>
+          <div className="lbl">Team size (Designer + Engineer)</div>
+          <div className="num">2</div>
         </div>
       </div>
 
@@ -636,74 +636,126 @@ export function BeeBobPage() {
       <section className="chapter light reveal" id="bb-s4b">
         <div className="eyebrow">Challenge B &middot; From My Co-founder CTO</div>
         <h2 className="chapter-title">
-          Three real forks &mdash;<br /><em>and what got killed</em>
+          Three real conflicts &mdash;<br /><em>designer vs. engineer</em>
         </h2>
 
         <p className="chapter-body">
-          Three moments where the path split and I had to pick one and kill the other. Each one had a real cost.
+          Every conflict came down to the same tension: the engineer optimised for what the system <em>can</em> do. I protected what the researcher <em>needs</em> to trust it.
         </p>
 
-        <div className="bb-decision-cards">
-          <div className="bb-decision-card">
-            <div className="bb-decision-card-num">01</div>
-            <div className="bb-decision-card-question">One product or two separate tools?</div>
-            <div className="bb-decision-card-choices">
-              <div className="bb-decision-choice bb-decision-killed">
-                <span className="bb-decision-choice-label">Killed</span>
-                Two separate products
+        <div className="bb-conflict-cards">
+          {/* Conflict 1 */}
+          <div className="bb-conflict-card">
+            <div className="bb-conflict-header">
+              <div className="bb-conflict-num">01</div>
+              <div className="bb-conflict-title">Smart Screener &mdash; Speed vs. Stability</div>
+              <div className="bb-conflict-badge bb-conflict-killed">Killed</div>
+            </div>
+            <div className="bb-conflict-perspectives">
+              <div className="bb-conflict-perspective bb-perspective-cto">
+                <div className="bb-perspective-label">CTO / Engineer</div>
+                <p>Ship the AI screener feature &mdash; it demos well and adds value</p>
               </div>
-              <div className="bb-decision-choice bb-decision-kept">
-                <span className="bb-decision-choice-label">Kept</span>
-                One platform, trust spectrum
+              <div className="bb-conflict-perspective bb-perspective-designer">
+                <div className="bb-perspective-label">Me</div>
+                <p>The model isn&rsquo;t stable enough yet; it needs large volumes of quality screener forms to produce reliable output</p>
               </div>
             </div>
-            <div className="bb-decision-card-basis">Two codebases = no cross-sell path. Researchers who outgrow one have to leave entirely.</div>
+            <div className="bb-conflict-outcome">
+              <div className="bb-conflict-outcome-label">What happened</div>
+              <p>Screener questions were causing bugs in form generation downstream, creating cascading instability that slowed the entire system&rsquo;s iteration speed.</p>
+            </div>
+            <div className="bb-conflict-lesson">
+              <strong>Lesson:</strong> Shipping an unstable AI feature before you have the training data to support it doesn&rsquo;t just disappoint users &mdash; it destroys the feedback loop you need to improve it.
+            </div>
           </div>
 
-          <div className="bb-decision-card">
-            <div className="bb-decision-card-num">02</div>
-            <div className="bb-decision-card-question">Full automation or researcher-gated approval?</div>
-            <div className="bb-decision-card-choices">
-              <div className="bb-decision-choice bb-decision-killed">
-                <span className="bb-decision-choice-label">Killed</span>
-                Fully automated participant approval
+          {/* Conflict 2 */}
+          <div className="bb-conflict-card">
+            <div className="bb-conflict-header">
+              <div className="bb-conflict-num">02</div>
+              <div className="bb-conflict-title">Participant Approval &mdash; Full Automation vs. Human Judgment</div>
+              <div className="bb-conflict-badge bb-conflict-kept">Kept Human Gate</div>
+            </div>
+            <div className="bb-conflict-perspectives">
+              <div className="bb-conflict-perspective bb-perspective-cto">
+                <div className="bb-perspective-label">CTO / Engineer</div>
+                <p>Automate participant approval after screener &mdash; that&rsquo;s the point of AI</p>
               </div>
-              <div className="bb-decision-choice bb-decision-kept">
-                <span className="bb-decision-choice-label">Kept</span>
-                Human approval gate (for now)
+              <div className="bb-conflict-perspective bb-perspective-designer">
+                <div className="bb-perspective-label">Me / Researcher users</div>
+                <p>Researchers want to hand-pick participants because the screener responses themselves sometimes reveal surprising patterns worth acting on</p>
               </div>
             </div>
-            <div className="bb-decision-card-basis">Not enough usage data. Full automation may recreate the bottleneck later.</div>
+            <div className="bb-conflict-outcome">
+              <div className="bb-conflict-outcome-label">What happened</div>
+              <p>A researcher who &ldquo;qualifies&rdquo; on paper might be less interesting than one whose unexpected answer signals a new segment or research direction.</p>
+            </div>
+            <div className="bb-conflict-lesson">
+              <strong>Lesson:</strong> Before automating a step, ask: <em>&ldquo;Is a human doing this because it&rsquo;s tedious &mdash; or because they&rsquo;re actually thinking while they do it?&rdquo;</em>
+            </div>
           </div>
 
-          <div className="bb-decision-card bb-decision-card-highlight">
-            <div className="bb-decision-card-num">03</div>
-            <div className="bb-decision-card-question">AI output displayed raw or interpreted?</div>
-            <div className="bb-decision-card-choices">
-              <div className="bb-decision-choice bb-decision-killed">
-                <span className="bb-decision-choice-label">Killed</span>
-                Raw output with no confidence signal
+          {/* Conflict 3 */}
+          <div className="bb-conflict-card">
+            <div className="bb-conflict-header">
+              <div className="bb-conflict-num">03</div>
+              <div className="bb-conflict-title">AI Interview Scoring &mdash; Raw Output vs. Confidence Encoding</div>
+              <div className="bb-conflict-badge bb-conflict-convinced">Convinced CTO</div>
+            </div>
+            <div className="bb-conflict-perspectives">
+              <div className="bb-conflict-perspective bb-perspective-cto">
+                <div className="bb-perspective-label">CTO / Engineer</div>
+                <p>Just show raw model output &mdash; faster to build, easier to iterate</p>
               </div>
-              <div className="bb-decision-choice bb-decision-kept">
-                <span className="bb-decision-choice-label">Kept</span>
-                Visual confidence encoding throughout
+              <div className="bb-conflict-perspective bb-perspective-designer">
+                <div className="bb-perspective-label">Me</div>
+                <p>At scale, researchers can&rsquo;t read every transcript. Uncertain AI output presented as resolved will lead to wrong research decisions</p>
               </div>
             </div>
-            <div className="bb-decision-card-basis">Low confidence output presented as resolved = wrong. The UI must surface uncertainty.</div>
-            <div className="bb-decision-card-callout">
-              <strong>Where I fought:</strong> The engineer preferred raw output &mdash; faster to build. I pushed for explicit confidence visual weight. Cost: two sprint cycles. Worth it.
+            <div className="bb-conflict-outcome">
+              <div className="bb-conflict-outcome-label">What happened</div>
+              <p>I defined a 3-layer confidence framework: depth of sharing (how much did the participant reveal?), AI data confidence (how certain is the model?), and usability at scale (is this safe to act on?).</p>
+            </div>
+            <div className="bb-conflict-lesson">
+              <strong>Lesson:</strong> Designing for AI uncertainty isn&rsquo;t polish &mdash; it&rsquo;s the feature. The more participants, the more researchers rely on AI-summarised output, making trustworthy confidence signals <em>more</em> critical at scale.
+            </div>
+            <div className="bb-conflict-cost">
+              <span className="bb-conflict-cost-label">Cost:</span> 2 sprints (1 month) &mdash; worth it.
             </div>
           </div>
         </div>
 
-        <div className="bb-flags">
-          <div className="bb-flag bb-flag-red">
-            <div className="bb-flag-label">Red flag</div>
-            &ldquo;We explored three options and picked the best one.&rdquo;
+        <div className="bb-conflict-thread">
+          <blockquote>
+            &ldquo;The engineer optimised for what the system <em>can</em> do. The designer protected what the researcher <em>needs</em> to trust it.&rdquo;
+          </blockquote>
+          <p>Automation, speed, and raw output are all valid engineering defaults &mdash; but in a research tool, <strong>trust is the product</strong>. Lose it once, and researchers don&rsquo;t come back.</p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════
+          IMPACT SECTION
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="bb-impact reveal">
+        <div className="bb-impact-inner">
+          <div className="bb-impact-header">
+            <div className="eyebrow">BeeBob AI</div>
+            <h2 className="bb-impact-title">Impact</h2>
           </div>
-          <div className="bb-flag bb-flag-green">
-            <div className="bb-flag-label">Green flag</div>
-            &ldquo;Here&rsquo;s what we killed, here&rsquo;s why, and here&rsquo;s what it cost us to kill it.&rdquo;
+          <div className="bb-impact-grid">
+            <div className="bb-impact-item">
+              <div className="bb-impact-num">90<span>%</span></div>
+              <div className="bb-impact-label">Time saved vs. manual qualitative research</div>
+            </div>
+            <div className="bb-impact-item">
+              <div className="bb-impact-num">70<span>%</span></div>
+              <div className="bb-impact-label">Cost saved vs. traditional focus groups</div>
+            </div>
+            <div className="bb-impact-item">
+              <div className="bb-impact-num">10<span>&times;</span></div>
+              <div className="bb-impact-label">Faster from recruitment to insight</div>
+            </div>
           </div>
         </div>
       </section>
@@ -737,26 +789,6 @@ export function BeeBobPage() {
           </div>
         </div>
 
-        <div className="bb-flags">
-          <div className="bb-flag bb-flag-red">
-            <div className="bb-flag-label">What I won&rsquo;t say</div>
-            &ldquo;In hindsight I&rsquo;d probably communicate more proactively with stakeholders.&rdquo; That&rsquo;s a platitude wearing a lesson&rsquo;s clothes.
-          </div>
-          <div className="bb-flag bb-flag-green">
-            <div className="bb-flag-label">What I&rsquo;ll actually own</div>
-            I let demo appeal drive scope priority. Scheduling &mdash; the highest-impact feature &mdash; shipped last because it demos less impressively. I know exactly when I made that call.
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════════
-          CLOSING QUOTE
-      ══════════════════════════════════════════════════════════ */}
-      <section className="chapter coral bb-closing reveal">
-        <blockquote className="bb-block-quote">
-          &ldquo;Researchers already know how to do research. BeeBob is the co-pilot that handles what gets in the way of it. Not an efficiency tool. Not a research platform. A co-pilot for people who already have the expertise &mdash; and need the ops to disappear.&rdquo;
-        </blockquote>
-        <cite className="bb-cite">&mdash; The strategic bet. And I&rsquo;d make it again.</cite>
       </section>
     </main>
   );

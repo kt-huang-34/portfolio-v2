@@ -1396,6 +1396,214 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   CONFLICT CARDS (Designer vs Engineer)
+   ══════════════════════════════════════════════════════════════ */
+.bb-conflict-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+.bb-conflict-card {
+  background: var(--white);
+  border: var(--border-width-sub) solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.bb-conflict-card-highlight {
+  border-color: var(--coral);
+  border-width: 2px;
+}
+
+.bb-conflict-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.bb-conflict-num {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--coral);
+  flex-shrink: 0;
+}
+
+.bb-conflict-title {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 1.5vw, 18px);
+  font-weight: 700;
+  color: var(--near-black);
+  line-height: var(--leading-tight);
+  flex: 1;
+}
+
+.bb-conflict-badge {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--tag-radius);
+  flex-shrink: 0;
+}
+
+.bb-conflict-killed {
+  background: var(--coral-pale);
+  color: var(--coral);
+}
+
+.bb-conflict-kept {
+  background: rgba(93, 184, 106, 0.15);
+  color: var(--status-green);
+}
+
+.bb-conflict-convinced {
+  background: rgba(123, 142, 200, 0.15);
+  color: #5A6FA8;
+}
+
+.bb-conflict-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.bb-conflict-perspective {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.bb-perspective-cto {
+  background: rgba(26, 23, 20, 0.04);
+}
+
+.bb-perspective-designer {
+  background: rgba(200, 74, 46, 0.06);
+}
+
+.bb-perspective-label {
+  font-family: var(--font-sans);
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.bb-perspective-cto .bb-perspective-label {
+  color: var(--warm-gray);
+}
+
+.bb-perspective-designer .bb-perspective-label {
+  color: var(--coral);
+}
+
+.bb-conflict-perspective p {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--near-black);
+  line-height: var(--leading-normal);
+  margin: 0;
+}
+
+.bb-conflict-outcome {
+  padding: var(--space-4) 0;
+  border-top: var(--border-width-sub) solid var(--border-light);
+  margin-bottom: var(--space-4);
+}
+
+.bb-conflict-outcome-label {
+  font-family: var(--font-sans);
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--warm-gray-lt);
+  margin-bottom: var(--space-2);
+}
+
+.bb-conflict-outcome p {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--warm-gray);
+  line-height: var(--leading-normal);
+  margin: 0;
+}
+
+.bb-conflict-lesson {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--warm-gray);
+  line-height: var(--leading-normal);
+  padding: var(--space-4);
+  background: rgba(26, 23, 20, 0.03);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--coral);
+}
+
+.bb-conflict-lesson strong {
+  color: var(--near-black);
+}
+
+.bb-conflict-lesson em {
+  font-style: italic;
+}
+
+.bb-conflict-cost {
+  margin-top: var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--warm-gray);
+}
+
+.bb-conflict-cost-label {
+  font-weight: 600;
+  color: var(--near-black);
+}
+
+/* ── Conflict Thread (Closing statement) ── */
+.bb-conflict-thread {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: rgba(26, 23, 20, 0.03);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.bb-conflict-thread blockquote {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-style: italic;
+  color: var(--near-black);
+  line-height: 1.5;
+  margin: 0 0 var(--space-4);
+}
+
+.bb-conflict-thread blockquote em {
+  color: var(--coral);
+  font-style: italic;
+}
+
+.bb-conflict-thread p {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--warm-gray);
+  line-height: var(--leading-normal);
+  margin: 0;
+}
+
+.bb-conflict-thread p strong {
+  color: var(--near-black);
+}
+
+/* ══════════════════════════════════════════════════════════════
    DECISION TABLE
    ══════════════════════════════════════════════════════════════ */
 .bb-decision-table {
@@ -2054,6 +2262,70 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   IMPACT SECTION
+   ══════════════════════════════════════════════════════════════ */
+.bb-impact {
+  background: var(--coral);
+  padding: var(--space-section) var(--page-gutter);
+}
+
+.bb-impact-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bb-impact-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.bb-impact .eyebrow {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bb-impact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  color: var(--white);
+  margin-top: var(--space-3);
+}
+
+.bb-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.bb-impact-item {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.bb-impact-num {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: var(--space-3);
+}
+
+.bb-impact-num span {
+  font-size: 0.6em;
+  opacity: 0.7;
+}
+
+.bb-impact-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: var(--leading-normal);
+}
+
+/* ══════════════════════════════════════════════════════════════
    CLOSING QUOTE
    ══════════════════════════════════════════════════════════════ */
 .bb-closing {
@@ -2406,5 +2678,26 @@
   /* ── Decision Cards ── */
   .bb-decision-card-choices {
     grid-template-columns: 1fr;
+  }
+
+  /* ── Conflict Cards ── */
+  .bb-conflict-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .bb-conflict-perspectives {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Impact Section ── */
+  .bb-impact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .bb-impact-item {
+    padding: var(--space-6) var(--space-4);
   }
 }
