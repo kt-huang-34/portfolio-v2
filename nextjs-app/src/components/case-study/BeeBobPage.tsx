@@ -1,8 +1,50 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useScrollReveal } from '@/lib';
 import './beebob-page.css';
+
+function ImageLightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div className="bb-lightbox-overlay" onClick={onClose}>
+      <button className="bb-lightbox-close" onClick={onClose} aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        className="bb-lightbox-image"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  );
+}
+
+function ClickableImage({ src, alt, onImageClick }: { src: string; alt: string; onImageClick: (src: string, alt: string) => void }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      onClick={() => onImageClick(src, alt)}
+      className="bb-clickable-image"
+    />
+  );
+}
 
 function ImgPlaceholder({ label }: { label: string }) {
   return (
@@ -26,9 +68,25 @@ function VidPlaceholder({ label }: { label: string }) {
 
 export function BeeBobPage() {
   useScrollReveal();
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
+
+  const openLightbox = useCallback((src: string, alt: string) => {
+    setLightboxImage({ src, alt });
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setLightboxImage(null);
+  }, []);
 
   return (
     <main className="bb-page">
+      {lightboxImage && (
+        <ImageLightbox
+          src={lightboxImage.src}
+          alt={lightboxImage.alt}
+          onClose={closeLightbox}
+        />
+      )}
       {/* ══════════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════════ */}
@@ -144,11 +202,11 @@ export function BeeBobPage() {
 
         <div className="two-col" style={{ marginTop: 'var(--space-10)' }}>
           <div className="img-card">
-            <img src="/images/beebob-problem-01.png" alt="Problem — fragmented research ops workflow" />
+            <ClickableImage src="/images/beebob-problem-01.png" alt="Problem — fragmented research ops workflow" onImageClick={openLightbox} />
             <div className="cap">The broken pipeline &mdash; 4 disconnected tools, context lost at every handoff</div>
           </div>
           <div className="img-card">
-            <img src="/images/beebob-problem-02.png" alt="Problem — timeline mismatch vs sprint cycles" />
+            <ClickableImage src="/images/beebob-problem-02.png" alt="Problem — timeline mismatch vs sprint cycles" onImageClick={openLightbox} />
             <div className="cap">6&ndash;8 week research cycle vs. 2-week sprint cycles &mdash; insights arrive too late</div>
           </div>
         </div>
@@ -167,7 +225,7 @@ export function BeeBobPage() {
             </p>
           </div>
           <div className="img-card">
-            <img src="/images/beebob-problem-03.png" alt="Fragmented tooling — 5 disconnected subscriptions" />
+            <ClickableImage src="/images/beebob-problem-03.png" alt="Fragmented tooling — 5 disconnected subscriptions" onImageClick={openLightbox} />
           </div>
         </div>
       </section>
@@ -309,7 +367,7 @@ export function BeeBobPage() {
             </div>
 
             <div className="bb-flow-image">
-              <img src="/images/beebob-overall-flow.png" alt="BeeBob overall flow diagram" />
+              <ClickableImage src="/images/beebob-overall-flow.png" alt="BeeBob overall flow diagram" onImageClick={openLightbox} />
             </div>
           </div>
         </div>
@@ -374,11 +432,11 @@ export function BeeBobPage() {
 
           <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
             <div className="img-card-light">
-              <img src="/images/beebob-screener-form-01.png" alt="Screener form step 1" />
+              <ClickableImage src="/images/beebob-screener-form-01.png" alt="Screener form step 1" onImageClick={openLightbox} />
               <div className="cap">Screener form &mdash; step 1</div>
             </div>
             <div className="img-card-light">
-              <img src="/images/beebob-screener-form-02.png" alt="Screener form step 2" />
+              <ClickableImage src="/images/beebob-screener-form-02.png" alt="Screener form step 2" onImageClick={openLightbox} />
               <div className="cap">Screener form &mdash; step 2</div>
             </div>
           </div>
@@ -418,11 +476,11 @@ export function BeeBobPage() {
 
           <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
             <div className="img-card-light">
-              <img src="/images/beebob-group-list-participant.png" alt="Group list of participants" />
+              <ClickableImage src="/images/beebob-group-list-participant.png" alt="Group list of participants" onImageClick={openLightbox} />
               <div className="cap">Participant list &mdash; all responses in one view</div>
             </div>
             <div className="img-card-light">
-              <img src="/images/beebob-group-list-schedule.png" alt="Group list schedule view" />
+              <ClickableImage src="/images/beebob-group-list-schedule.png" alt="Group list schedule view" onImageClick={openLightbox} />
               <div className="cap">Schedule view &mdash; confirmed sessions at a glance</div>
             </div>
           </div>
@@ -434,68 +492,68 @@ export function BeeBobPage() {
             <div className="bb-flow-section-icon">🤖</div>
             <div className="bb-flow-section-title">AI Interview Flow</div>
           </div>
+          <p className="bb-flow-section-desc">
+            For scale and speed, AI handles the entire interview process. Participants who pass the AI screening are invited to an AI-moderated interview session. Once all interviews are complete, the system automatically synthesises responses into a group insight report.
+          </p>
+
+          {/* AI Interview flow diagram */}
+          <div className="bb-pipeline-v2">
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">01</div>
+              <div className="bb-pipe-v2-icon">🎯</div>
+              <div className="bb-pipe-v2-name">AI Screening</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">02</div>
+              <div className="bb-pipe-v2-icon">🤖</div>
+              <div className="bb-pipe-v2-name">AI Moderated Interview</div>
+            </div>
+            <div className="bb-pipe-v2-arrow">&rarr;</div>
+            <div className="bb-pipe-v2">
+              <div className="bb-pipe-v2-num">03</div>
+              <div className="bb-pipe-v2-icon">📊</div>
+              <div className="bb-pipe-v2-name">Group Insight Report</div>
+            </div>
+          </div>
+
           <div className="img-card-light">
-            <VidPlaceholder label="Replace · AI Interview flow video" />
+            <div className="bb-video-embed">
+              <iframe
+                src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                title="BeeBob AI Interview Flow"
+              />
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* 3D: Shipped Work (duplicate) */}
-      <section className="chapter light reveal" id="bb-s3d">
-        <div className="eyebrow">What We Shipped</div>
-        <h2 className="chapter-title">
-          Two flows, one decision point &mdash;<br /><em>researcher chooses</em>
-        </h2>
-
-        <div className="bb-signal">
-          <div className="bb-signal-label">What I shipped</div>
-          <p>Annotated with intent &mdash; not just what it looks like, but why it&rsquo;s designed that way and what it accounts for.</p>
-        </div>
-
-        <div className="img-card-light" style={{ marginBottom: 'var(--space-6)' }}>
-          <ImgPlaceholder label="Fig 05 — Placeholder" />
-          <div className="cap">Fig 05 &middot; Caption here</div>
-        </div>
-
-        <div className="two-col" style={{ marginBottom: 'var(--space-6)' }}>
-          <div className="img-card-light">
-            <ImgPlaceholder label="Fig 06 — Placeholder" />
-            <div className="cap">Fig 06 &middot; Caption here</div>
+          <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
+            <div className="img-card-light">
+              <ClickableImage src="/images/beebob-discovery-question.png" alt="Set up discovery question" onImageClick={openLightbox} />
+              <div className="cap">Set up discovery question</div>
+            </div>
+            <div className="img-card-light">
+              <ClickableImage src="/images/beebob-preference-test.png" alt="Set up preference test" onImageClick={openLightbox} />
+              <div className="cap">Set up preference test</div>
+            </div>
           </div>
-          <div className="img-card-light">
-            <ImgPlaceholder label="Fig 07 — Placeholder" />
-            <div className="cap">Fig 07 &middot; Caption here</div>
-          </div>
-        </div>
 
-        <div className="img-card-light" style={{ marginBottom: 'var(--space-6)' }}>
-          <ImgPlaceholder label="Fig 08 — Placeholder" />
-          <div className="cap">Fig 08 &middot; Caption here</div>
-        </div>
-
-        <div className="two-col" style={{ marginBottom: 'var(--space-8)' }}>
-          <div className="img-card-light">
-            <VidPlaceholder label="Replace · Video placeholder" />
-            <div className="cap">Vid 03 &middot; Caption here</div>
-          </div>
-          <div className="img-card-light">
-            <VidPlaceholder label="Replace · Video placeholder" />
-            <div className="cap">Vid 04 &middot; Caption here</div>
-          </div>
-        </div>
-
-        <div className="bb-prompts">
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Point 1:</strong> Description here.</p>
-          </div>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Point 2:</strong> Description here.</p>
-          </div>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Point 3:</strong> Description here.</p>
+          <div className="bb-video-image-row" style={{ marginTop: 'var(--space-6)' }}>
+            <div className="img-card-light">
+              <div className="bb-video-embed">
+                <iframe
+                  src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="BeeBob AI Interview Setup"
+                />
+              </div>
+            </div>
+            <div className="img-card-light">
+              <ClickableImage src="/images/beebob-report-ask-agent.png" alt="Report and ask agent" onImageClick={openLightbox} />
+              <div className="cap">Report and ask agent</div>
+            </div>
           </div>
         </div>
       </section>
