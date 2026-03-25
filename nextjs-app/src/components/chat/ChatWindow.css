@@ -5,79 +5,19 @@
 /* Avatar area */
 .tina-avatar-area {
   background: linear-gradient(160deg, var(--cream-deep) 0%, var(--sand) 100%);
-  height: 160px;
+  height: 280px;
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   border-bottom: var(--border-width) solid rgba(42, 37, 32, 0.15);
 }
 
-.avatar-figure {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
-  height: 145px;
-}
-
-.avatar-head {
-  position: absolute;
-  width: 62px;
-  height: 68px;
-  background: var(--skin-tone);
-  border-radius: 50% 50% 45% 45%;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.avatar-hair {
-  position: absolute;
-  width: 70px;
-  height: 50px;
-  background: var(--hair-brown);
-  border-radius: 50% 50% 20% 20%;
-  top: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.avatar-hair-side {
-  position: absolute;
-  width: var(--space-4);
-  height: 38px;
-  background: var(--hair-brown);
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
-  top: var(--space-8);
-}
-
-.avatar-hair-side.left { left: 6px; }
-.avatar-hair-side.right { right: 6px; }
-
-.avatar-body {
-  position: absolute;
-  width: 82px;
-  height: 70px;
-  background: var(--coral);
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.avatar-neck {
-  position: absolute;
-  width: 22px;
-  height: var(--space-5);
-  background: var(--skin-tone);
-  bottom: 68px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+.avatar-selfie {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .avatar-badge {
@@ -126,8 +66,8 @@
 .tina-chat-body {
   padding: var(--space-3);
   background: var(--off-white);
-  min-height: 200px;
-  max-height: 200px;
+  min-height: 240px;
+  max-height: 280px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -142,6 +82,18 @@
   display: flex;
   gap: var(--space-2);
   align-items: flex-start;
+  animation: messageSlideIn 0.4s ease-out;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .chat-msg.user { flex-direction: row-reverse; }
@@ -164,7 +116,7 @@
 .chat-avatar.tina-av { background: var(--coral); }
 
 .chat-bubble {
-  max-width: 220px;
+  max-width: 75%;
   font-size: var(--text-sm);
   line-height: 1.5;
   font-family: var(--font-sans);
@@ -238,6 +190,19 @@
 }
 
 .chat-send-btn:hover { background: var(--coral-hover); }
+
+/* ══════════════════════════════════════
+   CHAT WINDOW — ANIMATIONS
+   ══════════════════════════════════════ */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
 
 /* ══════════════════════════════════════
    CHAT WINDOW — RESPONSIVE

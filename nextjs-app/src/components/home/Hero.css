@@ -105,7 +105,8 @@
 .hero-right {
   position: relative;
   z-index: 2;
-  height: 520px;
+  display: flex;
+  align-items: center;
   animation: fadeUp 0.9s 0.35s ease both;
 }
 
@@ -265,10 +266,8 @@
 
 /* Win: AI Tina */
 .win-tina {
-  position: absolute;
-  width: 340px;
-  top: var(--space-5);
-  right: 0;
+  position: relative;
+  width: 100%;
   z-index: 10;
 }
 
