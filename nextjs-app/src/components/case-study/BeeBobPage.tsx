@@ -590,12 +590,12 @@ export function BeeBobPage() {
           <div>
             <div className="eyebrow">Challenge A &middot; From Users</div>
             <h2 className="chapter-title">
-              10+ expert consultations &mdash;<br /><em>and one feature killed</em>
+              Experts consultations &mdash;<br /><em>and one feature killed</em>
             </h2>
             <p className="chapter-body">
               Smart Study Setup impressed in demos &mdash; but nobody needed it. Study planning and screener question generation already happens outside BeeBob. By the time users reach us, they already know what they want to ask.
             </p>
-            <div className="bb-insight-paths">
+            <div className="bb-insight-paths" style={{ marginTop: 'var(--space-6)' }}>
               <div className="bb-insight-path">
                 <div className="bb-insight-path-icon">👤</div>
                 <div className="bb-insight-path-text">

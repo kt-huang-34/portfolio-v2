@@ -126,7 +126,7 @@ const tinaKnowledge: Record<string, string> = {
   learnings: "Tina's key learnings: 'Design systems fail at scale when governance is an afterthought' (GXS). 'IA isn't about wireframes — it's about understanding what someone needs in the exact moment they're deciding' (Viki). 'AI should enhance researcher work, not replace it' (BeeBob).",
   thinking: "Tina separates 'impressive to build' from 'right thing to build.' At BeeBob, she killed the Smart Study Setup feature after user testing showed nobody needed it — study planning happens before users reach the tool. Speed of execution isn't the same as quality of judgment.",
   challenges: "Tina has navigated designer-engineer tensions: At BeeBob, she convinced her CTO co-founder to keep human approval gates and build confidence scoring, even though it added 2 sprints. Her lesson: 'Before automating a step, ask: Is a human doing this because it's tedious — or because they're actually thinking while they do it?'",
-  process: "Tina's process: Lead with research (10+ expert consultations at BeeBob), establish shared principles before components (GXS workshops), prove value through pilots (MSME project), and ship with clear ownership (Viki's 4-tab structure with team accountability).",
+  process: "Tina's process: Lead with research (Numbers of experts consultations at BeeBob), establish shared principles before components (GXS workshops), prove value through pilots (MSME project), and ship with clear ownership (Viki's 4-tab structure with team accountability).",
 
   // ═══════════════════════════════════════════════════════════════════
   // PROJECTS OVERVIEW
