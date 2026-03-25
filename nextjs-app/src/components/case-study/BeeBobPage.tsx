@@ -502,66 +502,78 @@ export function BeeBobPage() {
             For scale and speed, AI handles the entire interview process. Participants who pass the AI screening are invited to an AI-moderated interview session. Once all interviews are complete, the system automatically synthesises responses into a group insight report.
           </p>
 
-          {/* AI Interview flow diagram */}
-          <div className="bb-pipeline-labeled">
-            <span className="bb-pipeline-label">User Journey</span>
-            <div className="bb-pipeline-v2">
-              <div className="bb-pipe-v2">
-                <div className="bb-pipe-v2-num">01</div>
-                <div className="bb-pipe-v2-icon">🎯</div>
-                <div className="bb-pipe-v2-name">AI Screening</div>
+          {/* Step-by-step AI Interview Flow */}
+          <div className="bb-steps">
+            {/* Step 1: Set up Interview Guide */}
+            <div className="bb-step">
+              <div className="bb-step-header">
+                <div className="bb-step-num">01</div>
+                <div className="bb-step-content">
+                  <h4 className="bb-step-title">Set up your AI Interview Guide</h4>
+                  <p className="bb-step-desc">Define your research goals, craft your questions, and configure follow-up logic. This helps Bob understand exactly what insights you&rsquo;re looking for and how deep to probe.</p>
+                </div>
               </div>
-              <div className="bb-pipe-v2-arrow">&rarr;</div>
-              <div className="bb-pipe-v2">
-                <div className="bb-pipe-v2-num">02</div>
-                <div className="bb-pipe-v2-icon">🤖</div>
-                <div className="bb-pipe-v2-name">AI Moderated Interview</div>
-              </div>
-              <div className="bb-pipe-v2-arrow">&rarr;</div>
-              <div className="bb-pipe-v2">
-                <div className="bb-pipe-v2-num">03</div>
-                <div className="bb-pipe-v2-icon">📊</div>
-                <div className="bb-pipe-v2-name">Group Insight Report</div>
+              <div className="bb-step-video">
+                <div className="bb-video-embed">
+                  <iframe
+                    src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="Set up AI Interview Guide"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="img-card-light">
-            <div className="bb-video-embed">
-              <iframe
-                src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                title="BeeBob AI Interview Flow"
-              />
-            </div>
-          </div>
-
-          <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
-            <div className="img-card-light">
-              <ClickableImage src="/images/beebob-discovery-question.png" alt="Set up discovery question" onImageClick={openLightbox} />
-              <div className="cap">Set up discovery question</div>
-            </div>
-            <div className="img-card-light">
-              <ClickableImage src="/images/beebob-preference-test.png" alt="Set up preference test" onImageClick={openLightbox} />
-              <div className="cap">Set up preference test</div>
-            </div>
-          </div>
-
-          <div className="bb-video-image-row" style={{ marginTop: 'var(--space-6)' }}>
-            <div className="img-card-light">
-              <div className="bb-video-embed">
-                <iframe
-                  src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  title="BeeBob AI Interview Setup"
-                />
+            {/* Step 2: Bob Interviews Participants */}
+            <div className="bb-step">
+              <div className="bb-step-header">
+                <div className="bb-step-num">02</div>
+                <div className="bb-step-content">
+                  <h4 className="bb-step-title">Bob interviews your participants</h4>
+                  <p className="bb-step-desc">AI Bob conducts natural, conversational interviews &mdash; asking follow-up questions, probing deeper on interesting responses, and capturing rich qualitative insights in real time.</p>
+                </div>
+              </div>
+              <div className="bb-step-video">
+                <div className="bb-video-embed">
+                  <iframe
+                    src="https://player.vimeo.com/video/1177071719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="AI Bob Participant Interview"
+                  />
+                </div>
+              </div>
+              <div className="bb-try-cta">
+                <a href="https://participant.beebob.ai/participate/0a64f6a48962" target="_blank" rel="noopener noreferrer" className="bb-try-button">
+                  <span>Try it yourself</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+                <span className="bb-try-hint">Experience a live AI Bob interview as a participant</span>
               </div>
             </div>
-            <div className="img-card-light">
-              <ClickableImage src="/images/beebob-report-ask-agent.png" alt="Report and ask agent" onImageClick={openLightbox} />
-              <div className="cap">Report and ask agent</div>
+
+            {/* Step 3: Get Your Report */}
+            <div className="bb-step">
+              <div className="bb-step-header">
+                <div className="bb-step-num">03</div>
+                <div className="bb-step-content">
+                  <h4 className="bb-step-title">Get your insights report</h4>
+                  <p className="bb-step-desc">Once interviews are complete, BeeBob automatically synthesises all responses into a comprehensive group insight report &mdash; themes, patterns, and key findings ready for your team.</p>
+                </div>
+              </div>
+              <div className="bb-step-video">
+                <div className="bb-video-embed">
+                  <iframe
+                    src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    title="BeeBob Insights Report"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -2262,6 +2262,139 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   AI INTERVIEW STEPS
+   ══════════════════════════════════════════════════════════════ */
+.bb-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  margin-top: var(--space-8);
+}
+
+.bb-step {
+  background: var(--white);
+  border: var(--border-width-sub) solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.bb-step-header {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.bb-step-num {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--coral);
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.bb-step-content {
+  flex: 1;
+  padding-top: var(--space-2);
+}
+
+.bb-step-title {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  color: var(--near-black);
+  margin: 0 0 var(--space-3);
+  line-height: var(--leading-tight);
+}
+
+.bb-step-desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--warm-gray);
+  line-height: var(--leading-normal);
+  margin: 0;
+}
+
+.bb-step-video {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.bb-step .bb-try-cta {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+}
+
+/* ── Try CTA ── */
+.bb-try-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border-top: var(--border-width-sub) solid var(--border-light);
+}
+
+.bb-try-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--white);
+  background: var(--coral);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.bb-try-button:hover {
+  background: var(--coral-hover);
+  transform: translateY(-1px);
+}
+
+.bb-try-button svg {
+  flex-shrink: 0;
+}
+
+.bb-try-hint {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--warm-gray-lt);
+}
+
+@media (max-width: 768px) {
+  .bb-steps {
+    gap: var(--space-6);
+  }
+
+  .bb-step {
+    padding: var(--space-5);
+  }
+
+  .bb-step-header {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .bb-step-num {
+    font-size: 28px;
+  }
+
+  .bb-step-content {
+    padding-top: 0;
+  }
+
+  .bb-try-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
    IMPACT SECTION
    ══════════════════════════════════════════════════════════════ */
 .bb-impact {
