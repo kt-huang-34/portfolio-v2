@@ -392,29 +392,32 @@ export function BeeBobPage() {
           </p>
 
           {/* High-level flow */}
-          <div className="bb-pipeline-v2">
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">01</div>
-              <div className="bb-pipe-v2-icon">📋</div>
-              <div className="bb-pipe-v2-name">Screener Form</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">02</div>
-              <div className="bb-pipe-v2-icon">🎯</div>
-              <div className="bb-pipe-v2-name">AI Screening</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">03</div>
-              <div className="bb-pipe-v2-icon">📅</div>
-              <div className="bb-pipe-v2-name">Schedule</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">04</div>
-              <div className="bb-pipe-v2-icon">✉️</div>
-              <div className="bb-pipe-v2-name">Auto Email</div>
+          <div className="bb-pipeline-labeled">
+            <span className="bb-pipeline-label">User Journey</span>
+            <div className="bb-pipeline-v2">
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">01</div>
+                <div className="bb-pipe-v2-icon">📋</div>
+                <div className="bb-pipe-v2-name">Screener Form</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">02</div>
+                <div className="bb-pipe-v2-icon">🎯</div>
+                <div className="bb-pipe-v2-name">AI Screening</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">03</div>
+                <div className="bb-pipe-v2-icon">📅</div>
+                <div className="bb-pipe-v2-name">Schedule</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">04</div>
+                <div className="bb-pipe-v2-icon">✉️</div>
+                <div className="bb-pipe-v2-name">Auto Email</div>
+              </div>
             </div>
           </div>
 
@@ -442,23 +445,26 @@ export function BeeBobPage() {
           </div>
 
           {/* Scheduling flow diagram */}
-          <div className="bb-pipeline-v2" style={{ marginTop: 'var(--space-6)' }}>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">01</div>
-              <div className="bb-pipe-v2-icon">🔗</div>
-              <div className="bb-pipe-v2-name">Researcher Sends Invite</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">02</div>
-              <div className="bb-pipe-v2-icon">📅</div>
-              <div className="bb-pipe-v2-name">Participant Selects Availability</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">03</div>
-              <div className="bb-pipe-v2-icon">📹</div>
-              <div className="bb-pipe-v2-name">Auto Send Google Meet</div>
+          <div className="bb-pipeline-labeled" style={{ marginTop: 'var(--space-6)' }}>
+            <span className="bb-pipeline-label">User Journey</span>
+            <div className="bb-pipeline-v2">
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">01</div>
+                <div className="bb-pipe-v2-icon">🔗</div>
+                <div className="bb-pipe-v2-name">Researcher Sends Invite</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">02</div>
+                <div className="bb-pipe-v2-icon">📅</div>
+                <div className="bb-pipe-v2-name">Participant Selects Availability</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">03</div>
+                <div className="bb-pipe-v2-icon">📹</div>
+                <div className="bb-pipe-v2-name">Auto Send Google Meet</div>
+              </div>
             </div>
           </div>
 
@@ -497,23 +503,26 @@ export function BeeBobPage() {
           </p>
 
           {/* AI Interview flow diagram */}
-          <div className="bb-pipeline-v2">
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">01</div>
-              <div className="bb-pipe-v2-icon">🎯</div>
-              <div className="bb-pipe-v2-name">AI Screening</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">02</div>
-              <div className="bb-pipe-v2-icon">🤖</div>
-              <div className="bb-pipe-v2-name">AI Moderated Interview</div>
-            </div>
-            <div className="bb-pipe-v2-arrow">&rarr;</div>
-            <div className="bb-pipe-v2">
-              <div className="bb-pipe-v2-num">03</div>
-              <div className="bb-pipe-v2-icon">📊</div>
-              <div className="bb-pipe-v2-name">Group Insight Report</div>
+          <div className="bb-pipeline-labeled">
+            <span className="bb-pipeline-label">User Journey</span>
+            <div className="bb-pipeline-v2">
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">01</div>
+                <div className="bb-pipe-v2-icon">🎯</div>
+                <div className="bb-pipe-v2-name">AI Screening</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">02</div>
+                <div className="bb-pipe-v2-icon">🤖</div>
+                <div className="bb-pipe-v2-name">AI Moderated Interview</div>
+              </div>
+              <div className="bb-pipe-v2-arrow">&rarr;</div>
+              <div className="bb-pipe-v2">
+                <div className="bb-pipe-v2-num">03</div>
+                <div className="bb-pipe-v2-icon">📊</div>
+                <div className="bb-pipe-v2-name">Group Insight Report</div>
+              </div>
             </div>
           </div>
 
@@ -565,72 +574,61 @@ export function BeeBobPage() {
       {/* 4A: From Users (Ch05b) */}
       <section className="chapter dark reveal" id="bb-s4a">
         <div className="chapter-num">Chapter 04</div>
-        <div className="eyebrow">Challenge A &middot; From Users</div>
-        <h2 className="chapter-title">
-          10+ expert consultations &mdash;<br /><em>and one feature killed</em>
-        </h2>
-
-        <div className="bb-signal bb-signal-dark">
-          <div className="bb-signal-label">Before a single line of production code</div>
-          <p>I brought the prototype to 10+ Heads of Design, Principal Designers, and Principal Researchers. Not to get approval &mdash; to stress-test the scope before committing to build.</p>
-        </div>
-
-        <div className="bb-prompts">
-          <div className="bb-prompt bb-prompt-dark">
-            <div className="bb-prompt-dot" />
-            <p>The validation loop ran in two stages: prototype consultations with senior practitioners first, then a private beta with real users. Each stage had a different job &mdash; the experts challenged the scope, the beta users tested the execution.</p>
-          </div>
-          <div className="bb-prompt bb-prompt-dark">
-            <div className="bb-prompt-dot" />
-            <p>Who I consulted: Heads of Design and Principal Designers/Researchers at companies building fast. People who run research at scale and feel the ops problem directly.</p>
-          </div>
-        </div>
-
-        {/* Killed Feature */}
-        <div className="bb-killed-feature">
-          <div className="bb-killed-header">
-            <span className="bb-killed-label-tag">Feature removed after expert feedback</span>
-            <span className="bb-killed-badge">Killed</span>
-          </div>
-          <div className="bb-killed-name">Smart Screener Study</div>
-          <div className="bb-killed-body">
-            <p>Originally, BeeBob included a collaborative study planning mode &mdash; where teams could define research goals and build screener criteria together inside the product.</p>
-            <p>Every expert we consulted showed up having already thought about what they wanted to research. They came with their own plan, their own hypothesis, their own questions. <strong>Research planning happens in Slack, in meetings, in shared docs &mdash; with the people who need to align on it. BeeBob has no role in that conversation.</strong></p>
-            <p>We removed it. BeeBob now starts where that conversation ends: researcher has a plan, needs to move fast.</p>
-          </div>
-          <div className="bb-flags">
-            <div className="bb-flag bb-flag-red">
-              <div className="bb-flag-label">What we were designing</div>
-              A tool that tried to own the research planning conversation and the research ops workflow simultaneously.
-            </div>
-            <div className="bb-flag bb-flag-green">
-              <div className="bb-flag-label">What we shipped instead</div>
-              A tool that starts where alignment already exists &mdash; and makes everything after that 10x faster.
+        <div className="two-col" style={{ alignItems: 'center' }}>
+          <div>
+            <div className="eyebrow">Challenge A &middot; From Users</div>
+            <h2 className="chapter-title">
+              10+ expert consultations &mdash;<br /><em>and one feature killed</em>
+            </h2>
+            <p className="chapter-body">
+              Smart Study Setup impressed in demos &mdash; but nobody needed it. Study planning and screener question generation already happens outside BeeBob. By the time users reach us, they already know what they want to ask.
+            </p>
+            <div className="bb-insight-paths">
+              <div className="bb-insight-path">
+                <div className="bb-insight-path-icon">👤</div>
+                <div className="bb-insight-path-text">
+                  <strong>Researchers</strong> just need to conduct the interview
+                </div>
+              </div>
+              <div className="bb-insight-path">
+                <div className="bb-insight-path-icon">⚙️</div>
+                <div className="bb-insight-path-text">
+                  <strong>Research Ops</strong> need to run the whole recruitment cycle
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="bb-prompts" style={{ marginTop: 'var(--space-8)' }}>
-          <div className="bb-prompt bb-prompt-dark">
-            <div className="bb-prompt-dot" />
-            <p>The private beta followed: real researchers, real studies, live product. The beta confirmed the ops time numbers &mdash; 15+ hours returned per week &mdash; and validated that the two-mode architecture matched how researchers actually think about trust and control.</p>
-          </div>
-        </div>
-
-        <div className="two-col" style={{ marginTop: 'var(--space-8)' }}>
           <div className="img-card">
-            <ImgPlaceholder label="Prototype screenshot shared with experts" />
-            <div className="cap">Fig V1 &middot; Prototype version shared with expert consultants &mdash; pre-MVP</div>
-          </div>
-          <div className="img-card">
-            <ImgPlaceholder label="MVP / private beta screenshot" />
-            <div className="cap">Fig V2 &middot; MVP shipped to private beta &mdash; post expert feedback iteration</div>
+            <ClickableImage src="/images/beebob-test-with-user.png" alt="Testing with users" onImageClick={openLightbox} />
           </div>
         </div>
 
-        <div className="img-card" style={{ marginTop: 'var(--space-6)' }}>
-          <VidPlaceholder label="Replace &middot; Prototype walkthrough video (Loom / YouTube)" />
-          <div className="cap">Vid V1 &middot; Prototype walkthrough &mdash; expert consultation session recording</div>
+        <div className="bb-killed-videos">
+          <div className="bb-killed-videos-label">Experiments we killed</div>
+          <div className="two-col">
+            <div className="img-card">
+              <div className="bb-video-embed">
+                <iframe
+                  src="https://player.vimeo.com/video/1177043967?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="Smart Screener Experiment 1"
+                />
+              </div>
+              <div className="cap">Smart Screener design exploration &mdash; killed after user testing</div>
+            </div>
+            <div className="img-card">
+              <div className="bb-video-embed">
+                <iframe
+                  src="https://player.vimeo.com/video/1176853646?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="Smart Screener Experiment 2"
+                />
+              </div>
+              <div className="cap">AI-assisted study setup &mdash; impressive in demos, unused in practice</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -641,42 +639,60 @@ export function BeeBobPage() {
           Three real forks &mdash;<br /><em>and what got killed</em>
         </h2>
 
-        <div className="bb-signal">
-          <div className="bb-signal-label">What I actually decided</div>
-          <p>Three moments where the path split and I had to pick one and kill the other. Each one had a real cost.</p>
-        </div>
+        <p className="chapter-body">
+          Three moments where the path split and I had to pick one and kill the other. Each one had a real cost.
+        </p>
 
-        <div className="bb-decision-table">
-          <div className="bb-decision-row bb-decision-header">
-            <div>The fork</div>
-            <div>What I killed</div>
-            <div>What I kept</div>
-            <div>The basis</div>
+        <div className="bb-decision-cards">
+          <div className="bb-decision-card">
+            <div className="bb-decision-card-num">01</div>
+            <div className="bb-decision-card-question">One product or two separate tools?</div>
+            <div className="bb-decision-card-choices">
+              <div className="bb-decision-choice bb-decision-killed">
+                <span className="bb-decision-choice-label">Killed</span>
+                Two separate products
+              </div>
+              <div className="bb-decision-choice bb-decision-kept">
+                <span className="bb-decision-choice-label">Kept</span>
+                One platform, trust spectrum
+              </div>
+            </div>
+            <div className="bb-decision-card-basis">Two codebases = no cross-sell path. Researchers who outgrow one have to leave entirely.</div>
           </div>
-          <div className="bb-decision-row">
-            <div>One product or two separate tools?</div>
-            <div className="bb-killed">Two separate products</div>
-            <div className="bb-kept">One platform, trust spectrum</div>
-            <div>Two codebases = no cross-sell path. Researchers who outgrow one have to leave entirely.</div>
-          </div>
-          <div className="bb-decision-row">
-            <div>Full automation or researcher-gated approval?</div>
-            <div className="bb-killed">Fully automated participant approval</div>
-            <div className="bb-kept">Human approval gate (for now)</div>
-            <div>Not enough usage data. Full automation may recreate the bottleneck later. Unresolved &mdash; see section 05.</div>
-          </div>
-          <div className="bb-decision-row">
-            <div>AI output displayed raw or interpreted?</div>
-            <div className="bb-killed">Raw output with no confidence signal</div>
-            <div className="bb-kept">Visual confidence encoding throughout</div>
-            <div>Low confidence output presented as resolved = wrong. The UI must surface uncertainty. Non-negotiable.</div>
-          </div>
-        </div>
 
-        <div className="bb-prompts" style={{ marginTop: 'var(--space-8)' }}>
-          <div className="bb-prompt">
-            <div className="bb-prompt-dot" />
-            <p><strong>Where I had to fight:</strong> The engineer initially preferred raw AI output surfaced directly &mdash; it was faster to build. I pushed for explicit confidence visual weight. It cost two sprint cycles. The product is better for it.</p>
+          <div className="bb-decision-card">
+            <div className="bb-decision-card-num">02</div>
+            <div className="bb-decision-card-question">Full automation or researcher-gated approval?</div>
+            <div className="bb-decision-card-choices">
+              <div className="bb-decision-choice bb-decision-killed">
+                <span className="bb-decision-choice-label">Killed</span>
+                Fully automated participant approval
+              </div>
+              <div className="bb-decision-choice bb-decision-kept">
+                <span className="bb-decision-choice-label">Kept</span>
+                Human approval gate (for now)
+              </div>
+            </div>
+            <div className="bb-decision-card-basis">Not enough usage data. Full automation may recreate the bottleneck later.</div>
+          </div>
+
+          <div className="bb-decision-card bb-decision-card-highlight">
+            <div className="bb-decision-card-num">03</div>
+            <div className="bb-decision-card-question">AI output displayed raw or interpreted?</div>
+            <div className="bb-decision-card-choices">
+              <div className="bb-decision-choice bb-decision-killed">
+                <span className="bb-decision-choice-label">Killed</span>
+                Raw output with no confidence signal
+              </div>
+              <div className="bb-decision-choice bb-decision-kept">
+                <span className="bb-decision-choice-label">Kept</span>
+                Visual confidence encoding throughout
+              </div>
+            </div>
+            <div className="bb-decision-card-basis">Low confidence output presented as resolved = wrong. The UI must surface uncertainty.</div>
+            <div className="bb-decision-card-callout">
+              <strong>Where I fought:</strong> The engineer preferred raw output &mdash; faster to build. I pushed for explicit confidence visual weight. Cost: two sprint cycles. Worth it.
+            </div>
           </div>
         </div>
 
