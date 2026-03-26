@@ -18,9 +18,9 @@ const projects: FeaturedProject[] = [
   {
     num: '01',
     company: 'BeeBob AI',
-    year: '2024 – Present',
-    title: 'AI Operations Co-Pilot — Zero to One UX',
-    desc: 'Designed the end-to-end experience for an AI-powered operations co-pilot, from conversational AI patterns to agentic UX workflows.',
+    year: '2025 – Present',
+    title: 'Research Ops Agent — Automating the Entire User Research Process',
+    desc: 'Designed the end-to-end experience for an AI research ops agent that automates the entire user research process — from participant recruitment to insight synthesis.',
     tags: ['Conversational AI', 'Agentic UX', '0→1 Product'],
     outcome: '↑ 0→1 product launch',
     bgClass: 'fi-beebob',

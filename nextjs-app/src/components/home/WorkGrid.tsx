@@ -14,7 +14,7 @@ interface WorkItem {
 
 const works: WorkItem[] = [
   /* Row 1 */
-  { company: 'BeeBob AI', shortName: 'BeeBob', title: 'AI Operations Co-Pilot — Zero to One UX', tags: ['Conversational AI', 'Agentic UX'], bgClass: 'wc-beebob', href: '/case-study/beebob', coverImage: '/images/cover-beebob.jpg' },
+  { company: 'BeeBob AI', shortName: 'BeeBob', title: 'Research Ops Agent — Automating the Entire User Research Process', tags: ['Conversational AI', 'Agentic UX'], bgClass: 'wc-beebob', href: '/case-study/beebob', coverImage: '/images/cover-beebob.jpg' },
   { company: 'GXS Bank', shortName: 'GXS', title: 'Regional Design System — 3 Countries, 1 Source of Truth', tags: ['Design System', 'Fintech'], bgClass: 'wc-gxs', href: '/case-study/gxs', coverImage: '/images/cover-rds.png' },
   { company: 'Rakuten Viki', shortName: 'Viki', title: 'Watch Party — Social Viewing Feature', tags: ['Product Strategy', 'Social UX'], bgClass: 'wc-watchparty', href: '/images/watchparty-full.png', coverImage: '/images/cover-watchparty.png', fullImage: '/images/watchparty-full.png' },
   /* Row 2 */
