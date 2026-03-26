@@ -1,20 +1,12 @@
 import React from 'react';
 import { Button, ArrowIcon, SectionLabel, StatPill } from '@/components/ui';
 
-const skills = [
-  { title: 'AI Product Design', desc: 'Conversational & Agentic UX' },
-  { title: 'Design Systems', desc: 'Multi-surface, cross-market' },
-  { title: 'User Research', desc: 'Qualitative & quantitative' },
-  { title: 'Prototyping', desc: 'Figma, high-fidelity' },
-  { title: 'Workshop Facilitation', desc: 'Discovery & alignment' },
-  { title: 'Design Mentorship', desc: 'Team building & growth' },
-];
 
 const speaking = [
-  { year: '2023', title: 'Remote Research — East Meets West', venue: 'Figma Singapore', href: '#' },
-  { year: '2022', title: 'Design Management Transition', venue: 'Shanghai UI/UX Meetup', href: '#' },
-  { year: '2021', title: 'Building Design Teams from Scratch', venue: 'CuriousCore', href: '#' },
-  { year: '2019', title: 'Cross-Market Design Strategy', venue: 'EC Design School, Taiwan', href: '#' },
+  { year: '2023', title: 'CuriousCore — "East Meets West Product Design"', venue: 'Singapore · Webinar on designing for Western vs Asian markets & mentoring IC to Design Manager transitions', href: 'https://www.youtube.com/watch?v=HtdpL61eDxo' },
+  { year: '2022', title: 'EC Design School — Career Transition Talk', venue: 'Taiwan · Invited by prestigious design school to share career journey, inspiring non-design backgrounds to transition into tech & UX', href: 'https://www.accupass.com/event/2203070943241429225604' },
+  { year: '2019', title: 'Friends of Figma Singapore', venue: 'Singapore · Educated the local design community on remote user research & usability testing strategies', href: 'https://www.youtube.com/watch?v=wwnRC_on_3g' },
+  { year: '2018', title: 'Shanghai UI/UX Conference', venue: 'Shanghai · Represented Carousell on main stage; cross-border product learnings & knowledge exchange with regional peers', href: 'https://2018.uiuxconf.com/' },
 ];
 
 export function AboutBody() {
@@ -52,33 +44,27 @@ export function AboutBody() {
 
         {/* Right column — Skills, Podcast, Speaking */}
         <div className="about-right-col">
-          <div>
-            <SectionLabel>Core Skills</SectionLabel>
-            <div className="skills-grid">
-              {skills.map(s => (
-                <div key={s.title} className="skill-chip-light">
-                  <strong>{s.title}</strong>
-                  {s.desc}
-                </div>
-              ))}
-            </div>
-          </div>
-
           <div className="about-podcast-card">
             <div className="about-podcast-icon">🎙️</div>
             <div>
               <div className="about-podcast-label">Podcast</div>
               <div className="about-podcast-title">Tech Boss Diaries</div>
               <div className="about-podcast-desc">
-                Co-hosting conversations with tech leaders on product strategy, agentic AI, and career growth.
+                Co-hosting conversations with tech leaders on product strategy, agentic AI, and cross-cultural product development.
               </div>
               <div className="about-podcast-stats">
                 <StatPill variant="subtle">1,000+ listeners</StatPill>
+                <StatPill variant="subtle">10,000+ downloads</StatPill>
                 <StatPill variant="subtle">SG 30%</StatPill>
                 <StatPill variant="subtle">TW 21%</StatPill>
                 <StatPill variant="subtle">US 20%</StatPill>
               </div>
-              <Button variant="primary" size="sm" href="#" className="about-podcast-btn">
+              <Button
+                variant="primary"
+                size="sm"
+                href="https://open.spotify.com/show/3ehjBwEOEQscxE4XSRqrsW"
+                className="about-podcast-btn"
+              >
                 Listen Now <ArrowIcon size={10} />
               </Button>
             </div>

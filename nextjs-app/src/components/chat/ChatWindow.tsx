@@ -79,11 +79,11 @@ const tinaKnowledge: Record<string, string> = {
   // ═══════════════════════════════════════════════════════════════════
   // SPEAKING, PODCAST & THOUGHT LEADERSHIP
   // ═══════════════════════════════════════════════════════════════════
-  speaking: "Tina's speaking engagements: 2023 — 'Remote Research — East Meets West' at Figma Singapore; 2022 — 'Design Management Transition' at Shanghai UI/UX Meetup; 2021 — 'Building Design Teams from Scratch' at CuriousCore; 2019 — 'Cross-Market Design Strategy' at EC Design School, Taiwan.",
-  podcast: "Tina co-hosts Tech Boss Diaries, a podcast about product strategy, agentic AI, and career growth. It has 1,000+ listeners across Singapore (30%), Taiwan (21%), and the US (20%).",
-  "tech boss": "Tech Boss Diaries is Tina's podcast where she has conversations with tech leaders about product strategy, agentic AI, and career growth. The podcast has reached 1,000+ listeners globally.",
-  "tech boss diaries": "Tech Boss Diaries is Tina's podcast about product strategy, agentic AI, and career growth. 1,000+ listeners across Singapore (30%), Taiwan (21%), and the US (20%).",
-  conference: "Tina has spoken at conferences including Figma Singapore (2023), Shanghai UI/UX Meetup (2022), CuriousCore (2021), and EC Design School Taiwan (2019) on topics ranging from remote research to design management.",
+  speaking: "Tina's speaking engagements: 2023 — 'East Meets West Product Design' webinar at CuriousCore, Singapore; 2022 — Career Transition Talk at EC Design School, Taiwan; 2019 — Remote user research & usability testing at Friends of Figma Singapore; 2018 — Shanghai UI/UX Conference representing Carousell on main stage.",
+  podcast: "Tina co-hosts Tech Boss Diaries, a podcast about product strategy, agentic AI, and cross-cultural product development. It has 1,000+ listeners and 10,000+ downloads across Singapore (30%), Taiwan (21%), and the US (20%).",
+  "tech boss": "Tech Boss Diaries is Tina's podcast where she interviews top-tier tech leaders on product strategy, agentic AI, and cross-cultural product development. The podcast has reached 1,000+ listeners and nearly 10,000+ downloads globally.",
+  "tech boss diaries": "Tech Boss Diaries is Tina's podcast about product strategy, agentic AI, and cross-cultural product development. 1,000+ listeners and 10,000+ downloads across Singapore (30%), Taiwan (21%), and the US (20%).",
+  conference: "Tina has spoken at conferences including CuriousCore Singapore (2023), EC Design School Taiwan (2022), Friends of Figma Singapore (2019), and Shanghai UI/UX Conference (2018) on topics ranging from cross-market design to career transitions and remote research.",
 
   // ═══════════════════════════════════════════════════════════════════
   // EDUCATION & AWARDS
