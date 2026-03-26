@@ -48,6 +48,12 @@ export function WorkGrid() {
                     <img src={w.coverImage} alt={`${w.company} cover`} className="work-cover" />
                   )}
                 </div>
+                <div className="work-img-overlay" />
+              </div>
+              <div className="work-card-tags">
+                {w.tags.map(t => (
+                  <span key={t} className="tag-base tag-muted">{t}</span>
+                ))}
               </div>
               <div className="work-info">
                 <div className="work-co">{w.company}</div>

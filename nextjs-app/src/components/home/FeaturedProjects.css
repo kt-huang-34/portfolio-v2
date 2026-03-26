@@ -83,6 +83,7 @@
   gap: var(--space-5);
 }
 
+/* ── Card ── */
 .feat-card {
   background: rgba(255, 255, 255, 0.04);
   border: var(--border-width-sub) solid var(--border-dark);
@@ -110,6 +111,7 @@
   z-index: 3;
 }
 
+/* ── Image ── */
 .feat-img {
   height: 320px;
   position: relative;
@@ -139,6 +141,7 @@
   z-index: 2;
 }
 
+/* ── Body: always visible below image ── */
 .feat-body {
   padding: var(--space-5);
   border-top: var(--border-width-sub) solid rgba(255, 255, 255, 0.07);
