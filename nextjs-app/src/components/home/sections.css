@@ -116,9 +116,8 @@
   gap: var(--space-6);
 }
 
-/* ── Work Card: hover-to-reveal ── */
+/* ── Work Card ── */
 .work-card {
-  position: relative;
   overflow: hidden;
   cursor: none;
   text-decoration: none;
@@ -126,7 +125,7 @@
 }
 
 .work-img {
-  height: 320px;
+  height: 280px;
   position: relative;
   overflow: hidden;
 }
@@ -142,25 +141,13 @@
 }
 
 .work-card:hover .work-img-inner {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .work-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.work-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 50%);
-  z-index: 2;
-  transition: background 0.35s ease;
-}
-
-.work-card:hover .work-img-overlay {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.25) 65%, transparent 100%);
 }
 
 /* Project gradient backgrounds */
@@ -171,46 +158,16 @@
 .wc-watchparty{ background: linear-gradient(135deg, #1A0A10 0%, #3D1020 100%); }
 .wc-ownrides  { background: linear-gradient(135deg, #0A1206 0%, #162208 100%); }
 
-/* Tags: static strip below image, stays above hover overlay */
-.work-card-tags {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-  padding: var(--space-3) var(--space-4);
-  background: var(--near-black);
-}
-
-.work-card-tags .tag-muted {
-  color: var(--cream);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-/* Info: overlay, hidden by default */
+/* Info: always visible below image */
 .work-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
   padding: var(--space-4) var(--space-5);
-  opacity: 0;
-  transform: translateY(var(--space-3));
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.work-card:hover .work-info {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .work-co {
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--coral-light);
+  color: var(--coral);
   margin-bottom: var(--space-1);
   font-weight: 600;
 }
@@ -218,15 +175,14 @@
 .work-title {
   font-family: var(--font-serif);
   font-size: var(--text-md);
-  color: var(--cream);
+  color: var(--near-black);
   font-weight: 500;
   line-height: 1.35;
   margin-bottom: var(--space-3);
 }
 
-/* Desktop: hide tags inside work-info (shown via .work-card-tags) */
 .work-tags {
-  display: none;
+  display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
 }
@@ -442,7 +398,7 @@
     max-width: 100%;
   }
 
-  /* Work Grid — single column, disable hover-reveal */
+  /* Work Grid — single column */
   .work-grid {
     grid-template-columns: 1fr;
     padding: var(--space-6) var(--space-5) var(--space-12);
@@ -450,30 +406,6 @@
 
   .work-img {
     height: 200px;
-    position: relative;
-  }
-
-  .work-card-tags {
-    display: none;
-  }
-
-  .work-info {
-    position: relative;
-    opacity: 1;
-    transform: none;
-    padding: var(--space-4) var(--space-5);
-  }
-
-  .work-co {
-    color: var(--coral);
-  }
-
-  .work-title {
-    color: var(--near-black);
-  }
-
-  .work-tags {
-    display: flex;
   }
 
   /* About Teaser — single column */
