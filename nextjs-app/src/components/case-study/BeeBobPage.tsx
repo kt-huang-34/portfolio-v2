@@ -68,6 +68,83 @@ function VidPlaceholder({ label }: { label: string }) {
   );
 }
 
+function VimeoEmbed({ src, title }: { src: string; title: string }) {
+  const [inView, setInView] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const wrapperRef = React.useRef<HTMLDivElement | null>(null);
+  const iframeRef = React.useRef<HTMLIFrameElement | null>(null);
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    observer.observe(wrapper);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return;
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const post = (method: string) => {
+      iframe.contentWindow?.postMessage(JSON.stringify({ method }), '*');
+    };
+
+    const handleMessage = (e: MessageEvent) => {
+      if (typeof e.data !== 'string') return;
+      if (!e.source || e.source !== iframe.contentWindow) return;
+      let data: { event?: string; method?: string };
+      try {
+        data = JSON.parse(e.data);
+      } catch {
+        return;
+      }
+      if (data.event === 'ready') {
+        post('addEventListener:play');
+      } else if (data.event === 'play') {
+        setLoaded(true);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    const fallback = window.setTimeout(() => setLoaded(true), 8000);
+    return () => {
+      window.removeEventListener('message', handleMessage);
+      window.clearTimeout(fallback);
+    };
+  }, [inView]);
+
+  return (
+    <div className="bb-video-embed" ref={wrapperRef}>
+      {inView && (
+        <iframe
+          ref={iframeRef}
+          src={src}
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          title={title}
+        />
+      )}
+      <div className={`bb-video-loader${loaded ? ' is-loaded' : ''}`} aria-hidden="true">
+        <div className="bb-video-loader-dots">
+          <span className="bb-video-loader-dot" />
+          <span className="bb-video-loader-dot" />
+          <span className="bb-video-loader-dot" />
+        </div>
+        <span className="bb-video-loader-label">Loading video&hellip;</span>
+      </div>
+    </div>
+  );
+}
+
 export function BeeBobPage() {
   useScrollReveal();
   const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
@@ -424,15 +501,10 @@ export function BeeBobPage() {
           </div>
 
           <div className="img-card-light">
-            <div className="bb-video-embed">
-              <iframe
-                src="https://player.vimeo.com/video/1176913265?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                loading="lazy"
-                title="BeeBob Research Ops Flow"
-              />
-            </div>
+            <VimeoEmbed
+              src="https://player.vimeo.com/video/1176913265?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+              title="BeeBob Research Ops Flow"
+            />
             <div className="cap">This video showcases how Research Ops is set up in BeeBob AI &mdash; from creating a screener form, to stating your availability, to auto-sending emails.</div>
           </div>
 
@@ -472,15 +544,10 @@ export function BeeBobPage() {
           </div>
 
           <div className="img-card-light" style={{ marginTop: 'var(--space-6)' }}>
-            <div className="bb-video-embed">
-              <iframe
-                src="https://player.vimeo.com/video/1176908157?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                loading="lazy"
-                title="BeeBob Scheduling and Email"
-              />
-            </div>
+            <VimeoEmbed
+              src="https://player.vimeo.com/video/1176908157?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+              title="BeeBob Scheduling and Email"
+            />
             <div className="cap">Once participants complete the screener form, their responses are captured in the system. From there, you can send calendar invites &mdash; the system emails participants to collect availability and confirms sessions automatically.</div>
           </div>
 
@@ -518,15 +585,10 @@ export function BeeBobPage() {
                 </div>
               </div>
               <div className="bb-step-video">
-                <div className="bb-video-embed">
-                  <iframe
-                    src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                    loading="lazy"
-                    title="Set up AI Interview Guide"
-                  />
-                </div>
+                <VimeoEmbed
+                  src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  title="Set up AI Interview Guide"
+                />
               </div>
             </div>
 
@@ -540,15 +602,10 @@ export function BeeBobPage() {
                 </div>
               </div>
               <div className="bb-step-video">
-                <div className="bb-video-embed">
-                  <iframe
-                    src="https://player.vimeo.com/video/1177071719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                    loading="lazy"
-                    title="AI Bob Participant Interview"
-                  />
-                </div>
+                <VimeoEmbed
+                  src="https://player.vimeo.com/video/1177071719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  title="AI Bob Participant Interview"
+                />
               </div>
               <div className="bb-try-cta">
                 <a href="https://participant.beebob.ai/participate/830485df2058" target="_blank" rel="noopener noreferrer" className="bb-try-button">
@@ -571,15 +628,10 @@ export function BeeBobPage() {
                 </div>
               </div>
               <div className="bb-step-video">
-                <div className="bb-video-embed">
-                  <iframe
-                    src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                    loading="lazy"
-                    title="BeeBob Insights Report"
-                  />
-                </div>
+                <VimeoEmbed
+                  src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  title="BeeBob Insights Report"
+                />
               </div>
             </div>
           </div>
