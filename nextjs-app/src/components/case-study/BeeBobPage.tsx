@@ -203,7 +203,7 @@ export function BeeBobPage() {
         </div>
         <div className="bb-hero-image-wrap card-surface">
           <iframe
-            src="https://player.vimeo.com/video/1176853429?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+            src="https://player.vimeo.com/video/1176853429?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
             title="BeeBob AI Demo"
@@ -502,7 +502,7 @@ export function BeeBobPage() {
 
           <div className="img-card-light">
             <VimeoEmbed
-              src="https://player.vimeo.com/video/1176913265?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+              src="https://player.vimeo.com/video/1176913265?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
               title="BeeBob Research Ops Flow"
             />
             <div className="cap">This video showcases how Research Ops is set up in BeeBob AI &mdash; from creating a screener form, to stating your availability, to auto-sending emails.</div>
@@ -545,7 +545,7 @@ export function BeeBobPage() {
 
           <div className="img-card-light" style={{ marginTop: 'var(--space-6)' }}>
             <VimeoEmbed
-              src="https://player.vimeo.com/video/1176908157?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+              src="https://player.vimeo.com/video/1176908157?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
               title="BeeBob Scheduling and Email"
             />
             <div className="cap">Once participants complete the screener form, their responses are captured in the system. From there, you can send calendar invites &mdash; the system emails participants to collect availability and confirms sessions automatically.</div>
@@ -586,7 +586,7 @@ export function BeeBobPage() {
               </div>
               <div className="bb-step-video">
                 <VimeoEmbed
-                  src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
                   title="Set up AI Interview Guide"
                 />
               </div>
@@ -603,7 +603,7 @@ export function BeeBobPage() {
               </div>
               <div className="bb-step-video">
                 <VimeoEmbed
-                  src="https://player.vimeo.com/video/1177071719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  src="https://player.vimeo.com/video/1177071719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
                   title="AI Bob Participant Interview"
                 />
               </div>
@@ -629,7 +629,7 @@ export function BeeBobPage() {
               </div>
               <div className="bb-step-video">
                 <VimeoEmbed
-                  src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
                   title="BeeBob Insights Report"
                 />
               </div>
@@ -680,7 +680,7 @@ export function BeeBobPage() {
             <div className="img-card">
               <div className="bb-video-embed">
                 <iframe
-                  src="https://player.vimeo.com/video/1177043967?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  src="https://player.vimeo.com/video/1177043967?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                   loading="lazy"
@@ -692,7 +692,7 @@ export function BeeBobPage() {
             <div className="img-card">
               <div className="bb-video-embed">
                 <iframe
-                  src="https://player.vimeo.com/video/1176853646?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
+                  src="https://player.vimeo.com/video/1176853646?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                   loading="lazy"
