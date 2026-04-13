@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { BeeBobPage } from '@/components/case-study';
+import { ScrollDepthTracker, CASE_STUDY_MILESTONES } from '@/lib/analytics';
 
 export const metadata: Metadata = {
   title: 'BeeBob AI — Research Ops Reimagined | Tina Huang',
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function BeebobCaseStudy() {
-  return <BeeBobPage />;
+  return (
+    <>
+      <BeeBobPage />
+      <ScrollDepthTracker milestones={CASE_STUDY_MILESTONES} />
+    </>
+  );
 }

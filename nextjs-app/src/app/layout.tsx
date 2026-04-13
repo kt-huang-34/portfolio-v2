@@ -7,6 +7,7 @@ import '../components/home/sections.css';
 import '../components/chat/ChatWindow.css';
 import '../components/about/about.css';
 import { Nav, Footer, CustomCursor } from '@/components/layout';
+import { PostHogProvider } from '@/lib/analytics';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -37,13 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body>
-        <a href="#main-content" className="skip-link">Skip to main content</a>
-        <CustomCursor />
-        <Nav />
-        <div id="main-content">
-          {children}
-        </div>
-        <Footer />
+        <PostHogProvider>
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          <CustomCursor />
+          <Nav />
+          <div id="main-content">
+            {children}
+          </div>
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );

@@ -62,11 +62,27 @@ export function WorkGrid() {
           );
 
           return w.fullImage ? (
-            <a key={i} href={w.fullImage} target="_blank" rel="noopener noreferrer" className="work-card retro-window" aria-label={`${w.company}: ${w.title} (opens in new tab)`}>
+            <a
+              key={i}
+              href={w.fullImage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="work-card retro-window"
+              aria-label={`${w.company}: ${w.title} (opens in new tab)`}
+              data-ph-capture-attribute-project-name={w.company}
+              data-ph-capture-attribute-project-section="work-grid"
+              data-ph-capture-attribute-link-type="full-image"
+            >
               {cardContent}
             </a>
           ) : (
-            <Link key={i} href={w.href} className="work-card retro-window">
+            <Link
+              key={i}
+              href={w.href}
+              className="work-card retro-window"
+              data-ph-capture-attribute-project-name={w.company}
+              data-ph-capture-attribute-project-section="work-grid"
+            >
               {cardContent}
             </Link>
           );

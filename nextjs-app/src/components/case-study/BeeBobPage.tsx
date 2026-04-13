@@ -40,6 +40,8 @@ function ClickableImage({ src, alt, onImageClick }: { src: string; alt: string; 
     <img
       src={src}
       alt={alt}
+      loading="lazy"
+      decoding="async"
       onClick={() => onImageClick(src, alt)}
       className="bb-clickable-image"
     />
@@ -427,6 +429,7 @@ export function BeeBobPage() {
                 src="https://player.vimeo.com/video/1176913265?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                loading="lazy"
                 title="BeeBob Research Ops Flow"
               />
             </div>
@@ -474,6 +477,7 @@ export function BeeBobPage() {
                 src="https://player.vimeo.com/video/1176908157?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                loading="lazy"
                 title="BeeBob Scheduling and Email"
               />
             </div>
@@ -519,6 +523,7 @@ export function BeeBobPage() {
                     src="https://player.vimeo.com/video/1176923438?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    loading="lazy"
                     title="Set up AI Interview Guide"
                   />
                 </div>
@@ -540,12 +545,13 @@ export function BeeBobPage() {
                     src="https://player.vimeo.com/video/1177071719?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    loading="lazy"
                     title="AI Bob Participant Interview"
                   />
                 </div>
               </div>
               <div className="bb-try-cta">
-                <a href="https://participant.beebob.ai/participate/0a64f6a48962" target="_blank" rel="noopener noreferrer" className="bb-try-button">
+                <a href="https://participant.beebob.ai/participate/830485df2058" target="_blank" rel="noopener noreferrer" className="bb-try-button">
                   <span>Try it yourself</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -570,6 +576,7 @@ export function BeeBobPage() {
                     src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    loading="lazy"
                     title="BeeBob Insights Report"
                   />
                 </div>
@@ -624,6 +631,7 @@ export function BeeBobPage() {
                   src="https://player.vimeo.com/video/1177043967?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  loading="lazy"
                   title="Smart Screener Experiment 1"
                 />
               </div>
@@ -635,6 +643,7 @@ export function BeeBobPage() {
                   src="https://player.vimeo.com/video/1176853646?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  loading="lazy"
                   title="Smart Screener Experiment 2"
                 />
               </div>

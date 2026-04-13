@@ -60,7 +60,13 @@ export function FeaturedProjects() {
 
       <div className="feat-grid">
         {projects.map((p) => (
-          <Link key={p.num} href={p.href} className="feat-card">
+          <Link
+            key={p.num}
+            href={p.href}
+            className="feat-card"
+            data-ph-capture-attribute-project-name={p.company}
+            data-ph-capture-attribute-project-section="featured"
+          >
             <div className="feat-card-num" aria-hidden="true">{p.num}</div>
             <div className={`feat-img ${p.bgClass}`}>
               <div className="feat-img-inner">

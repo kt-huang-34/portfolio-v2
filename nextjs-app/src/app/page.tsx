@@ -6,6 +6,7 @@ import {
   WorkGrid,
   AboutTeaser,
 } from '@/components/home';
+import { ScrollDepthTracker, HOME_MILESTONES } from '@/lib/analytics';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Companies />
       <WorkGrid />
       <AboutTeaser />
+      <ScrollDepthTracker milestones={HOME_MILESTONES} />
     </main>
   );
 }

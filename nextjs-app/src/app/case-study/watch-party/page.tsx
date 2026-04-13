@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { CaseStudyPlaceholder } from '@/components/case-study';
+import { ScrollDepthTracker, CASE_STUDY_MILESTONES } from '@/lib/analytics';
 
 export const metadata: Metadata = {
   title: 'Rakuten Viki — Watch Party | Tina Huang',
@@ -8,9 +9,12 @@ export const metadata: Metadata = {
 
 export default function WatchPartyCaseStudy() {
   return (
-    <CaseStudyPlaceholder
-      label="Rakuten Viki · 2020 – 2021"
-      title="Watch Party — Social Viewing Feature"
-    />
+    <>
+      <CaseStudyPlaceholder
+        label="Rakuten Viki · 2020 – 2021"
+        title="Watch Party — Social Viewing Feature"
+      />
+      <ScrollDepthTracker milestones={CASE_STUDY_MILESTONES} />
+    </>
   );
 }

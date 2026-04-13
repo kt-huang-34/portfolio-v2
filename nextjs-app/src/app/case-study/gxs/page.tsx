@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { GxsRdsPage } from '@/components/case-study';
+import { ScrollDepthTracker, CASE_STUDY_MILESTONES } from '@/lib/analytics';
 
 export const metadata: Metadata = {
   title: 'GXS Bank — Regional Design System | Tina Huang',
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function GxsCaseStudy() {
-  return <GxsRdsPage />;
+  return (
+    <>
+      <GxsRdsPage />
+      <ScrollDepthTracker milestones={CASE_STUDY_MILESTONES} />
+    </>
+  );
 }
