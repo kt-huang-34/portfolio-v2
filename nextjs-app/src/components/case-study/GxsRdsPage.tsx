@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useScrollReveal } from '@/lib';
+import { BackToWorkButton } from '@/components/ui';
 import './gxs-rds-page.css';
 
 export function GxsRdsPage() {
@@ -9,6 +10,7 @@ export function GxsRdsPage() {
 
   return (
     <main className="gxs-page">
+      <BackToWorkButton />
       {/* ══════════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════════ */}

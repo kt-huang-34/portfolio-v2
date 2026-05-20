@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useScrollReveal } from '@/lib';
+import { BackToWorkButton } from '@/components/ui';
 import './viki-show-page.css';
 
 function ImgPlaceholder({ label }: { label: string }) {
@@ -17,6 +18,7 @@ export function VikiShowPage() {
 
   return (
     <main className="viki-page">
+      <BackToWorkButton />
       {/* ══════════════════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════════════════ */}

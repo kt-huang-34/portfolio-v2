@@ -3,6 +3,10 @@
    ══════════════════════════════════════════════════════════════ */
 
 /* ── Page Max Width ── */
+.viki-page {
+  overflow-x: hidden;
+}
+
 .viki-page > * {
   max-width: 1440px;
   margin-inline: auto;
@@ -458,6 +462,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-8);
     padding: calc(var(--space-section) + var(--space-8)) var(--space-5) var(--space-12);
+    overflow: hidden;
   }
 
   .viki-hero-title {
@@ -465,8 +470,19 @@
   }
 
   .viki-hero-meta {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-4);
+  }
+
+  .viki-hero-image-wrap {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .viki-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* ── Tab Grid ── */
@@ -754,5 +770,26 @@
   /* ── Role Contrib ── */
   .role-contrib {
     padding: var(--space-4);
+  }
+
+  /* ── Chapter body full-width ── */
+  .chapter-body {
+    max-width: 100%;
+  }
+
+  /* ── Pull quote padding ── */
+  .pull-quote {
+    padding-left: var(--space-4);
+    font-size: clamp(16px, 4.5vw, 22px);
+  }
+
+  /* ── Two-col tighter gap ── */
+  .two-col {
+    gap: var(--space-6);
+  }
+
+  /* ── Insight grid ── */
+  .insight-grid {
+    gap: var(--space-3);
   }
 }

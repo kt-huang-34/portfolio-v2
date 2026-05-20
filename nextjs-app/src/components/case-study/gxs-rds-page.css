@@ -793,6 +793,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-10);
     padding: calc(var(--space-section) + var(--space-8)) var(--space-5) var(--space-12);
+    overflow: hidden;
   }
 
   .gxs-hero-meta {
@@ -802,6 +803,27 @@
 
   .gxs-hero-meta-divider {
     display: none;
+  }
+
+  /* Stack the hero stat row to single column */
+  .gxs-hero-stat-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Chapter body full-width */
+  .chapter-body {
+    max-width: 100%;
+  }
+
+  /* Two-col tighter gap */
+  .two-col {
+    gap: var(--space-6);
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    padding-left: var(--space-4);
+    font-size: clamp(16px, 4.5vw, 22px);
   }
 
   .rds-principle-grid {

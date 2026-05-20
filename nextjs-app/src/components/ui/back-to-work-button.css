@@ -1,0 +1,48 @@
+.back-to-work-btn {
+  position: fixed;
+  top: calc(60px + var(--space-6));
+  left: var(--page-gutter);
+  z-index: 90;
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  height: var(--btn-height);
+  padding: 0 var(--btn-padding-x);
+
+  font-family: var(--font-sans);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  letter-spacing: var(--tracking-wide);
+  color: var(--near-black);
+  text-decoration: none;
+
+  background: var(--cream-deep);
+  border: var(--border-width) solid var(--sand);
+  border-radius: var(--btn-radius);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.back-to-work-btn--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-work-btn:hover {
+  background: var(--coral-pale);
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+@media (max-width: 768px) {
+  .back-to-work-btn {
+    left: var(--space-5);
+    padding: 0 var(--space-4);
+  }
+}

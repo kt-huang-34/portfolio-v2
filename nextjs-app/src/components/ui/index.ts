@@ -5,3 +5,4 @@ export { ArrowIcon, DownloadIcon } from './ArrowIcon';
 export { Metric } from './Metric';
 export { StatPill } from './StatPill';
 export { Divider } from './Divider';
+export { BackToWorkButton } from './BackToWorkButton';

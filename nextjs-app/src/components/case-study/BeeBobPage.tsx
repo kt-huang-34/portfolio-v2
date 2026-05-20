@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useScrollReveal } from '@/lib';
+import { BackToWorkButton } from '@/components/ui';
 import './beebob-page.css';
 
 function ImageLightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -159,6 +160,7 @@ export function BeeBobPage() {
 
   return (
     <main className="bb-page">
+      <BackToWorkButton />
       {lightboxImage && (
         <ImageLightbox
           src={lightboxImage.src}
