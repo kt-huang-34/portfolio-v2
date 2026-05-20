@@ -39,7 +39,7 @@
   --hair-brown: #2A1A10;
   --text-dark: #2A2520;
 
-  /* Typography — --font-serif and --font-sans are injected by next/font
+  /* Typography — --font-serif, --font-sans, and --font-mono are injected by next/font
      via className on <html>. Fallbacks defined here for safety. */
   --text-xs: 10px;
   --text-sm: 12px;

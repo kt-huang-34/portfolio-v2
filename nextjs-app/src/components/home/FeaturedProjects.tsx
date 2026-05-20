@@ -25,7 +25,7 @@ const projects: FeaturedProject[] = [
     outcome: '↑ 0→1 product launch',
     bgClass: 'fi-beebob',
     href: '/case-study/beebob',
-    coverImage: '/images/cover-beebob.jpg',
+    coverImage: '/images/cover-beebob.png',
   },
   {
     num: '02',

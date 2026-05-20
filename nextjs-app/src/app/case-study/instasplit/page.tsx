@@ -1,19 +1,16 @@
 import type { Metadata } from 'next';
-import { CaseStudyPlaceholder } from '@/components/case-study';
+import { InstaSplitPage } from '@/components/case-study';
 import { ScrollDepthTracker, CASE_STUDY_MILESTONES } from '@/lib/analytics';
 
 export const metadata: Metadata = {
   title: 'InstaSplit — GXS Bank | Tina Huang',
-  description: 'InstaSplit case study for GXS Bank.',
+  description: 'InstaSplit — an in-app bill-split feature that hooks social settlement back into the GXS debit card and account.',
 };
 
 export default function InstasplitCaseStudy() {
   return (
     <>
-      <CaseStudyPlaceholder
-        label="GXS Bank · InstaSplit"
-        title="InstaSplit"
-      />
+      <InstaSplitPage />
       <ScrollDepthTracker milestones={CASE_STUDY_MILESTONES} />
     </>
   );

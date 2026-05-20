@@ -157,6 +157,7 @@
 .wc-beebob    { background: linear-gradient(135deg, #0D0A1A 0%, #1E1640 100%); }
 .wc-watchparty{ background: linear-gradient(135deg, #1A0A10 0%, #3D1020 100%); }
 .wc-ownrides  { background: linear-gradient(135deg, #0A1206 0%, #162208 100%); }
+.wc-instasplit{ background: linear-gradient(135deg, #021612 0%, #0A3028 100%); }
 
 /* Info: always visible below image */
 .work-info {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, DM_Sans } from 'next/font/google';
+import { Radio_Canada, Source_Serif_4, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import '../components/home/Hero.css';
 import '../components/home/FeaturedProjects.css';
@@ -9,7 +9,7 @@ import '../components/about/about.css';
 import { Nav, Footer, CustomCursor } from '@/components/layout';
 import { PostHogProvider } from '@/lib/analytics';
 
-const playfair = Playfair_Display({
+const sourceSerif4 = Source_Serif_4({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
@@ -17,10 +17,16 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const dmSans = DM_Sans({
+const radioCanada = Radio_Canada({
   subsets: ['latin'],
   weight: ['300', '400', '500'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -36,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${sourceSerif4.variable} ${radioCanada.variable} ${geistMono.variable}`}>
       <body>
         <PostHogProvider>
           <a href="#main-content" className="skip-link">Skip to main content</a>

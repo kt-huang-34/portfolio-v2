@@ -2,3 +2,4 @@ export { CaseStudyPlaceholder } from './CaseStudyPlaceholder';
 export { VikiShowPage } from './VikiShowPage';
 export { GxsRdsPage } from './GxsRdsPage';
 export { BeeBobPage } from './BeeBobPage';
+export { InstaSplitPage } from './InstaSplitPage';

@@ -204,12 +204,7 @@ export function BeeBobPage() {
           </div>
         </div>
         <div className="bb-hero-image-wrap card-surface">
-          <iframe
-            src="https://player.vimeo.com/video/1176853429?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-            title="BeeBob AI Demo"
-          />
+          <ClickableImage src="/images/cover-beebob_02.png" alt="BeeBob AI product cover" onImageClick={openLightbox} />
         </div>
       </section>
 
@@ -326,6 +321,13 @@ export function BeeBobPage() {
         <p className="chapter-body">
           BeeBob&rsquo;s solution wasn&rsquo;t a single insight &mdash; it was two. First, that researchers shouldn&rsquo;t need four tools to run one study. Second, that AI should enhance their work, not replace it. These two directions shaped every design decision.
         </p>
+
+        <div className="img-card-light" style={{ marginTop: 'var(--space-8)' }}>
+          <VimeoEmbed
+            src="https://player.vimeo.com/video/1176853429?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
+            title="BeeBob AI Demo"
+          />
+        </div>
 
         {/* ── Direction A ── */}
         <div className="bb-direction-section">
@@ -592,6 +594,16 @@ export function BeeBobPage() {
                   title="Set up AI Interview Guide"
                 />
               </div>
+              <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
+                <div className="img-card-light">
+                  <ClickableImage src="/images/beebob-discovery-question.png" alt="Discovery Questions" onImageClick={openLightbox} />
+                  <div className="cap">Discovery Questions</div>
+                </div>
+                <div className="img-card-light">
+                  <ClickableImage src="/images/beebob-preference-test.png" alt="Preference Test" onImageClick={openLightbox} />
+                  <div className="cap">Preference Test</div>
+                </div>
+              </div>
             </div>
 
             {/* Step 2: Bob Interviews Participants */}
@@ -634,6 +646,16 @@ export function BeeBobPage() {
                   src="https://player.vimeo.com/video/1176968581?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&background=1&dnt=1"
                   title="BeeBob Insights Report"
                 />
+              </div>
+              <div className="two-col" style={{ marginTop: 'var(--space-6)' }}>
+                <div className="img-card-light">
+                  <ClickableImage src="/images/beebob-report-ask-agent.png" alt="Report — Ask Agent" onImageClick={openLightbox} />
+                  <div className="cap">Ask Agent</div>
+                </div>
+                <div className="img-card-light">
+                  <ClickableImage src="/images/interview report_element.png" alt="Interview Report Elements" onImageClick={openLightbox} />
+                  <div className="cap">Interview Report Elements</div>
+                </div>
               </div>
             </div>
           </div>
