@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips --cropOffset 320 0 /tmp/gxs-context-full.png --out /tmp/gxs-tmp3.png)",
+      "Bash(sips -c 500 1440 /tmp/gxs-tmp3.png --out /tmp/gxs-context-cropped3.png)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --screenshot=/tmp/gxs-full2.png --window-size=1440,900 --hide-scrollbars --virtual-time-budget=5000 'http://localhost:3000/case-study/instasplit#context')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --screenshot=/tmp/gxs-context-v2.png --window-size=1440,5000 --hide-scrollbars http://localhost:3000/case-study/instasplit)",
+      "Bash(sips --cropOffset 170 0 /tmp/gxs-context-v2.png --out /tmp/gxs-ctx-tmp.png)",
+      "Bash(sips -c 480 1440 /tmp/gxs-ctx-tmp.png --out /tmp/gxs-ctx-section.png)"
+    ]
+  }
+}

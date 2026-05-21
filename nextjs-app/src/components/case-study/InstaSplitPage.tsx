@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useScrollReveal } from '@/lib';
 import { BackToWorkButton } from '@/components/ui';
 import './instasplit-page.css';
@@ -68,12 +68,53 @@ function VimeoEmbed({ src, title }: { src: string; title: string }) {
   );
 }
 
+function ImageLightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [onClose]);
+
+  return (
+    <div className="is-lightbox-overlay" onClick={onClose}>
+      <button className="is-lightbox-close" onClick={onClose} aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <img src={src} alt={alt} className="is-lightbox-image" onClick={(e) => e.stopPropagation()} />
+    </div>
+  );
+}
+
+function ClickableImage({ src, alt, className, onImageClick }: { src: string; alt: string; className?: string; onImageClick: (src: string, alt: string) => void }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className={`is-clickable-image${className ? ` ${className}` : ''}`}
+      onClick={() => onImageClick(src, alt)}
+    />
+  );
+}
+
 export function InstaSplitPage() {
   useScrollReveal();
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
+  const openLightbox = useCallback((src: string, alt: string) => setLightboxImage({ src, alt }), []);
+  const closeLightbox = useCallback(() => setLightboxImage(null), []);
 
   return (
     <main className="is-page">
       <BackToWorkButton />
+      {lightboxImage && <ImageLightbox src={lightboxImage.src} alt={lightboxImage.alt} onClose={closeLightbox} />}
 
       {/* ════════════════════════════════════════════════════════════
           HERO
@@ -111,7 +152,7 @@ export function InstaSplitPage() {
         </div>
 
         <div className="is-hero-cover">
-          <img src="/images/instasplit01.png" alt="InstaSplit app screens" />
+          <ClickableImage src="/images/instasplit01.png" alt="InstaSplit app screens" onImageClick={openLightbox} />
         </div>
       </section>
 
@@ -138,11 +179,50 @@ export function InstaSplitPage() {
       </div>
 
       {/* ════════════════════════════════════════════════════════════
+          CONTEXT — WHAT IS GXS BANK
+      ════════════════════════════════════════════════════════════ */}
+      <section className="chapter dark reveal" id="context">
+        <div className="is-context-body">
+          <div className="is-context-left">
+            <img src="/images/GXS logo.png" alt="GXS Bank logo" className="is-context-logo" />
+            <div className="eyebrow">About GXS Bank</div>
+            <h2 className="chapter-title">
+              One digital bank,<br /><em>three markets</em>
+            </h2>
+          </div>
+          <p className="chapter-body is-context-para">
+            GXS is a Southeast Asian digital banking group backed by Grab and Singtel &mdash; the region&rsquo;s two largest super-apps. It operates with no branches and no queues, embedded directly into apps people already use daily. Across three markets, it runs under different names but the same no-fee, access-first philosophy: <strong>GXS Bank</strong> in Singapore, <strong>GX Bank</strong> in Malaysia, and <strong>Superbank</strong> in Indonesia.
+          </p>
+        </div>
+        <div className="is-context-grid">
+          <div className="is-context-pill">
+            <div className="is-context-pill-label">Model</div>
+            <div className="is-context-pill-val">Digital-only &middot; No branches</div>
+          </div>
+          <div className="is-context-pill">
+            <div className="is-context-pill-label">Backed by</div>
+            <div className="is-context-pill-val">Grab &amp; Singtel</div>
+          </div>
+          <div className="is-context-pill">
+            <div className="is-context-pill-label">Products</div>
+            <div className="is-context-pill-val">Savings &middot; Debit &middot; FlexiCard &middot; FlexiLoan</div>
+          </div>
+          <div className="is-context-pill">
+            <div className="is-context-pill-label">Protection</div>
+            <div className="is-context-pill-val">SDIC insured up to S$100,000</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════════
           CH 1 — THE PROBLEM
       ════════════════════════════════════════════════════════════ */}
       <section className="chapter light reveal" id="ch1">
         <div className="chapter-num">Chapter 01</div>
-        <div className="eyebrow">The Challenge</div>
+        <div className="is-ch1-eyebrow-row">
+          <div className="eyebrow">The Challenge</div>
+          <div className="is-ch1-scope-tag">Singapore market only</div>
+        </div>
 
         <div className="is-ch1-grid">
           {/* Left — headline + body + who it affects */}
@@ -206,7 +286,7 @@ export function InstaSplitPage() {
         </p>
 
         <div className="is-explain-img">
-          <img src="/images/instasplit_explain.png" alt="InstaSplit flow explanation" loading="lazy" decoding="async" />
+          <ClickableImage src="/images/instasplit_explain.png" alt="InstaSplit flow explanation" onImageClick={openLightbox} />
         </div>
       </section>
 
@@ -300,6 +380,9 @@ export function InstaSplitPage() {
             <p>
               The 7× PayNow gap wasn&rsquo;t a hunch &mdash; it came from a collaborative deep-dive with the PM and Data Analyst. Together we sized the behaviour gap and built the business case before a single screen was drawn.
             </p>
+            <div className="is-step1-data">
+              <ClickableImage src="/images/instasplit_data.png" alt="Data findings: conversion funnel, average balance, and PayNow vs debit card transaction gap" onImageClick={openLightbox} />
+            </div>
           </div>
         </div>
 
@@ -311,6 +394,9 @@ export function InstaSplitPage() {
             <p>
               A sweep of record-keeping and splitting apps (Splitwise, Settle Up, IOU) surfaced the key signal: 11% of users would pay explicitly for settlement features. That number validated demand before we committed to the build.
             </p>
+            <div className="is-step1-data">
+              <ClickableImage src="/images/instasplit-competitor_spend.png" alt="Competitive scan — willingness-to-pay signal and feature validation" onImageClick={openLightbox} />
+            </div>
           </div>
         </div>
 
@@ -345,7 +431,20 @@ export function InstaSplitPage() {
             </div>
 
             <div className="is-explain-img" style={{ marginTop: 'var(--space-8)' }}>
-              <img src="/images/instasplit_flow.png" alt="InstaSplit dual flow diagram" loading="lazy" decoding="async" />
+              <ClickableImage src="/images/instasplit_flow.png" alt="InstaSplit dual flow diagram" onImageClick={openLightbox} />
+            </div>
+
+            <div className="is-ds-block">
+              <div className="is-ds-label">Also in scope &mdash; Singapore Design System (Cream)</div>
+              <p className="is-ds-desc">
+                Alongside the product work, I optimised the Singapore design system tokens and components to ensure a consistent, better mobile experience across the GXS app.
+              </p>
+              <div className="is-ds-grid">
+                <ClickableImage src="/images/design system_01.png" alt="Design system — Layout grid: containers and padding" onImageClick={openLightbox} />
+                <ClickableImage src="/images/design system_02.png" alt="Design system — Textfield components" onImageClick={openLightbox} />
+                <ClickableImage src="/images/design system_03.png" alt="Design system — Transaction list component" onImageClick={openLightbox} />
+                <ClickableImage src="/images/design system_04.png" alt="Design system — List item variants" onImageClick={openLightbox} />
+              </div>
             </div>
           </div>
         </div>

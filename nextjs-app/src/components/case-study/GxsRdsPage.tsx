@@ -72,6 +72,42 @@ export function GxsRdsPage() {
       </div>
 
       {/* ══════════════════════════════════════════════════════════
+          CONTEXT — WHAT IS GXS BANK
+      ══════════════════════════════════════════════════════════ */}
+      <section className="chapter dark reveal" id="context">
+        <div className="rds-context-body">
+          <div className="rds-context-left">
+            <img src="/images/GXS logo.png" alt="GXS Bank logo" className="rds-context-logo" />
+            <div className="eyebrow">About GXS Bank</div>
+            <h2 className="chapter-title">
+              One digital bank,<br /><em>three markets</em>
+            </h2>
+          </div>
+          <p className="chapter-body rds-context-para">
+            GXS is a Southeast Asian digital banking group backed by Grab and Singtel &mdash; the region&rsquo;s two largest super-apps. It operates with no branches and no queues, embedded directly into apps people already use daily. Across three markets, it runs under different names but the same no-fee, access-first philosophy: <strong>GXS Bank</strong> in Singapore, <strong>GX Bank</strong> in Malaysia, and <strong>Superbank</strong> in Indonesia.
+          </p>
+        </div>
+        <div className="rds-context-grid">
+          <div className="rds-context-pill">
+            <div className="rds-context-pill-label">Model</div>
+            <div className="rds-context-pill-val">Digital-only &middot; No branches</div>
+          </div>
+          <div className="rds-context-pill">
+            <div className="rds-context-pill-label">Backed by</div>
+            <div className="rds-context-pill-val">Grab &amp; Singtel</div>
+          </div>
+          <div className="rds-context-pill">
+            <div className="rds-context-pill-label">Products</div>
+            <div className="rds-context-pill-val">Savings &middot; Debit &middot; FlexiCard &middot; FlexiLoan</div>
+          </div>
+          <div className="rds-context-pill">
+            <div className="rds-context-pill-label">Protection</div>
+            <div className="rds-context-pill-val">SDIC insured up to S$100,000</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
           CH 1 — THE PROBLEM
       ══════════════════════════════════════════════════════════ */}
       <section className="chapter dark reveal" id="ch1">
