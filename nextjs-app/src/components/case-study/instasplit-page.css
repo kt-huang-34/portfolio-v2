@@ -222,6 +222,11 @@
   display: block;
 }
 
+.is-step1-data--half {
+  max-width: 60%;
+  margin-inline: auto;
+}
+
 /* ── Ch1 Eyebrow Row ── */
 .is-ch1-eyebrow-row {
   display: flex;

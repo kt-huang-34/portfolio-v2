@@ -457,6 +457,9 @@ export function InstaSplitPage() {
             <p>
               Working as the sole designer on a six-person cross-functional team under tight delivery pressure, I partnered closely with the two FE and two BE engineers throughout &mdash; not just at handoff. Edge cases and technical constraints shaped the UX decisions early, not late.
             </p>
+            <div className="is-step1-data is-step1-data--half">
+              <ClickableImage src="/images/Instasplit_final.png" alt="InstaSplit final shipped screens — split details, home, and request views" onImageClick={openLightbox} />
+            </div>
           </div>
         </div>
       </section>
